@@ -7,6 +7,8 @@
 [ ] przycisk "nie wiem" obok "sprawdz"
 [ ] mapa ze mozna skoczyc do dowolnego pytania
 [ ] dodac zdjecia pogladowe do zadań lub rozwiązania ich (bo pani cos mowila ze trzeba umiec narysowac schematy niektorych algorytmów - przeanalizowac które i starać się pod to testy tez zrobić sprawdzające)
+[ ] Stronka git na mobilce
+[ ] Stronka punkty FS (first try) i RS (Z powtórkami)
 
 [ ] wszystkie assety wprowadzic
 
