@@ -273,6 +273,14 @@ Jeśli odpowiedź spełnia definicję pojęcia:
   "częściowo", "niepełna", "brakuje"
 - score NIE MOŻE być < 85
 
+KLUCZOWA ZASADA OCENY DEFINICJI:
+- Jeśli odpowiedź zawiera poprawną, klasyczną definicję akademicką,
+  obejmującą istotę pojęcia (co to jest + do czego służy),
+  należy przyznać 81–100 punktów.
+- Brak przykładów, wzorów, tablic, szczegółów implementacyjnych
+  NIE OBNIŻA OCENY, jeśli pytanie o nie nie prosi.
+- „Można by dodać więcej szczegółów” NIE JEST powodem do obniżenia punktów.
+
 ────────────────────────
 ZAKAZ OCENY STYLISTYCZNEJ
 ────────────────────────

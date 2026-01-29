@@ -113,15 +113,17 @@ w drzewie BST?`,
     { from: 13, to: 19, name: "Systemy liczbowe" },
     { from: 20, to: 28, name: "Sortowanie" },
     { from: 29, to: 37, name: "Selekcja i wyszukiwanie" },
-    { from: 38, to: 46, name: "Struktury danych cz. 1" },
-    { from: 47, to: 55, name: "Struktury danych cz. 2" },
-    { from: 56, to: 63, name: "Grafy cz. 1" },
-    { from: 64, to: 71, name: "Grafy cz. 2" },
+    { from: 38, to: 46, name: "Struktury danych, cz. 1" },
+    { from: 47, to: 55, name: "Struktury danych, cz. 2" },
+    { from: 56, to: 63, name: "Grafy, cz. 1" },
+    { from: 64, to: 71, name: "Grafy, cz. 2" },
     { from: 72, to: 87, name: "Szyfrowanie" },
     { from: 88, to: 92, name: "Przeszukiwanie tekstów" },
   ];
 
   let current = 0;
+  let questionOrder = [];
+  $: realIndex = questionOrder[current];
   let answer = "";
 
   let verdict = null;
@@ -158,10 +160,33 @@ w drzewie BST?`,
     }
   }
 
+  function stopTypingSound() {
+    if (typingSound) {
+      typingSound.pause();
+      typingSound.currentTime = 0;
+    }
+  }
+
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
   function getSection(index) {
     return (
       sectionRanges.find((s) => index >= s.from && index <= s.to)?.name || ""
     );
+  }
+
+  function scoreToGrade(score) {
+    if (score < 40) return "2.0";
+    if (score < 50) return "3.0";
+    if (score < 60) return "3.5";
+    if (score < 70) return "4.0";
+    if (score < 80) return "4.5";
+    return "5.0";
   }
 
   async function retry() {
@@ -183,6 +208,8 @@ w drzewie BST?`,
     // 🔥 jeśli trwa animacja – przerywamy ją
     skipTyping = true;
     talking = false;
+
+    stopTypingSound(); // 🔥 KLUCZ
 
     // reset stanu pytania
     answer = "";
@@ -208,6 +235,15 @@ w drzewie BST?`,
   onMount(() => {
     typingSound = new Audio("/type.mp3");
     typingSound.volume = 0.2;
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        stopTypingSound();
+      }
+    });
+
+    questionOrder = questions.map((_, i) => i);
+    shuffle(questionOrder);
   });
 
   async function typeVerdict(text) {
@@ -271,7 +307,7 @@ w drzewie BST?`,
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          question: questions[current],
+          question: questions[realIndex],
           answer,
         }),
       });
@@ -300,10 +336,10 @@ w drzewie BST?`,
 {#if current < questions.length}
   <div class="quiz">
     <h2>Pytanie {current + 1}</h2>
-    <p>{questions[current]}</p>
+    <p>{questions[realIndex]}</p>
 
     <div class="question-section">
-      {getSection(current)}
+      {getSection(realIndex)}
     </div>
 
     {#if score === null}
@@ -333,7 +369,10 @@ w drzewie BST?`,
           <div class="mentor-text">
             <div class="header">
               <strong>{character}</strong>
-              <span class="score">{score}/100</span>
+              <!-- <span class="score">{score}/100</span> -->
+              <span class="score">
+                {score}/100 ({scoreToGrade(score)})
+              </span>
             </div>
 
             <p class="verdict">{typedVerdict}</p>
