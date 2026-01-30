@@ -2340,9 +2340,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
       if (data.tip && data.tip.at(-1) !== ".") {
         data.tip += ".";
       }
-      if (data.score >= 0) {
-        data.tip += " Czujesz?";
-      }
+      data.tip += " Czujesz?";
 
       saveResult({
         answer,
