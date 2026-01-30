@@ -104,9 +104,9 @@ export async function POST({ request }) {
 
   if (metaCheck?.isMeta) {
     return json({
-      score: 15,
+      score: -10,
       verdict: "Odpowiedź nie zawiera treści merytorycznej",
-      tip: metaCheck.reason || "Odpowiedź nie odnosi się do pojęcia z pytania.",
+      tip: (metaCheck.reason || "Odpowiedź nie odnosi się do pojęcia z pytania.") + " Nie manipuluj odpowiedzią, cwaniaku.",
       sources: []
     });
   }
