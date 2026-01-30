@@ -1619,7 +1619,7 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
   let nickname = "";
   let submitted = false;
 
-  let selectedMentorId = "jeffrey";
+  let selectedMentorId = "ishowspeed";
 
   let showAskMentor = false;
   let mentorQuestion = "";
