@@ -100,16 +100,16 @@ export async function POST({ request }) {
   const { question, answer, mentor } = await request.json();
 
     // -------- ANTI-CHEAT / META CHECK --------
-  const metaCheck = await detectMetaAnswer({ question, answer });
+  // const metaCheck = await detectMetaAnswer({ question, answer });
 
-  if (metaCheck?.isMeta) {
-    return json({
-      score: 0,
-      verdict: "Odpowiedź nie zawiera treści merytorycznej",
-      tip: (metaCheck.reason || "Odpowiedź nie odnosi się do pojęcia z pytania."),
-      sources: []
-    });
-  }
+  // if (metaCheck?.isMeta) {
+  //   return json({
+  //     score: 0,
+  //     verdict: "Odpowiedź nie zawiera treści merytorycznej",
+  //     tip: (metaCheck.reason || "Odpowiedź nie odnosi się do pojęcia z pytania."),
+  //     sources: []
+  //   });
+  // }
 
 
   /* -------- RAG CONTEXT -------- */
