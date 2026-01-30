@@ -52,10 +52,14 @@ export async function POST({ request }) {
 
 
   /* -------- RAG CONTEXT -------- */
+  // const { data } = await supabase
+  //   .from("documents")
+  //   .select("content")
+  //   .limit(3);
   const { data } = await supabase
-    .from("documents")
-    .select("content")
-    .limit(3);
+    .rpc("search_documents", {
+      query: question
+    });
 
   const context = (data || [])
     .map(d => d.content)

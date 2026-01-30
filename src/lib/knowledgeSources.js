@@ -8,7 +8,7 @@ export const knowledgeSources = [
         type: "pdf",
       },
       {
-        label: "Opracowanie AiSD – wykład",
+        label: "Opracowanie AiSD – wykład (2022/2023)",
         path: "/assets/opracowanie_AISD_wyklad.pdf",
         type: "pdf",
       },
@@ -18,7 +18,7 @@ export const knowledgeSources = [
       //   type: "md",
       // },
       {
-        label: "Pytania egzaminacyjne",
+        label: "Pytania egzaminacyjne (2025)",
         path: "/assets/pytania.pdf",
         type: "pdf",
       },
@@ -26,7 +26,7 @@ export const knowledgeSources = [
   },
 
   {
-    section: "🖼️ Kolokwia (obrazy)",
+    section: "🖼️ Kolokwia (2022)",
     files: [
       { label: "Kolokwium 01", path: "/assets/kol-alg-01.png", type: "img" },
       { label: "Kolokwium 02", path: "/assets/kol-alg-02.png", type: "img" },
@@ -34,7 +34,7 @@ export const knowledgeSources = [
   },
 
   {
-    section: "🧪 Wejściówki – LAB",
+    section: "🧪 Wejściówki",
     files: [
       "LAB05","LAB06","LAB07","LAB09","LAB10","LAB11","LAB12","LAB13","LAB14"
     ].map(n => ({
@@ -45,7 +45,18 @@ export const knowledgeSources = [
   },
 
   {
-    section: "🎓 Wykłady",
+    section: "⚗️ Laboratoria (2025)",
+    files: [
+      "LAB02","LAB03","LAB08","LAB12"
+    ].map(n => ({
+      label: n,
+      path: `/assets/laby/${n}.pdf`,
+      type: "pdf",
+    })),
+  },
+
+  {
+    section: "🎓 Wykłady (2024)",
     files: [
       "Algorytmy 1",
       "Algorytmy 2",

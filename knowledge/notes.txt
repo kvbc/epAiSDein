@@ -1,4 +1,4 @@
-=============================================================================================================== Algorytmy i struktury danych opracowane zagadnienia by Temus (Iza edit).pdf (opracowanie zagadnień do kolokwium z wykładów)
+=============================================================================================================== ŹRÓDŁO: Algorytmy i struktury danych opracowane zagadnienia by Temus (Iza edit).pdf (opracowanie zagadnień do kolokwium z wykładów)
 
 Algorytmy i struktury baz danych wykład
 Zagadnienia do kolokwium
@@ -695,7 +695,7 @@ Schematy Blokowe
     Blok fragmentu
     Łącznik wewnętrzny (ta sama strona)
 
-=============================================================================================================== kol-alg-01.png (zalieczenie z algorytmów 2022 - strona 1)
+=============================================================================================================== ŹRÓDŁO: kol-alg-01.png (zalieczenie z algorytmów 2022 - strona 1)
 
 Zadanie 1.
 
@@ -730,7 +730,7 @@ Idealnym algorytmem będzie taki, który:
 - zawsze daje poprawne wyniki,
 - zajmuje niewiele pamięci (jest efektywny).
 
-=============================================================================================================== kol-alg-02.png (zalieczenie z algorytmów 2022 - strona 2)
+=============================================================================================================== ŹRÓDŁO: kol-alg-02.png (zalieczenie z algorytmów 2022 - strona 2)
 
 Zadanie 4. Opisz czym jest złożoność pamięciowa oraz złożoność obliczeniowa algorytmu.
 
@@ -764,7 +764,7 @@ Zadanie 8. Opisz czym jest:
 a) ścieżka Hamiltona (oraz kiedy nazywana jest cyklem) - Ścieżka Hamiltona to ścieżka w grafie, która odwiedza każdy wierzchołek dokładnie jeden raz. Jeżeli ścieżka zaczyna się i kończy w tym samym wierzchołku, nazywana jest cyklem Hamiltona.,
 b) ścieżka Eulera (cykl Eulera) - Ścieżka Eulera to ścieżka przechodząca przez każdą krawędź grafu dokładnie jeden raz. Jeżeli ścieżka zaczyna się i kończy w tym samym wierzchołku, mówimy o cyklu Eulera..
 
-=============================================================================================================== opracowanie_AISD_wyklad.pdf (opracowanie zagadnień podanych na egzamin z algorytmów z wykładów; 2022/2023 )
+=============================================================================================================== ŹRÓDŁO: opracowanie_AISD_wyklad.pdf (opracowanie zagadnień podanych na egzamin z algorytmów z wykładów; 2022/2023 )
 
 1 Co to jest algorytm, jakie ma cechy, złożoność dla przykładu.
 
@@ -1012,15 +1012,2788 @@ Hamiltona.
 W ścieżce Eulera możesz przejść przez wierzchołek więcej niż jeden raz.
 Na ścieżce Hamiltona nie można przejść przez wszystkie krawędzie.
 
-=============================================================================================================== wyklady/
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 1.pdf (opracowanie wykładów z 2024)
 
-TODO
+Temat: Algorytmy
 
-=============================================================================================================== wejsciowki/
+# Co to algorytm?
 
-TODO
+Algorytm to zestaw instrukcji opisujących, jak wykonać pewne zadanie, krok o
+kroku, w określonej kolejności
 
-=============================================================================================================== prompt_algorytmy.md
+Cechy dobrego algorytmu:
+- Poprawny
+- Jednoznaczny Zawsze działa tak samo)
+- Skończoność
+- Efektywność
+
+# Jak zapisać algorytm?
+- Lista kroków
+- Pseudokod
+- Schemat blokowy
+- Kod źródłowy
+
+Typy podstawowe i złożone:
+
+# Struktury danych
+
+Struktura danych to sposób uporządkowania danych i zarządzania nimi
+Przykładowe struktury danych to na przykład:
+- lista
+- tabela
+Struktury danych dzielimy na np.:
+- Liniowe
+  * Statyczne
+    > Tablica
+  * Dynamiczne
+    > Lista
+    > Stos
+    > Kolejka
+- Nieliniowe
+  * Graf
+  * Drzewo
+Oraz:
+- Homogeniczne - przechowujące tylko jeden typ danych (przykładowo tabelka)
+- Niehomogeniczne - przechowujące więcej niż jeden typ danych (przykładowo
+struct albo unia)
+
+# Analiza algorytmów
+
+Jest so sprawdzenie wykonania algorytmów z uwzględnieniem takich elementów
+jak:
+- Pobór pamięci
+- Prędkość wykonania
+- Złożoność czasowa
+
+Optymalny  Najlepsza możliwa sytuacja
+Pesymistyczne  Najgorsza możliwa sytuacja
+Przewidywalny - losowy
+
+# Schematy blokowe
+
+Schematy blokowe to diagramy, która określa procedure, w naszym przypadku
+algorytmy, lub programy komputerowe, reprezentowane w formie wizualnej
+poprzez figury geometryczne połączone strzałkami
+Schemat blokowy powinien zapewniać:
+- Elastyczność zapisu
+- Możliwość zapisu z użyciem składu wybranegu języka programowania
+- Łatwą kontrolę sprawdzenia poprawności algorytmu
+
+# Elementy schematów blokowych
+
+Strzałka - wskazuje kierunek przepływ danych lub kolejność wykonania (wygląd
+jest analogiczny)
+
+Blok graniczny - oznacza początek, koniec lub przerwanie algorytmu
+
+Blok wejścia-wyjścia - przedstawia czynność wprowadzenia danych do programu
+i przyporządkowania ich do zmiennych
+
+Blok operacyjny - oznacza wykonanie operacji, w efekcie której zmienią się
+wartości, postać lub miejsce zapisu danych
+
+Blok warunkowy - przedstawia wybór jednej z dwóch opcji, zależnie od warunku
+
+Blok podprogramu - oznacza zmianę wykonywanej czynności na skutek
+wywołania podprogramu
+
+Blok zdefiniowanego fragmentu - przedstawia część programu zdefiniowanego
+odrębnie
+
+Łącznik - służy do łączenia odrębnych części schematu
+
+# Typy operacji
+
+Inkrementacja - ++
+Dekrementacja - --
+Operacje bitowe:
+- 8x (np. 5 101 binarnie) 8 4 100 binarnie)  4 100 binarnie))
+- ^
+- ~
+- >>
+- <<
+
+Przypisanie - =
+Porównanie - ==
+Negacja - !=
+8x - operacja bitowa
+88x - operacja prawdziwa
+
+# Pytania Kontrolne
+
+1. Co to algorytm?
+Algorytm to zestaw instrukcji opisujących, jak wykonać pewne zadanie, krok o
+kroku, w określonej kolejności
+
+2. Co to struktura danych?
+Struktura danych to sposób na uporządkowanie i przechowanie typów
+podstawowych i złożonych (w pamięci komputera)
+
+3. Cechy algorytmu
+Poprawność Działa wraz z założeniami) ,Skończoność Ma określony
+początek i koniec), Jednoznaczność Za każdym razem wykonywany jest tak
+samo), Efektywność Jest zbudowany w najlepszy możliwie sposób w ramach
+założeń)
+
+4. Jak można zapisać algorytm
+Lista kroków, Pseudokod, Schemat blokowy, Program komputerowy
+
+5. Jak dzielimy struktury danych?
+Struktury danych dzielimy na liniowe, które same w sobie dzielimy na
+statyczne (np. tablica) i dynamiczne (np. stos), oraz nieliniowe (np. drzewo)
+
+6. Co to jest analiza algorytmu
+Jest to sprawdzenie wydajności algorytmu poprzez zwrócenie uwagi na
+elementy takie jak: pobór zasobów, prędkość wykonania, złożoność czasowa
+
+7. Elementy schematów blokowych
+Strzałki, blok graniczny, blok wejścia-wyjścia, blok operacyjny, blok
+warunkowy, blok podprogramu, blok zdefiniowanego fragmentu, łącznik
+
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 2.pdf (opracowanie wykładów z 2024)
+
+Temat: Podstawowe algorytmy matematyczne - Pojęcie rekurencji
+
+# Algorytm Euklidesa
+
+Utworzony w IV wieku przed naszą erą
+Służy on do wyznaczenia największego wspólnego dzielnika dwóch liczb
+Jego zmodyfikowana wersja pozwoli nam na obliczenie najmniejszej wspólnej
+wielokrotności dwóch liczb
+
+# Pseudokod
+1.  m i n
+2.  NWW  m * n
+3.  n ! 0
+    a. tmp = m % n
+    b. m = n
+    c. n = tmp
+4. NWW / m
+NWW  a * b / NWD(a,b)
+
+# Program Algorytmu Euklidesa - NWW i NWD
+
+#include <stdio.h>
+void main()
+{
+    int a,b,temp;
+    printf("Podaj A: ");
+    scanf("%d",&a);
+    printf("Podaj B: ");
+    scanf("%d",&b);
+    int atemp = a;
+    int btemp = b;
+    while(b!=0)
+    {
+        temp = b;
+        b = a%b;
+        a = temp;
+    }
+    printf("NWD = %d", a);
+    printf("\nNWW = %d", atemp*btemp/a);
+}
+
+# Iteracja
+Iterowanie to powtarzanie tej samej operacji w pętli z góry określoną liczbę razy
+lub aż do spełnienia określonego warunku
+
+# Rekurencja
+
+Rekurencja działa podobnie do iteracji, lecz w tym przypadku, funkcja wywołuje
+samą siebie, z innymi parametrami aż do spełnienia pewnego warunku
+Programy napisane rekurencyjnie, prawie zawszę mogą być przekształcone w
+formy iteracyjne
+
+Przykłady rekurencji:
+- Informatyka:
+    * Wywołanie funkcji z jej wnętrza
+- Zastosowania w prawdziwym życiu:
+    * Matrioszka
+    * Udostępnianie ekranu
+    * Nagranie video
+- Cechy pozytywne:
+    * Poprawia przejrzystość kodu
+    * Efektywna dla problemów rekurencyjnych
+    * Nie wykonujemy “na siłęˮ
+- Cechy negatywne:
+    * Większe zużycie pamięci operacyjnej
+    * Możliwość przepełnienia stosu
+
+# Rekurencyjny algorytm Euklidesa
+
+1. Podaj m oraz n
+2. NWD(m,n)  NWD(n,m%n)
+3. n == 0
+    a. Zwróć m
+    b. W przeciwnym wypadku:
+        i. Wróć do kroku 2
+
+# Kod programu algorytmu Euklidesa z rekurencją
+
+int funk1(int a, int b)
+{
+    int tmp;
+    while (b!=0)
+    {
+        tmp = a%b
+        a = b;
+        b = tmp;
+    }
+    return a;
+}
+int funk2(int a, int b)
+{
+    if(b==0)
+    {
+        return a;
+    }
+    else
+    {
+        return funk1(b,(a%b));
+    }
+}
+
+Jest to algorytm naiwny - oznacza to, że działa poprawnie, lecz przeszukuje
+wszystkie elementy
+
+# Sito Eratostenesa
+
+Powstał w III wieku przed naszą erą
+Jego zadaniem jest wyznaczenie wszystkich liczb pierwszych miejszych lub
+równych zadanej, czyli z przedziału [2,n]
+Przesiewa zbiór w taki sposób, że pozostają jedynie liczby pierwsze
+
+# Pseudokod
+1. Stwórz tablicę n+1 z wartościami false
+2. Dla indeksów i  2,3…,sqrt(n) wykonuj:
+    a. a = 2*i, 3*i, 4*i.. aż do n
+        i. Wykonaj tab[a] = true
+3. Wypisz wszystkie indeksy od 2 do n, które mają wartość false
+
+# Kod programu
+
+void funk1(int n)
+{
+    bool tab[n+1];
+    for(int i = 0; i <= n; i++)
+    {
+        tab[i]=false;
+    }
+    for(int i = 2; i*i <= n; i++)
+    {
+        for(int a = 2*i; a<=n; a+=i)
+        {
+            tab[a]=true;
+        }
+    }
+    for(int i=2; i<=n;i++)
+    {
+        if(!tab[i])
+        {
+            cout<<i<<" ";
+        }
+    }
+}
+
+# Dodatek poprawiający kod
+1. tab[i] == false, dla indeksów a=2*i, 3*i, 4*i… aż do n
+    b. wykonaj: tab[a]  TRUE
+
+# Algorytm Fibbonaciego
+Ciąg Fibbonaciego to ciąg liczb naturalnych, który zaczyna się od 0 i 1, a każda
+kolejna liczba jest sumą dwóch poprzednich
+Ciąg ten został opisany przez włoskiego matematyka Leonardo Fibonnaciego w
+XII wieku
+Algorytm ten pozwala nam obliczać kolejne elementy ciągu Fibbonaciego
+
+Założenia algorytmu:
+1. Procedura Fibbonaci
+2. Weź numer elementu ciągu n
+    a. Jeśli 0, zwróć 0
+    b. Jeśli 1, zwróć 1
+3. W przeciwnym wypadku zwróć Fibbonaci(n-1)+Fibbonaci(n-2)
+
+# Pseudokod
+1. n (n≥2)
+2. a  0; b=1
+3. dla i  0,1,… n-2
+    a. c = a+b
+    b. a = b
+    c. b = c
+4. Wypisz b
+
+# Kod programu
+// rekurencyjnie
+int funk1(int n)
+{
+    if(n==0 || n==1)
+    {
+        return n;
+    }
+    else
+    {
+        return funk1(n-1)+funk1(n-2);
+    }
+}
+
+// iteracyjnie
+int funk2(int n)
+{
+    int a = 0; int b = 1; int c;
+    while(i<n-1)
+    {
+        c=a+b;
+        a=b;
+        b=c;
+        i++;
+    }
+    return b;
+}
+
+# Pytania kontrolne
+
+1. Do czego stosujemy algorytm Euklidesa?
+By znaleźć największy wspólny dzielnik dwóch liczb całkowitych, w jego
+zmodyfikowanej wersji, możemy znaleźć najmniejszą wspólną wielokrotność
+dwóch liczb
+
+2. Iteracja vs rekurencja
+Iteracja to powtarzanie danego segmentu kodu aż do spełnienia danego
+wymogu, rekurencja to wywoływanie funkcji przez samą siebie z innymi
+danymi, aż do spełnienia danego wymogu
+
+3. Zagrożenia wynikające z rekurencji
+Większe zużycie pamięci operacyjne, możliwość przepełnienia stosu
+
+4. Co otrzymujemy z wyniku działania Sita Erastotenesa
+Otrzymujemy listę liczb pierwszych
+
+5. Jak tworzy się kolejne elementy ciągu Fibonacciego
+Kolejne elementy ciągu Fibbonaciego powstają poprzez zsumowanie
+poprzednich dwóch elementów
+
+6. Algorytm obliczania ciągu Fibonacciego jest rekurencyjne czy iteracyjne?
+Może być wykonany rekurencyjnie i iteracyjnie, lecz wersja iteracyjna jest
+wydajniesza
+
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 3.pdf (opracowanie wykładów z 2024)
+
+# 1. Po co nam system binarny?
+
+Komputery rozumieją tylko system binarny
+- Sposób zapisu liczb zaproponowany na początku XVIII w.
+- Za ojca systemu dwójkowego uważa się Gottfrieda Wilhelma Leibniza
+- Polega na zapisie liczb jedynie za pomocą znaków 0 i 1
+- Łatwy w zrozumieniu dla komputerów
+- Dobry do implementacji w technice cyfrowej (stan niski i wysoki)
+- Tworzy długi zapis liczb 910  10012
+- Trudności w zapisie liczb ujemnych (kod U1 i U2
+
+# Algorytm dec2bin
+
+- 25/2 = 12  1
+- 12/2 = 6
+- 6/2 = 3
+- 3/2 = 1  1
+- 1/2 = 1
+Czytamy od dołu do góry)
+11001 = 25
+
+Korzystamy z operatora modulo 2 do przetworzenia liczby z decymalnej do
+binarnej
+- Sposób działania algorytmu jest zasadniczo jeden - kolejne reszty z dzielenia liczby przez 2
+- Różnią się sposoby tych reszt - napis, tablica, lista
+- Wykorzystanie tablicy ma istotne ograniczenie związane z wielkością tablicy.
+
+Pseudokod
+1. Pobierz liczbę naturalną n
+2. wynik = “ˮ
+3. Dopóki n > 0 wykonuj:
+    a. wynik = str(n % 2) + wynik
+    b. n/2
+4. Wypisz: wynik
+
+Algorytm dec2bin (tablica)
+1. Pobierz liczbę naturalną n < 256
+2. Utwórz pustą tablicę 8-elementową binary
+3. i = 0
+4. Dopóki n > 0 wykonuj:
+    a. binary[i] = n % 2
+    b. n /= 2
+    c. i++
+5. Wypisz: binary (od końca!!)
+
+Pętle - porady dla początkujących
+Pętle zwykle możemy stosować zamiennie FOR/WHILE
+Jeśli wiemy, ile razy wykonamy pętle, zwykle użyjemy FOR (iterowanie po
+tablicach, przechodzenie po kolejnych liczbach naturalnych).
+Jeśli nie wiemy, ile razy wykonamy pętle i czekamy na jakąś zależność, zwykle
+użyjemy WHILE (koniec pliku, koniec bufora, dopóki liczby są nierówne)
+
+# Algorytm bin2dec
+1. Pobierz reprezentację binarną n
+2. wynik = 0, potega = 1
+3. Dla i = długość n-1,…, 1, 0 wykonaj:
+    a. Jeśli n[i] == ‘1ʼ, wynik += potega
+    b. potega *= 2
+4. Wypisz: wynik
+
+# Bin2dec - kod programu
+void bin2dec_str(string n) {
+    int res = 0;
+    int power = 1;
+    for (int i = n.length() -1; i >= 0; i--) {
+        if (n[i] == '1') {
+            wynik *= potega;
+        }
+        potega *= 2
+    }
+}
+
+# System heksadecymalny
+- Wprowadzony aby skrócić duże liczby zapisane binarnie
+- Podstawą systemu jest 16
+- Liczby 0-9 są identyczne jak w przypadku liczb dziesiętnych
+- Liczby 10-15 przedstawia się jako A, B, C, D, E oraz F
+- Spotykamy je przy adresach IPv6, stylach CSS czy adresach rejestrów w
+mikroprocesorach
+- Zapis np. 0x7b
+
+# Algorytm dec2hex - procedura pomocnicza
+Procedura getHex:
+1. Pobierz liczbę n
+2. Jeśli n < 10 zwróć n w postaci napisu
+3. W przeciwnym przypadku zwróć ‘Aʼ dla 10, ‘Bʼ dla 11, ‘Cʼ dla 12, ‘Dʼ dla 13, ‘Eʼ
+dla 14, ‘Fʼ dla 15
+
+# Algorytm dec2hex
+1. Pobierz liczbę naturalną n
+2. wynik = “ˮ
+3. Dopóki n > 0 wykonuj
+    a. wynik = getHex(n % 16) + wynik
+    b. n /= 16
+4. Wypisz: wynik
+
+A1(hex) -> 161(dec)
+38(hex) -> 56(dec) (3*16 + 8 = 56)
+0x44(hex) -> 68(dec) (4*16 + 4 = 68)
+33(dec) -> 0010|0001(bin) -> 21(hex)
+
+# Algorytm hex2dec - procedura pomocnicza
+Procedura setHex:
+1. Pobierz element napisu heksadecymalnego
+2. Dla A zwróć 10, dla B 11, … dla F 15
+3. Wypisz wynik
+
+# Algorytm hex2dec
+1. Pobierz reprezentację heksadecymalną n
+2. wynik = 0, potega = 1
+3. Dla i = długość n-1,…, 1, 0 wykonaj:
+    a. wynik += setHex(n[i]) * potega
+    b. potega *= 16
+4. Wypisz: wynik
+
+# Tablica ASCII
+Tablica ASCII, to siedmiobitowy system kodowania znaków, w którym każdy znak
+na nim się znajdujący jest reprezentowany poprzez liczbę całkowitą pomiędzy
+[0;127]
+Przy pomocy tablicy ASCII, jesteśmy przykładowo w stanie zapisać liczby
+hexadecymalne w tablicy int, zapisując przykładowo liczbę A2(hex)=162(dec),
+zostanie ona zapisana jako 65 w pierwszym indeksie tabelki, i 2 w drugim indeksie
+tabelki
+
+# Pytania kontrolne
+
+1. Czym jest system bitowy?
+Jest to system zero jedynkowy, inaczej dwójkowy, bardzo prosty do
+zrozumienia przez komputer, podobnie do systemu dziesiętnego jesteśmy w
+stanie zapisywać liczby przy jego pomocy
+
+2. Jak wykonać konwersję dec2bin?
+Wyznaczamy modulo przez 2 danej liczby, oraz wynik dzielenia przez 2
+zaokrąglonej w dół, robimy to aż nie uzyskamy 0 dla liczby dzielonej, wynik
+zapisany w systemie binarnym, to reszta z dzielenia, pierwszym znakiem w
+wartości binarnej jest ostatnia reszta, drugim, przed ostatnia, itd.
+
+3. Jak wykonać sprawdzenie działania algorytmu dec2bin?
+Możemy to zrobić poprzez wykorzystanie algorytmu bin2dec, lub ręcznego
+obliczenia wyniku
+
+4. Czym jest zapis heksadecymalny? Gdzie go spotykamy?
+Jest to system który ma na celu skrócić długie liczby binarne lub decymalne,
+spotykamy go w adresach IPv6, stylach CSS czy adresach rejestrów w
+mikroprocesorach
+
+5. Jakie znaki występują w zapisie heksadecymalnym
+0-9, no i A dla 10, B dla 11, C dla 12, D dla 13, E dla 14, F dla 15
+
+6. Jak dokonać konwersji dec2hex?
+Podobnie jak w dec2bin, obliczamy resztę z dzielenia naszej wartości przez
+16, oraz dzielimy ów wartość przez 16 i zaokrąglamy w dół, dopuki nie
+otrzymamy 0 dla liczby dzielonej, wynik zapisany w systemie
+hexadecymalnym to reszty z dzielenia, pierwszym znakiem wartości
+heksadecymalnej jest ostatnia reszta, drugim, przed ostatnia, itd.
+
+7. Czym jest tablica ASCII
+Jest to tablica która opisuje wartości różnych znaków w systemie decymalnym
+
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 4+5.pdf (opracowanie wykładów z 2024)
+
+Temat: Sortowanie liczb
+
+# Notacja dużego O
+Asymptota - prosta która, coraz to bardziej zbliża się do pewnego elementu, lecz
+nigdy nie osiąga tej wartości
+Notacja dużego O jest sposobem dokumentowania szybkości działania
+algorytmów.
+Notacja dużego O nie wyraża czasu działania w sekundach, ale pokazuje tempo
+wzrostu operacji w zależności od liczności danych wejściowych (np. liczb do sortowania) (Jest asymptotyczna)
+
+Notacja dużego O pokazuje czas pesymistyczny, czyli najgorszy z możliwych
+Notacja dużego O != średni czas działania algorytmu
+- O(1) - Czas stały, np. odczyt całej tablicy
+- O(log n) - Czas logarytmiczny, np. wyszukiwanie binarne
+- O(n) - Czas liniowy, np. wyszukiwanie proste
+- O(n*log n) - np. sortowanie szybkie
+- O(n*n) - np. sortowanie przez wybór
+- O(n!) - np. algorytm rozwiązujące problem komiwojażera
+
+# Kiedy będziemy potrzebować sortowania liczb?
+
+# Sortowanie
+
+Def. sortować - układać coś w określonym porządku
+Def. sortowanie - informatyka - zadanie polegające na uporządkowanie
+elementów pewnego ciągu (np. zapisanych w tablicy), wg wartości klucza (np. s.
+liczb w porządku rosnącym albo s. rekordów opisujących osoby w kolejności ich
+nazwisk lub dat urodzenia)
+Na potrzeby naszych wykładów, będziemy sortować liczby naturalne
+przechowywane w tablicy.
+Sortowanie analogiczne można wykonać na napisów, dat itp.
+Sortowanie ułatwia późniejsze przeszukiwanie zbioru.
+W ramach wykładu przedstawione zostanie 5 różnych algorytmów
+
+# Sortowanie bąbelkowe
+Zasada sortowania bąbelkowego jest następująca: porównujemy dwie sąsiednie
+liczby i jeśli ich porządek jest niewłaściwy, zamieniamy je miejscami
+Sortowanie kończy się, gdy podczas kolejnego przejścia, nie dokonano żadnej
+zmiany.
+
+# Sortowanie bąbelkowe - kod
+for (int i = 0; i < y; i++)
+{
+    for(int j = 0; j < y; j++)
+    {
+        if(tabx[j] > tabx[j+1])
+        {
+            int x = tabx[j];
+            tabx[j] = tabx[j+1];
+            tabx[j+1] = x;
+        }
+    }
+}
+
+# Po co sortować liczby, kiedy możemy posortować STUDENTÓW?
+1. Pobierz n liczb do tabeli d;
+2. Dla j  1 ,2 ,.. ,n-1 wykonaj:
+    a. Dla i=1 ,.. ,n-1  jeśli d[i] < d[i-1], to zamień elementy miejscami;
+3. Posortowane liczby są w tabeli d.
+
+# Sortowanie bąbelkowe - ulepszanie
+
+Przedstawiony algorytm jest wolnym algorytmem, przez co będzie bezużyteczny
+dla dużych zbiorów danych. Można go jednak trochę przyspieszyć
+1. Ograniczenie liczby porównań - zamiast ‘przeglądaćʼ w każdym przejściu
+przez pętle całą tablicę, można przeglądać tylko do n-1, n-2, n-3 itp.
+2. Dodanie zmiennej (najlepiej typu bool) - jeśli w pojedynczym przejściu przez
+pętle nie będzie żadnego przestawienia, tablica jest już posortowana →
+można kończyć
+
+void bubblesort(int * tab, int size)
+{
+    Algorytmy 4  5 *4for (int = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - 1; j++)
+        {
+            if (tab[j] > tab[j + 1])
+            {
+                swap(tab[j], tab[j + 1]);
+            }
+        }
+    }
+}
+
+# Sortowanie przez wstawianie
+
+Jest to jeden z najstarszych algorytmów i każdy może go stosować np. podczas
+gry w karty! Mamy dwa przedziały - uporządkowany i nieuporządkowany.
+Bierzemy kolejne liczby ze zbioru nieuporządkowanego i wstawiamy w
+odpowiednie miejsce w zbiorze uporządkowanym.
+
+# Posortujemy Studentów algorytmem sortowania przez
+wstawianie.
+1. Dla i  1, 2, .., n-1  wykonaj:
+    a. tmp = d[i]; j = i 1
+    b. Dopóki (j >= 0) oraz (tmp <= d[j]) wykonaj:
+        i. d[j+1] = d[j]; j--;
+    c. d[j + 1] = tmp
+2. Posortowane liczby są w tabeli d.
+
+# Sortowanie przez wstawianie - moje wyjaśnienie
+
+1. Dla i = 2, 3, .., n-1  wykonaj: (zaczynamy od drugiego elementu tablicy, tutaj
+od 2, w faktycznej tablicy od 1, gdyż pierwszy element to 0)
+    a. tmp = d[i]; j = i 1
+    b. Dopóki (j > 0) oraz (tmp <= d[j]) wykonaj:
+        i. d[j+1] = d[j];
+        ii. j--;
+    c. d[j+1] = tmp
+3. Posortowane liczby są w tabeli d.
+
+int y = (sizeof(tabx)/sizeof(tabx[0]));
+for(int i = 1; i < y ;i++)
+{
+    int temp = tabx[i];
+    int j = i - 1;
+    while(j>=0 && temp < tabx[j])
+    {
+        tabx[j+1] = tabx[j];
+        j--;
+    }
+    tabx[j+1] = temp;
+}
+
+# Sortowanie przez wybór
+
+Kolejny z prostych algorytmów sortowania. Polega na przeszukiwaniu
+nieuporządkowanej części tablicy (od pierwszego elementu) i wybieraniu zawsze
+najmniejszego (lub największego) elementu. Po przejrzeniu tablicy do końca,
+zamienia się znaleziony element z aktualnie analizowanym
+
+Posortujemy Studentów algorytmem sortowania przez wybór.
+1. Dla i = 0, 1..., n-1: wykonaj:
+    a. index = i
+    b. Dla j = i,..., n-1: wykonaj:
+        i. Jeśli d[j] < d[index], index = j
+    c. Zamien elementy o indeksach index oraz i
+2. Posortowane liczby sa w tabeli d
+
+# Sortowanie przez wybór - moje wyjaśnienie
+
+1. Dla i = 0, 1..., n-1: wykonaj:
+    a. index = i
+    b. Dla j = i+1,..., n-1: wykonaj:
+        i. Jeśli d[j] < d[index], index = j
+    c. Zamien elementy o indeksach index oraz i
+2. Posortowane liczby sa w tabeli d
+
+for(int i = 0;i<y-1;i++)
+{
+    int index = i;
+    for(int j = i+1 ;j<y ;j++)
+    {
+        if(tabx[j] < tabx[index])
+        {
+            index = j;
+        }
+    }
+    int x = tabx[i];
+    tabx[i] = tabx[index];
+    tabx[index] = x;
+}
+
+# Analiza algorytmów
+- Teoretyczna złożoność obliczeniowa wszystkich przedstawionych algorytmów
+do tej chwili wynosi O(n^2)
+- Wszystkie algorytmy działają w miejscu
+- Algorytmy są skuteczne dla małych zbiorów lub zbiorów wstępnie
+posortowanych. Zwykle jednak nie mogą być implementowane produkcyjnie
+
+# Sortowanie szybkie
+
+- Algorytm powszechnie stosowany
+- Algorytm rekurencyjny!
+- Korzysta z techniki “dziel i zwyciężajˮ
+- Z tablicy wybiera się pivot, a następnie tablicę dzieli na elementy mniejsze od
+pivotu i większe. Algorytm uruchamia sam siebie dla poszczególnych podzbiorów. Po posortowaniu elementów łączy się.
+- Podział i zamiany elementów miejscami wykonuje się w miejscu.
+
+Istnieją różne strategie wyboru pivotu:
+- Losowy element
+- Element 0 tablicy
+- Element ostatni tablicy
+- Element środkowy tablicy
+
+Algorytm jest dobry dla dużych zbirów danych z uwagi na złożoność obliczeniową
+O(n * log n)
+
+Sortowanie szybkie może mieć dla skrajnych przypadków złożoność do O(n^2).
+Może się to wydarzyć, gdy pivot zawsze będzie największym/najmniejszym
+elementem, lecz bardzo rzadko się to zdarza.
+
+# Posortujemy Studentów algorytmem sortowania szybkiego.
+
+1. Dla tablic posiadających więcej niż jeden element wykonuj:
+    a. Wybierz pivot.
+    b. Podziel tablicę na elementy mniejsze i niemniejsze od pivotu
+    c. Posortuj rekurencyjnie tablicę mniejszych i niemniejszych
+2. Zakończ
+
+Jak to zrobić w programie!?
+- Dwie funkcje - jedna do podziału, druga wywołująca samą siebie dla
+mniejszych zbiorów
+- Rekurencja
+- Ustalenie pivota
+
+Widzieliśmy, że QuickSort wymaga sporo pracy dla sortowania niewielkich
+zbiorów (np. elementowych)
+
+Aby jeszcze bardziej go przyspieszyć można w momencie uzyskania zbioru o
+niewielkiej liczności użyć innego algorytmu (np. przez wybór)
+
+Taki zabieg pozwoli zaoszczędzić kilka wywołań (rekrurencja) i jeszcze
+przyspieszyć działanie całego algorytmu.
+
+# Sortowanie szybkie - moje wyjaśnienie
+
+1. Jeżeli tablica posiada więcej niż jeden element
+    a. Ustaw dany element w tablicy jako pivot
+    b. Podziel pierwszą połowę tablicy na elementy mniejsze od pivota i drugą na
+    niemniejsze od pivota
+    c. Posortuj rekurencyjnie pierwszą i drugą połowe tablicy
+2. Posortowane wartości znajdują się w oryginalnej tablicy
+
+int y = (sizeof(tabx)/sizeof(tabx[0]));
+quicksort(tabx,0,y-1);
+int rozdziel(int tabx[], int low, int high)
+{
+    int pivot = tabx[high];
+    int i = low - 1;
+    for(int j = low; j<=high-1;j++)
+    {
+        if(tabx[j]<pivot)
+        {
+            i++;
+            int x = tabx[i];
+            tabx[i] = tabx[j];
+            tabx[j] = x;
+        }
+    }
+    int x = tabx[high];
+    tabx[high] = tabx[i+1];
+    tabx[i+1] = x;
+    return i + 1;
+}
+void quicksort(int tabx[], int low, int high)
+{
+    if(linijki>=1)
+    {
+        if(low<high)
+        {
+            int rozdz = rozdziel(tabx,low,high);
+            quicksort(tabx,low,rozdz-1);
+            quicksort(tabx,rozdz+1,high);
+        }
+    }
+}
+
+# Sortowanie przez scalanie (MergeSort)
+
+Algorytm rekurencyjny!
+Korzysta z techniki “dziel i zwyciężajˮ
+Od algorytmu QuickSort różni się momentem sortowania (w Quicksort przy
+pivocie dzieliliśmy na mniejsze i większe, tu sortujemy w momencie scalania)
+Tablicę zawsze dzieli się na pół aż do uzyskania 1-elementowych zbiorów. W
+czasie ich scalania następuje sortowanie
+
+# Posortujemy Studentów algorytmem sortowania przez scalanie.
+1. Podziel zbiór danych na dwie możliwie równe części
+2. Posortuj przez scalanie każdy ze zbiorów, chyba że został już tylko jeden
+element
+3. Połącz posortowane zbiory A i B zgodnie z procedurą scalania
+    a. Ustaw wartowników: a dla zbioru A, b dla zbioru B
+    b. Jeśli zbiór A jest wyczerpany, wstaw pozostałe elementy z B i zakończ;
+    c. Jeśli zbiór B jest wyczerpany, wstaw pozostałe elementy z A i zakończ;
+    d. Jeśli A[a]  B[b], wstaw A[a] do zbioru wynikowego, zwiększ a;
+    e. Jeśli A[a]  B[b], wstaw B[b] do zbioru wynikowego, zwiększ b,
+    f. Powtarzaj kroki b → e aż wszystkie elementy trafią do zbioru wynikowego.
+
+Taka sama notacja dużego O jak quicksort
+Jak to zrobić w programie!?
+- Dwie funkcje - jedna do scalania, druga wywołująca samą siebie dla
+- mniejszych zbiorów
+- Rekurencja
+- Ustalenie pivota
+
+# Sortowanie przez scalenie - moje wyjaśnienie
+1. Wyznacz pivot (element środkowy) i podziel zbiór na dwie możliwie równe
+części
+2. Wstaw elementy z głównej tablicy do nowo powstałej tablicy elementów
+mniejszych, i tablicy elementów większych od pivotu
+3. Sortuj przez scalanie, aż element środkowy będzie równy 0 (nie można
+wybrać kolejnego pivotu)
+4. Złącz wszystkie posorotwane zbiory ze sobą zgodnie z:
+    a. Ustal rozmiar podzbiorów, jeden dla lewego, jeden dla prawego
+    b. Dopóki oba podzbiory nie są wyczerpane w tej samej chwili, oba indeksy
+    tablic wynosza zero:
+        i. Jeżeli zbiór prawy jest większy lub równy od lewego, dodaj obecny
+        element do głównej tablicy, i inkrementuj indeks
+        ii. W innym przyadpku, dodaj obecny element zbioru lewego do głównej
+        tablicy, inkrementuj indeks
+    c. Jeżeli jeden z zbiorów jest wyczerpany:
+        i. Gdy podzbiór lewy nie jest wyczerpany, dodawaj kolejne elementy
+        tego podzbioru do głównej tablicy
+        ii. Gdy podzbiór prawy nie jest wyczerpany, dodawaj kolejne elementy
+        tego podzbioru do głównej tablicy
+    d. Powtarzaj powyższe kroki, aż wszystkie elementy trafią do zbioru
+    głównego
+
+Tutaj pivotem jest zawsze środkowy element
+
+int y = (sizeof(tabx)/sizeof(tabx[0]));
+void zlacz(int tabx[], int lewo, int srodek, int prawo)
+{
+    int nt1 = srodek - lewo + 1;
+    int nt2 = prawo - srodek;
+    int tablewo[nt1],tabprawo[nt2];
+    for(int i = 0; i <nt1;i++)
+    {
+        tablewo[i] = tabx[lewo+i];
+    }
+    for(int j = 0; j <nt2;j++)
+    {
+        tabprawo[j] = tabx[srodek+1+j];
+    }
+    int i = 0;
+    int j = 0;
+    int k = lewo;
+    while(i<nt1 && j<nt2)
+    {
+        if(tablewo[i]<=tabprawo[j])
+        {
+            tabx[k] = tablewo[i];
+            i++;
+        }
+        else
+        {
+            tabx[k] = tabprawo[j];
+            j++;
+        }
+        k++;
+    }
+    while(i<nt1)
+    {
+        tabx[k] = tablewo[i];
+        i++;
+        k++;
+    }
+    while(j<nt2)
+    {
+        tabx[k] = tabprawo[j];
+        j++;
+        k++;
+    }
+}
+void mergesort(int tabx[], int lewo, int prawo)
+{
+    if (lewo >= prawo)
+    {
+        return;
+    }
+    else
+    {
+        int srodek = lewo + (prawo - lewo)/2;
+        mergesort(tabx,lewo,srodek);
+        mergesort(tabx,srodek+1,prawo);
+        zlacz(tabx,lewo,srodek,prawo);
+    }
+}
+mergesort(tabx,0,y-1);
+
+Algorytm jest dobry dla dużych zbiorów danych z uwagi na złożoność
+obliczeniową O(n * log n)
+Można również zastosować hybrydę i dzielić do momentu osiągnięcia
+niewielkiego zbioru (np. 3 elementowego), a uzyskane niewielkie zbiory sortować
+innym, prostszym algorytmem.
+
+# Pytania kontrolne
+
+1. Na czym polega notacja dużego O?
+Notacja dużego O to sposób na wyrażenie złożoności czasowej danego
+algorytmu, nie jest ona wyrażana poprzez średni czas, tylko poprzez tępo
+wzrostu złożoności w zależności od ilości danych wejściowych
+
+2. Jaka jest podstawowa idea sortowania bąbelkowego?
+Polega na porównaniu dwóch sąsiednich wartości w zbiorze, jeżeli ich
+kolejność nie jest odpowiednia, dochodzi do zamiany ich indeksów
+
+3. Jakie dwie modyfikacje można wprowadzić, aby przyspieszyć sortowanie
+bąbelkowe?
+Pierwszym sposobem, jest dodanie wartości bool, która będzie sprawdzała
+czy w ostatniej pętli doszło do jakichkolwiek zmian, jeżeli nie; zakończy
+Algorytmy 4  5 *16działanie algorytmu. Drugim sposobem jest skracanie ilości przejść przez
+zbiór o 1, po każdym przejściu, ponieważ nie musimy sprawdzać czy liczby już
+posortowane, znajdują się w odpowiednim miejscu
+
+4. Jaka jest podstawowa idea sortowania przez wstawianie?
+Wybieramy co kolejne liczby w zbiorze, i szuka jego miejsca pomiędzy
+posortowanymi wartościami, po czym wstawia je w odpowiednie miejsce,
+zgodne z założeniami sortowania
+
+5. Jaka jest podstawowa idea sortowania przez wybór?
+Przechodzimy przez całą tablice i szuakmy elementu
+największego/najmniejszego, po czym wstawiamy je w odpowiednie miejsce,
+zgodnie z założeniami algorytmu
+
+6. Jakie złożoności obliczeniowe mają poznane algorytmy?
+- Sortowanie bąbelkowe – złożoność obliczeniowa O(n²)
+- Sortowanie przez wstawianie – złożoność obliczeniowa O(n²)
+- Sortowanie przez wybór – złożoność obliczeniowa O(n²)
+- Sortowanie szybkie (QuickSort) – średnia i najlepsza złożoność O(n·log n), w pesymistycznym przypadku O(n²)
+- Sortowanie przez scalanie (MergeSort) – złożoność obliczeniowa O(n·log n)
+Wszystkie algorytmy o złożoności O(n²) są przeznaczone głównie do małych zbiorów danych, natomiast algorytmy o złożoności O(n·log n) są efektywne dla dużych zbiorów danych.
+
+7. Jaka jest podstawowa idea sortowania szybkiego?
+Algorytm korzysta z zasady ‘dziel i zwyciężajʼ, wybieramy pivot, po czym
+dzielimy tablicę na elementy mniejsze i większe od pivotu, ten proces jest
+rekurencyjny, wykonywany aż wszystkie liczby znajdą się w odpowiednim
+miejscu, do sortowania dochodzi podczas rozdzielania na elementy mniejsze i
+większe od pivotu
+
+8. Jaka jest podstawowa idea sortowania przez scalanie
+Podobnie do QuickSort, używana jest metoda ‘dziel i zwyciężajʼ, lecz tutaj cała
+tablica jest dzielona na pół rekurencyjnie, aż do otrzymania samych zbiorów
+jednoelementowych, do sortowania dochodzi w chwili scalania
+jednoelementowych zbiorów do utworzenia zbioru posortowanego
+
+9. Jak przyspieszyć QuickSort i MergeSort?
+Możemy to zrobić, poprzez upewnienie się że pivot nigdy nie jest,
+największą/najmniejszą wartością w zbiorze, w zależności od założeń
+algorytmu, jednym z sposobów na to może być obliczenie mediany kilku
+wartości
+
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 6.pdf (opracowanie wykładów z 2024)
+
+Temat: Wizualizacja złożoności obliczeniowych różnych
+algorytmów sortowania
+
+Wyszukiwanie - definicja
+1. Odnajdować kogoś lub coś;
+2. Wyszukiwać się - znajdować siebie nawzajem; trafić na siebie.November 12, 2024 220 PM
+
+W informatyce wyszukiwanie oznacza znalezienie pozycji elementu w zbiorze lub
+zwrócenie informacji, że zbiór nie zawiera danego elementu
+Wyszukiwanie będzie odpowiadało na pytanie: w którym miejscu przechowuję
+element, e o ile w ogóle go mam?
+
+# Wyszukiwanie liniowe
+
+Wyszukiwanie liniowe polega na przeszukaniu zbioru elementów (np. tablicy lub
+listy) jeden po drugim, od pierwszego do ostatniego. Algorytm porównuje każdy
+element ze wskazaną wartością do momentu jej znalezienia lub zakończenia
+przeszukiwania całego zbioru. Jeśli nie uda się znaleźć elementu, algorytm
+informuje, że szukany element nie występuje w zadanym zbiorze. Zbiór może,
+lecz nie musi być posortowany
+
+# Pseudokod
+1. Dla elementów 0, …, n-1 wykonaj:
+    a. Jeśli element jest równy poszukiwanej wartości, zwróć jego indeks i
+    zakończ w przeciwnym wypadku przeglądaj dalej.
+2. Zwróć informację “element nie występujeˮ
+
+# Wyszukiwanie liniowe - kod
+int linearSearch(int *tab, int size, int searched)
+{
+    for(int = 0; i < size; i++)
+    {
+        if(tab[i] == searched) return 1;
+    }
+}
+
+# Wyszukiwanie binarne
+- Zakłada zbiór posortowany
+- Technika “dziel i zwyciężajˮ
+- Zawsze dzielimy zbiór na pół i szukamy rekurencyjnie w odpowiednim
+podzbiorze
+1. Jeśli w przeszukiwanym zbiorze nie ma elementów, zwróć: “element e nie
+występujeˮ;
+2. Oblicz indeks środkowego elementu - idx;
+3. Jeśli e == tab[idx], zwróć “element e występuje na pozycji idxˮ i zakończ;
+4. Jeśli e < tab[idx], uruchom wyszukiwanie dla lewej części zbioru;
+5. W przeciwnym wypadku uruchom wyszukiwanie dla prawej części zbioru
+
+# Wyszukiwanie binarne (Rekurencyjne) - kod
+int binarySearch(int lista[], double szukana, int L, int P)
+{
+    int idx = (L + P) / 2;
+    if(lista[sr] == szukana)
+    {
+        return idx;
+    }
+    if(L >= P)
+    {
+        return -1;
+    }
+    if(lista[idx] > szukana)
+    {
+        return binarySearch(lista, szukana, L, idx - 1);
+    }
+    return binarySearch(lista, szukana, idx + 1, P);
+}
+int search(int lista[], int n, double szukana)
+{
+    return binarySearch(lista, szukana, 0, n-1);
+}
+
+# Algorytmy wyszukiwania - analiza
+Wyszukiwanie liniowe ma złożoność O(n), stąd nie sprawdzi się dla większych
+zbiorów
+Jeśli zaczniemy szukać elementu występującego na ostatniej pozycji w zbiorze,
+musimy wszystkie elementy przejrzeć.
+Wyszukiwanie binarne ma złożoność O(log n)
+
+# Selekcja - co to takiego?
+
+# Selekcja - definicja
+Z def.: dobór osób lub rzeczy przez eliminację tych, które, nie spełniają
+określonych warunków
+W informatyce jednak selekcja oznacza wybór k-tego
+największego/najmniejszego elementu w zbiorze
+
+# Selekcja - podejście naiwne
+Zbiór posortowany  Sortuj zbiór  Weź k-ty element
+Sortujemy całą tablicę! Może da się szybciej?
+
+# Algorytm Hoareʼa
+- Brytyjczyk Sir Tony Hoare, zaproponował go w 1961 roku
+- Korzysta z założeń algorytmu Quicksort
+- Inna nazwa: Quickselect
+
+# Pseudokod
+k to indeks pomiędzy 0 a wartością (n-1), k zwraca k najmniejszy element
+startując od początku (tak że jest od tej wartości k-1 mniejszych wartości w
+zbiorze)
+1. Jeśli szukasz 1. elementu w zbiorze jednoelementowym, zwróć ten element i
+zakończ
+2. Wybierz losową liczbę ze zbioru - pivot
+3. Podziel zbiór na dwa zbioru względem pivotu: na elementy mniejsze lub
+równe (zbiór A) oraz elementy większe od niego (zbiór B)
+4. Jeśli |A| >= k, wykonaj rekurencyjnego algorytmu dla zbioru A i elementu k, aż
+pivot będzie elementem k
+5. W przeciwnym wypadku rekurencyjnie szukaj w zbiorze B elementu k - |A|, aż
+pivot będzie elementem k
+|A| oznacza moc zbioru (liczba elementów w zbiorze) (NIE WARTOŚĆ
+BEZWZGLĘDNA!!)
+
+# Algorytm Hoareʼa - analiza
+Algorytm wykorzystuje podobny mechanizm, jaki znamy z algorytmu
+Quicksort, jednak tu rekurencję “uruchamianyˮ tylko na jedną stronę pivota.
+Użycie tego mechanizmu sprawia, że złożoność jest zależna od wyboru pivota
+Jeśli zawsze wybierzemy element największy, to złożoność wynosi O(n^2)
+Zwykle jednak złożoność wynosi O(n)
+Algorytm działa w miejscu
+
+# Algorytm Hoareʼa - kod programu
+- Zapamiętujemy wart. pivota jako v;
+- Zaczynamy z wartością i = start (czyli 0, wartość o 1 za mała bo tam mamy
+pivot) oraz end o 1 za dużą - dzięki temu pętle while mogą dobrze działać
+- W pętlach najpierw sprawdzamy wyjście poza zakres, potem modyfikujemy
+indeks(i oraz end), dopiero potem porównujemy z v (pivotem)
+- Po dwóch pętlach while mamy w i pozycję pierwszego elementu większego
+od pivota v oraz w end pozycję pierwszego od końca elementu większego od
+pivota v;
+- Jeśli i oraz end się nie “przeciełyˮ, czyli porządek jest zaburzony →
+wykonujemy zamianę;
+- Po zewnętrznej pętli end to właściwy indeks pivota. Liczba zajmująca to
+miejsce trafia na początek (swap z pivotem)
+
+void swap(int *a, int *b)
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+int partition(int T[], int n)
+{
+    int L = 0;
+    int R = n - 1;
+    while(L < R)
+    {
+        if(T[L+1]<=T[L])
+        {
+            swap(&T[L], &T[L+1]);
+            L++;
+        }
+        else if(T[R]>T[L])
+        {
+            R--;
+        }
+        else
+        {
+            swap(&T[R],&T[L+1]);
+        }
+    }
+    return L;
+}
+int qs(int T[], int n, int k)
+{
+    int p = partition(T, n);
+    if (k==p)
+    {
+        return T[p];
+    }
+    else if(k<p)
+    {
+        return qs(T, p, k);
+    }
+    else
+    {
+        return qs(T+p+1, n-(p+1), k-(p+1));
+    }
+}
+
+# WAŻNE: NA ZALICZENIU NIE BĘDZIE PYTAŃ TYPU, ZAPISZ FRAGMENT KODU, LECZ
+BĘDĄ PYTANIA O PRZEANALIZOWANIU FRAGMENTU KODU
+
+Algorytm magicznych piątek
+- Zaproponowany w 1974 r. przez zespół informatyków (Blum, Floyd, Pratt, Rivest i Tarjan)
+- Nazywany algorytmem mediany* median lub BFPRT, chociaż jego pierwotna
+nazwa (z artykułu) to PICK
+- Poprawka względem algorytmu Hoareʼa polega na lepszym (nielosowym)
+wyborze pivota
+
+*Mediana, wartość środkowa - wartość cechy w szeregu uporządkowanym,
+powyżej i poniżej której znajduje się jednakowa liczba obserwacji. Dla zbioru 2-
+elementowego będzie to średnia elementów.
+
+# Algorytm magicznych piątek poszukiwania k-ego elementu
+1. Jeśli zbiór ma mniej niż 5 elementów, posortuj częściowo i zwróć k-ty
+element;
+2. Znajdź mediany dla piątek (sortowanie częściowe i zwrócenie 3-ego
+elementu) i niepełnych piątek;
+3. Wykonaj cały algorytm rekurencyjnie dla zbioru median i poszukiwań
+środkowego elementu - wynik tego działania staje się medianą median MM,
+mediana median staje się pivotem;
+4. Podziel zbiór względem MM na elementy mniejsze, równe i większe. W
+zależności od liczności tych zbiorów wywołaj rekurencyjnie modyfikując k.
+
+# Algorytm magicznych piątek - analiza
+- Algorytm nie działa w miejscu - wymaga dodatkowej pamięci na
+przechowywanie median
+- Złożoność tego algorytmu (nawet w pesymistycznej wersji) jest liniowa  O(n)
+- Dlaczego piątki?
+    * Trójki - mała reprezentatywność środkowych elementów - może
+prowadzić do zwiększenia złożoności
+    * Siódemki - za dużo obliczeń potrzebnych do liczenia median
+
+# Gdzie możemy zastosować algorytm wyszukiwania i
+selekcji?
+- SELEKCJA:
+    * Wybór mediany
+    * Podział danych na przedziały (dolny, średni i górny)
+    * Filtrowanie danych
+- WYSZUKIWANIE:
+    * Przeszukiwanie baz danych
+    * Wyszukiwanie plików
+
+# Pytania kontrolne
+
+1. Na czym polega różnica między problemem selekcji i wyszukiwania?
+Wyszukiwanie to znalezienie pozycji elementu o danej wartości, selekcja to
+znalezienie elementu kʼtego, np. k najmniejszy element w zbiorze
+
+2. Jak realizuje się algorytm wyszukiwania liniowego
+Algorytm ten polega na przeszukaniu całego zbioru, element po elemencie,
+porównując podczas każdego kroku wartość elementu do wyszukiwanej
+wartości
+
+3. Jak realizuje się algorytm wyszukiwania binarnego?
+Algorytm ten zakłada zbiór z góry posortowany, wykorzystuje zasadę ‘dziel i
+zwyciężajʼ, zbiór zawsze dzielimy na pół, i szukamy rekurencyjnie w
+odpowiednim podzbiorze
+
+4. Zasada znana z jakiego innego algorytmu jest stosowana w algorytmie
+Hoareʼa
+QuickSort, dokładniej to zasada wybrania pivotu, do podzielenia zbioru na
+elementy od niego mniejsze i większe
+
+5. Jak realizuje się selekcję za pomocą algorytmu Hoareʼa
+Rekurencyjnie wybieramy pivot i dzielimy zbiór na elementy większe i
+mniejszę od pivotu, rekurencja jest skończona gdy pozycja pivotu będzie
+równa k
+
+6. Jakie zmiany wprowadza algorytm magicznych piątek?
+Zamiast losowego pivotu, dzielimy nasz zbiór na możliwie 5 elementowe
+podzbiory, i wyliczamy mediane median ów podzbiorów, ta wartość staje się
+naszym pivotem
+
+7. Dlaczego zbiory dzielimy na piątki, a nie trójki, siódemki etc.?
+Ponieważ podzbiory 3 elementowe mają zbyt mała reprezentatywność, co
+może prowadzić do zwiększenia złożoności. Podzbiory 7 elementowe zwykle
+wymagają zbyt dużo obliczeń do obliczenia median
+
+8. Jakie złożoności mają poznane na wykładzie algorytmy?
+- Wyszukiwanie liniowe – O(n)
+- Wyszukiwanie binarne – O(log n)
+- Selekcja naiwna (sortowanie + wybór) – O(n log n)
+- Algorytm Hoare’a (Quickselect)
+    * średnio: O(n)
+    * pesymistycznie: O(n²)
+- Algorytm magicznych piątek (BFPRT) – O(n)
+
+9. Gdzie można zastosować przedstawione algorytmy wyszukiwania i selekcji?
+Przykładowo, algorytmy selekcji możemy wykorzystać do filtrowania danych,
+a algorytmy wyszukiwania do przeszukiwania baz danych
+
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 7+8.pdf (opracowanie wykładów z 2024)
+
+Temat: Struktura danych
+
+# Biblioteka STL
+1. Biblioteka STL Standard Template Library jest niezwykle pomocnym
+rozszerzeniem języka Cpp
+2. Zawiera wybrane algorytmy i struktury danych udostępnione w postaci
+szablonów (kod tworzony bez uwzględnienia typów danych)November 19, 2024 216 PM
+#include <vector>
+#include <list>
+#include <stack>
+#include <queue>
+Na labach samemu implementujemy struktury danych, w celu lepszego
+zapoznania się z materiałem
+struct - Zgrupowanie ze sobą powiązanych ze sobą informacji, mogą być różnego
+typu
+wskaźniki - Zmienna przechowująca adres pamięci danego elementu
+
+# 1. Czym jest struktura danych?
+
+Podstawowe definicje:
+W informatyce struktura danych to organizacja, sposób zarządzania i format
+przechowywania danych
+
+Struktury danych - podział
+Struktura danych może być rozumiana jako pojemnik do przechowywania i
+organizowania danych. Określa sposób uporządkowania danych na komputerze w
+taki sposób, aby można było efektywnie uzyskiwać do nich dostęp i aktualizować
+je
+Przykładowo:
+- Liniowe:
+    * Statyczne
+        > Tablica
+    * Dynamiczne
+        > Lista
+        > Stos
+        > Kolejka
+- Nieliniowe:
+    * Graf
+    * Drzewo
+Oraz:
+- Homogeniczne:
+    * Tablica
+    * Lista
+- Niehomogeniczne:
+    * Stos
+    * Unia
+    * Struktura
+
+# Struktura
+Struktura != struktura danych
+Jest to niehomogeniczna struktura danych
+To typ danych, który pozwala definiować własne typy danych składających się z
+różnych zmiennych (pól)
+Służy do organizowania danych w bardziej przejrzysty sposób.
+Wprowadza się ją za pomocą słowa kluczowego struct
+Pozwala porządkować przechowywane dane, więc wpisuje się w definicję SD
+Z czasem struktury przerodziły się w bardziej zaawansowaną koncepcję
+(dostępną już w Cpp) - KLASY $ więcej o klasach na programowaniu obiektowym
+(III sem.)
+
+# Struktura - kod w CPP
+struct Node{
+    std::string data;
+    Node* next;//
+    Node* prev;
+};
+Node* newNode = new Node();
+rear->next = newNode
+newNode->data = "dane"
+newNode->prev = rear;
+
+# Tablica
+Podstawowa i pierwsza struktura danych
+Umożliwia swobodny dostęp do elementów (za pomocą indeksów)
+Elementy są tworzone w pamięci w sposób ciągły
+Umożliwia przechowywanie elementów jednego typu (prostego np. int lub
+złożonego np. struktury)
+W C/Cpp numerowanie indeksów rozpoczyna się od 0
+String jest tablicą znaków
+Możliwe jest stworzenie tablicy wielowymiarowych, wtedy są zapisywane w
+pamięci wierszami
+
+# 2. Dlaczego tablica nie jest zawsze najlepszym
+wyborem podczas tworzenia oprogramowania
+
+## Tablica
+Zalety:
+Upraszcza strukturę programu (zamiast zmiennych t0,t1…,tn mamy tablica[n])
+Korzysta z mechanizmu indeksowania (łatwy dostęp do zmiennych)
+Wady:
+Konieczność rezerwacji pewnego stałego obszaru pamięci
+Zmiana wielkości tablicy jest kłopotliwa
+Możliwe przekroczenie zakresu tablicy
+
+## Lista
+Umożliwia przechowywanie jednego typu elementów
+Elementy nie znajdują się w jednym bloku pamięci
+Dostęp do elementów jest sekwencyjny ⟶ dojście do i-tego elementu wymaga
+przejścia od pierwszego, przez wszystkie pośrednie aż do docelowego elementu
+Zwykle oprócz danych, obecny element kolejki będzie przechowywał wskaźnik:
+- na element następny (lista jednokierunkowa)
+- na element następny i poprzedni (lista dwukierunkowa)
+Oprócz elementów listy należy zapamiętać wskaźnik na głowę (pierwszy element
+listy)
+Opcjonalnie można zapamiętać też ogon (ostatni element listy) oraz liczbę
+elementów
+
+## Lista - dodawanie elementów
+(Połączenia elementów między listami to wskaźniki)
+Aby dodać element:
+- Tworzymy nowy element (węzeł) i uzupełniamy go danymi
+- Ustawiamy wskaźniki nowego węzł
+- Dla dodawania na początek/koniec:
+    * Modyfikujemy wskaźnik ostatniego lub pierwszego elementu
+    * Modyfikujemy wskaźniki na początek i koniec (head/tail)
+- Dla dodawania w środku:
+    * Modyfikujemy wskaźniki elementów sąsiadujących z nowym
+Aby usunąć element:
+- Zmieniamy wskaźniki elementów sąsiadujących, tak by wskazywały jeden na
+drugi
+- Usuwamy element pomiędzy ów elementami
+WAŻNE: ZAPAMIĘTAĆ NA KOLOKWIUM JAK DODAWAĆ ELEMENTY DO LISTY!!!!!
+
+## Lista - dodanie elementu skrajnego
+Dodawanie elementu pierwszego:
+- Tworzymy nowy element, łączymy go z dawnym pierwszym elementem
+- Po połączeniu go, zwiększamy indeksy wszystkich elementów w tablicy o 1,
+zmieniamy indeks nowego elementu na 0
+Dodawanie elementu ostatniego:
+- Tworzymy nowy element, łączymy go z dawnym ostatnim elementem
+- Po połączeniu go, zmieniamy jego indeks na dawny ostatni indeks + 1
+
+## Lista - zastosowanie
+Przechowywanie nieuporządkowanych danych - szczególnie jeśli są często
+usuwanie, dodawane lub edytowanie
+Przechowywanie danych o dynamicznym rozmiarze - lista dynamiczna dostosuje
+rozmiar
+Implementacja innych struktur danych (drzewo, grafy)
+Obsługa GUI (listy wyboru w formularzach HTML)
+
+## Lista - implementacja w STL
+std::list
+Dynamiczny rozmiar, brak losowego dostępu (dostęp do elementów
+sekwencyjnych, za pomocą operatorów)
+Operacje:
+- empty() - zwraca true, jeśli lista jest pusta
+- size() - długość listy
+- pop_back() - usunięcie z tyłu
+- pop_front() - usunięcie z przodu
+- begin(), end() - pierwszy i ostatni element bez usuwania go
+- insert(), erase()
+
+## Kolejka
+Szczególny przypadek listy:
+- podobnie jak lista jest homogeniczna
+- łatwo zmienia rozmiar
+- jej elementy nie muszą być przechowywane blokowo w pamięci
+Cechy szczególne:
+- jest strukturą danych FIFO First In, First Out)
+- ogranicza dostęp do danych, zezwalając tylko na dodawanie elementów do
+końca listy i pobieranie ich z początku listy
+
+## Kolejka (z priorytetem)
+Oprócz danych zawiera informację o ważności elementu (priorytet)
+Elementy są dodawane do końca, ale jeśli mają wyższy priorytet niż te w kolejce,
+“przeskakują jeˮ
+Zdejmowanie elementów odbywa się bez zmian
+std::priority_queue
+
+## Kolejka - zastosowanie
+Zarządzanie zadaniami i wątkami w systemach operacyjnych
+Kolejki zadań w aplikacjach np. systemy rezerwacyjne
+Kolejka drukowania
+Routing pakietów w sieci
+Obsługa klientów
+
+## Kolejka - implementacja w STL
+std::queue
+Dynamiczny rozmiar, struktura FIFO
+Operacje:
+- push() - dodanie elementu na koniec kolejki
+- pop() - usunięcie elementu z początku kolejki
+- front() - pobranie pierwszego elementu bez usuwania go
+- back() - pobranie ostatniego elementu bez usuwania go
+- empty() - zwraca true, jeśli kolejka jest pusta
+- size() - zwraca rozmiar kolejki
+Brak losowego dostępu oraz indeksów
+
+## Stos
+Szczególny przypadek listy:
+- podobnie jak lista jest homogeniczny,
+- łatwo zmienia rozmiar,
+- jego elementy nie muszą być przechowywane blokowo w pamięci.
+Cechy szczególne:
+- jest strukturą danych LIFO (Last In, First Out)
+- ogranicza dostęp do danych, zezwalając tylko na dodawanie i usuwanie
+elementów z jednego końca listy (szczytu stosu)
+Stos - operacje
+1. Dodawanie elementu (push)
+    a. Stworzenie nowego elementu
+    b. Ustawianie wskaźnika na dotychczasowy wierzchołek
+    c. Modyfikacja wskaźnika na wierzchołek
+2. Zliczanie elementów (dla niepustego stosu)
+    a. Rozpocznij od top
+    b. Licznik = 1
+    c. Dopóki bottom nie wskazuje NULL
+        i. Zwiększ licznik i przejdź pod adres bottom
+3. Usuwanie elementów (pop)
+    a. Ustawienie wskaźnika top na bottom dotychczasowego wierzchołka
+    b. Usunięcie dotychczasowego wierzchołka (delete node)
+
+# 3. Gdzie możemy spotkać stos?
+Rekurencja może przepełnić stos!!
+
+## Stos - zastosowanie
+- Stos wywołań
+- Odwrotna Notacja Polska
+- Ctrl+Z  stos jest wykorzystywany
+
+## Stos - implementacja w STL
+std:stack
+Dynamiczny rozmiar, struktura LIFO
+Operacje:
+- push() - odłożenie elementu na stosie
+- pop()
+- top()
+- empty()
+- size()
+Brak losowego dostępu do indeksów - bezpośredni dostęp tylko do wierzchołka
+stosu (top())
+
+# Czym jest odwrotna notacja polska
+ONP - RPN - reverse Polish notation
+Notacja postfiksowa (operator znajduje się po operandach)
+Opracował ją Charles Leonard Hamblin podstawie notacji polskiej (prefiksowej)
+zaproponowanej przez Jana Łukasiewicza
+
+# ONP - algorytm konwersji na ONP
+1. Stwórz pusty stos operatorów
+2. Dla każdego elementu z wyjścia:
+    a. Jeśli element jest liczba: podłóż ten element na wyjście
+    b. Jeśli elementem jest ( : połóż go na stos operatorów
+    c. Jeśli elementem jest ) : przesuwaj operatory ze stosu na wyjście, dopóki
+    na szczycie stosu nie pojawi się ( ; wtedy usuń ( ze stosu
+    d. Jeśli elementem jest operator :) : dopóki na szczycie stosu znajduje się
+    operator o priorytecie wyższym lub równym od priorytetu :), ściągaj
+    operatory ze stosu na wyjście; następnie połóż :) na stosie.
+3. Dopóki stos nie jest pusty, ściągaj operatory ze stosu na wyjście
+
+Zadanie 1. Przedstawić za pomocą ONP Jeżeli na zaliczeniu pojawi się takie
+zadanie, interesuje ją tylko przedstawienie, a nie wynik obliczenia): (+ schemat
+blokowy)
+Zazwyczaj gwiazdka(*) to operator splotu!! Lecz tutaj jest używana jako mnożenie
+(5 - 6) * 4 - (5-2*2)
+
+# ONP - moja wersja
+Z liczby normalnej do ONP
+Dokonuj aż skończą się wartości do przeczytania:
+1. Wypisujemy normalne liczby do wyniku, od razu gdy je napotkamy
+2. Jeżeli spotykamy nawias otwierający, wpisz go do stosu
+3. Jeżeli napotkamy nawias zamykający, wypisz wszystko z stosu, aż napotkasz
+nawias otwierający
+4. Jeżeli napotykamy operator, idzie on do stosu
+    a. Jeżeli operator jest takiego samego stopnia co operator który znajduje się
+    pod nim w stosie, wypisz ten pod nim
+    b. Jeżeli operator jest niższego stopnia niż ten pod nim, wypisz cały stos aż
+    napotkasz nawias początkowy
+5. Gdy skończą nam się liczby do wypisania, wypisz stos do wyniku
+
+Obliczanie liczby ONP
+Dokonuj aż skończą się wartości do przeczytania:
+1. Jeżeli spotykamy liczbę, wypisz ją do stosu
+2. Jeżeli spotykamy operator, oznacz wartość na górze stosu jako a, a wartość
+pod nią jako b, usuń te liczby z stosu, i wprowadź wynik z a operator b na góre
+stosu
+3. Jeżeli skończyły się wartości do przeczytania, przenieś stos do wyniku
+
+# ONP - algortm obliczenia wartości
+1. Stwórz pusty stos.
+2. Dla każdego kolejnego elementu z wejścia:
+    a. Jeśli elementem jest liczba: połóż ją na stos
+    b. Jeśli elementem jest operator :) : ściągnij ze stosu prawy argument b,
+    ściągnij ze stosu lewy argument a, wykonaj obliczenie a :) b, połóż wynik
+    na stos
+3. Ściągnij ze stosu i zwróć wynik obliczenia
+
+# Drzewo
+Hierarchiczna struktura danych
+Rozrysowana przypomina drzewo
+Składa się z węzłów (dane) oraz krawędzi (hierarchia)
+Pierwszy węzeł to korzeń, który ma węzły podrzędne/dzieci (oraz jest dla nich
+węzłem nadrzędnym/rodzicem)
+Węzeł bez dzieci nazywany jest liściem
+Węzeł posiadający dzieci będzie nazywany węzłem wewnętrznym
+Ciąg węzłów połączonych krawędziami to ścieżka, w której liczba krawędzi = dł.
+ścieżki
+Poziom węzła to długość ścieżki od węzła do korzenia (korzeń na poziom 0
+Wysokość drzewa = max. poziom węzła
+Jeśli węzeł może mieć max. 2 synów, będzie to drzewo binarne B-drzewo)
+Drzewo binarne kompletne ma zapełnione węzłami wszystkie poziomy z
+wyjątkiem ostatniego, a na ostatnim poziomie węzły są zapełnione począwszy od
+lewej strony
+
+# Sterta (in. stóg, kopiec)
+Szczególny typ struktury drzewiastej
+Jest to kompletne drzewo binarne
+Choć zbiór danych w stercie nie jest uporządkowany globalnie, ma fragmenty
+lokalnie uporządkowane
+Uporządkowanie: wartość każdego z dwóch jego potomków jest nie większa od
+wartości ojca (dla sterty MAX  warunek “niemniejszyˮ dla sterty MIN
+Zastosowanie: kolejka priorytetowa, sortowanie liczb Heapsort) - zwykle tylko 2x
+wolniejsze od Quicksorta
+
+# Sterta - usuwanie elementów
+1. Usuń korzeń
+2. Zastąp go ostatnim elementem w stercie
+3. Porównaj korzeń z jego synami. Jeśli trzeba, zamień korzeń z większym z
+synów
+4. Wykonuj porównanie i zamianę aż do dołu drzewa lub znalezienia
+odpowiedniego miejsca
+
+# Binarne drzewo poszukiwań (Binary Search Tree, BST)
+Lewy potomek węzła zawiera wartość mniejszą od węzła
+Prawy potomek węzła zawiera wartość większą od węzła
+Prosty do zrozuzmienia, ale wymaga równoważenia, aby utrzymać
+efektywność (modyfikacje: AVL, d. czerwono-czarne)
+
+# Dodawanie elementu do drzewa BST:
+1. Niech korzeń będzie wierzchołkiem aktualnym
+2. Jeśli wartość nowego elementu ≤ wartość aktualnego wierzchołka, przejdź do
+lewego syna. W przeciwnym wypadku przejdź do prawego syna
+3. Powtarzaj krok 2 dopóki nie dojdziesz do liścia
+4. Wstaw nowy wierzchołek jako prawego lub lewego syna znalezionego liścia w
+zależności od ich wartości
+
+BST nie ma mechanizmu równoważenia, przez co korzystanie z niego. dla zbiorów
+posortowanych mija się z celem (tworzymy listę)
+
+# Usuwanie elementów z BST:
+1. Węzeł jest liściem - Po prostu usuń węzeł, ustawiając wskaźnik w jego rodzicu
+na NULL
+2. Węzeł ma jedno dziecko - Zastęp usuwany węzeł jego jedynym dzieckiem
+(czyli wskaźnik rodzica węzła przestaw na dziecko usuwanego węzła)
+3. Węzeł ma dwoje dzieci - znajdź następnika in-order usuwanego węzła
+(najmniejszy element w prawym poddrzewie). Skopiuj wartość następnika in-
+order do usuwanego węzła. Usuń następnik in-order, stosując powyższe
+reguły (liść lub jedno dziecko)
+Przeszukiwanie drzewa BST jest analogiczne do algorytmu binary search
+
+# Drzewo czerwono-czarne i AVL (Adelson-Velsky-Landis)
+- Wprowadzone, aby zachować balans w drzewie
+- Korzystają z mechanizmu rotacji
+- Drzewo czerwono czarne ma 2 razy mniej rotacji niż AVL!!! Ponieważ jest
+dokładne tylko do 1 stopnia!!
+
+# Zbiór
+Def.(ang. Set) Kontener, który przechowuje unikalne elementy w nieokreślonej
+kolejności
+Cechy:
+- Nie dopuszcza duplikatów (każdy element występuje tylko raz)
+- Elementy są automatycznie sortowane (w przypadku std::set)
+Operacje:
+- Dodawanie elementu
+- Usuwanie elementu
+
+# Słownik:
+Def. (ang. Map), to kontener par klucz-wartość, gdzie każdy klucz jest unikalny
+Cechy:
+- Każdy klucz jest przypisany do jednej wartości
+- Elementy są automatycznie sortowane według klucza (w przypadku std::map)
+Operacje:
+- Dodawanie elementu
+- Usuwanie elementu
+- Wyszukiwanie wartości po kluczu
+- Dostęp do wartości
+Przykład zastosowania:
+- Przechowywanie konfiguracji
+
+Wektor:
+Def. (ang. Vector) dynamiczna tablica, która może zmienić rozmiar w trakcie
+działania programu
+Cechy:
+- Elementy przechowywane są w sposób ciągły w pamięci
+- Rozmiar wektora rośnie dynamicznie, gdy jest taka potrzeba
+
+# BST vs AVL vs Drzewo Czerwono-Czarne
+Drzewo BST działa dobrze dla losowych danych, może się zdegradować do listy w
+przypadku uporządkowanych danych
+Średnio wyszukiwanie elementów w drzewie, wynosi O(log n), lecz jeżeli drzewo
+BST zostanie zdegradowane do listy, złożoność wzrasta do O(n)
+Tak samo jest ze złożonością wstawiania i usuwania, średnio wychodzi O(log n),
+lecz podstawowe drzewo BST może być zdegradowane do O(n)
+Równowaga drzewa nie istnieje w drzewie BST, lecz w drzewie AVL, różnica
+wysokości poddrzew wynosi maksymalnie 1. W Drzewie Czerwono-Czarnym, ta
+różnica może wynosić 2
+Drzewo AVL, gwarantuje równowagę dlatego, średni czas wykonywania jest
+najmniejszy, najlepsze w wyszukiwaniu elementów
+Drzewo Czerwono-Czarne, jest najlepsze do wstawiania/usuwania
+
+# Pytania kontrolne
+
+1. Czym jest struktura danych?
+Jest to organizacja, sposób zarządzania i format przechowywania danych
+
+2. Czym jest struktura? Jakim słowem kluczowym w Cpp ją definiujemy?
+Definiowana przez ‘structʼ, jest to niehomogeniczna struktura danych,
+pozwalająca na definiowanie własnych typów danych składających się z
+różnych zmiennych
+
+3. Tablica jako struktura danych - opis, wady, zalety
+Homogeniczna struktura danych, pozwalająca na zapiyswanie w niej tylko
+jednego typu wartości. Jej zaletami są uproszczenie struktury programu i
+indeksy, jej wadami są min: konieczność rezerwacji pamięci w momencie jej
+utworzenia, trudności w zmianie jej rozmiaru oraz możliwość przekroczenia jej
+granicy
+
+4. Jak dodaje się i usuwa elementy z listy?
+By dodać element, musimy zmienić indeksy elementów w liście, tak by
+elementy znajdujące się po nowo wprowadzonym elemencie, miały indeks
+większe o 1, po czym wstawiamy nasz nowy węzeł w odpowiedni indeks,
+wypełniamy go danymi, i łączymy wskaźniki sąsiadujących elementów do
+nowego węzła, tak by kierowały na następny i poprzedni w odpowiedni
+sposób. By usunąć element, musimy pierw zmienić wskaźniki elementów
+sąsiadujących w taki sposób by wskazywały na siebie, po czym usunąć nasz
+węzeł, i zmienić indeksy elementów po nim o -1
+
+5. Cechy wspólne i wyróżniające - kolejka vs. stos vs. lista
+Wszystkie trzy są typami listy, przechowują jeden typ danych, ich elementy
+nie muszą być przechowywane blokowo w pamięci. Kolejka różni się tym, że
+jest strukturą danych First In, First out, ogranicza dostęp do danych, jak i
+pozwala tylko na dodawanie elementów do końca listy, i pobierania ich z
+początku, jak i posiada możliwość wykorzystania priorytetu. Stos różni się
+tym, że jest strukturą danych Last In, First Out, zezwala on na dodawanie i
+odejmowanie elementów tylko z jego końca
+
+6. Jakie są realistyczne zastosowania stosu i kolejki?
+Przykładowymi zastosowaniami stosu jest między innymi: stos wywołań,
+odwrotna notacja polska jak i akcja ctrl+z. Przykładowymi zastosowaniami
+kolejki są między innymi: zarządzanie zadaniami i wątkami w systemach
+operacyjnych, kolejki zadań w aplikacji, routing pakietów jak i kolejka
+drukowania
+
+7. Czym jest ONP?
+Odwrócona Notacja Polska, to notacja postfiksowa, czyli zapis operatorów PO
+liczbach
+
+8. Jakie zmiany wprowadza kolejka priorytetowa?
+Dodaje informację o ważności elementu, czyli wartość priorytetu, tak samo jak
+w liście, elementy są dodawane do końca, lecz jeżeli mają wyższy priorytet od
+elementów przed nim, zmieniają miejsce aż napotkają element z wyższym
+priorytetem, lub zajmą pierwsze miejsce
+
+9. Do realizacji których elementów algorytmów ONP wykorzystamy stos?
+Stos jest wykorzystywany do przetrzymywania operatorów, przy zamianie na
+notacje postfiksową, lub do obliczania wartości liczby, przy obliczaniu
+wartości zapisanej w notacji postfiksowej
+
+10. Jakie są podstawowe pojęcia związane z drzewami?
+Węzeł - dane (wpisane w kołach przy zapisie graficznym).
+Krawędź - połączenie dwóch węzłów, oraz ich hierarchia.
+Korzeń - pierwszy węzeł.
+Dzieci - węzły wychodzące z węzła o wyższej hierarchi.
+Rodzic - węzeł z którego wychodzą inne węzły.
+Liść - węzeł bez dzieci.
+Węzeł wewnętrzny - węzeł posiadający dzieci.
+Ścieżka - ciąg węzłów połączonych krawędziami, jej długość to ilość krawędzi
+pomiędzy dwoma elementami.
+Poziom węzła - długość ścieżki od węzła do korzenia.
+Wysokość drzewa - maksymalny poziom węzła.
+Drzewo binarne - drzewo w którym każdy węzeł może mieć maksymalnie 2
+dzieci.
+Drzewo binarne kompletne - drzewo binarne których wszystkie węzły poza
+ostatnimi mają po 2 dzieci, na ostatnim poziomie węzły są zapełnione od lewej
+strony do prawej
+
+11. Czym jest sterta? Jak wygląda dodawanie/usuwanie elementów z niej? Czym
+jest MAX/MIN sterta?
+Stera, inaczej stóg lub kopiec, to specjalny typ struktury drzewiastej. Jest to
+kompletne drzewo binarne, uporządkowane lokalnie.
+Dodajemy elementy do najwyższego węzła po lewej stronie, aż będzie
+posiadał 2 dzieci, jeżeli nowo dodany element jest większy od rodzica,
+dochodzi do zamiany miejsc aż odpowiednia kolejność zostanie odzyskana.
+Usuwamy elementy z sterty poprzez usunięcie korzenia, i zastąpienie go
+najnowszym elementem w stercie, i w razie potrzeby zamieniami go z
+większymi synami.
+Sterta MAX, to sterta w którym dzieci nie mogą być większe od rodzica.
+Sterta MIN, to sterta w którym rodzic musi być niemniejszy od dzieci
+
+12. Czym jest drzewo BST? Jak wskazać MIN/MAX w drzewie BST? Jakie
+modyfikacje BST zostały omówione? (Złożoność obliczeniowa, co
+wykorzystują)
+Drzewo BST to specjalny typ drzewa binarnego, w którym elementy większe
+od rodzica znajdują się na prawo od niego, a mniejsze na lewo.
+MIN znajdujemy poprzez przechodzenie zawsze poprzez lewą krawędź, aż do
+napotkania liścia. MAX znajdujemy poprzez przechodzenie zawsze poprzez
+prawą krawędź, aż do napotkania liścia.
+Omówione modyfikacje do drzewa BST to: AVL oraz Drzewo Czerwono-
+Czarne, które wykorzystują mechanizm rotacji do zachowania balansu.
+Drzewo BST nie posiada mechanizmu zachowującego balans, więc jego
+średnie wyszukiwanie i wstawianie/usuwanie O(log n), może być
+zdegradowane do listy O(n).
+AVL posiada mechanizm zachowujący balans, który pozwala na maksymalną
+różnice podrzew wynoszącą 1. Drzewo AVL, gwarantuję prawie perfekcyjną
+równagę, dlatego jego średni czas wyszukiwania wynosi O(log n).
+Drzewo Czerwono-Czarne, podobnie do AVL, posiada mechanizm
+zachowujący balans, który pozwala na maksymalną różnice podrzew
+wynoszącą 2. Drzewo Czerwono-Czarne, nie gwarantuję aż takiej wysokiej
+równowagi co AVL, lecz jest efektywniejsze w wstawianiu i usuwaniu
+elementów
+
+13. Co wyróżnia strukturę danych zbiór?
+Zbiór to kontener, który przechowuje unikalne elementy w nieokreślonej
+kolejności, nie dopuszcza on duplikatów, w przypadku std::set, jego elementy
+są automatycznie sortowane
+
+14. Co wyróżnia strukturę danych słownik?
+Słownik to kontener par klucz-wartość, gdzie każdy klucz jest unikalny i
+przypisany do jednej wartości, w przypadku std::map, jego elementy są
+automatycznie sortowane według klucza
+
+15. Co wyróżnia strukturę danych wektor?
+Wektor to dynamiczna tablica, która może zmieniać rozmiar w trakcie działania
+programu
+
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 9+10.pdf (opracowanie wykładów z 2024)
+
+Temat: Grafy
+
+1. GRAF - Skojarzenia?
+Graf - kontekst historyczny
+1. Za ojca pojęcia grafu uważa się Leonharda Eulera, szwajcarskiego
+matematykaDecember 3, 2024 220 PM
+2. Za pomocą grafu udało mu się rozwiązać problem mostów królewieckich
+3. Problem polegał na tym, czy można przejść przez wszystkie 7 mostów
+Królewca bez konieczności przechodzenia przez żaden z most dwukrotnie
+4. Opis zagadnienia opublikowany został w pracy Solutio problematis od
+geometrium situs pertientis w Commentarii academiae scientarium
+Petropolitanae (wolumen 8, strony 128-140)
+
+# Graf - Definicja i zastosowanie
+1. Def. nieformalna: graf - struktura danych składająca się z wierzchołków i
+krawędzi, które łączą dwa wierzchołki
+2. Def. matematyczna: graf - grafem nazywamy dwa (niepuste i skończone)
+zbiory V oraz E, których elementy nazywa się w zbiorze V wierzchołkami, a E
+jest rodziną dwuelementowych podzbiorów wierzchołków V, zwanych
+krawędziami. Zwykle będziemy oznaczać |V|=n oraz |E| = m.
+
+Teoria grafów:
+1. System nawigacji w oparciu o GPS
+2. Protokołu routingu
+3. Gry komputerowe (ścieżki dla postaci)
+
+# Grafy
+Graf pełny - graf posiadający wszystkie wierzchołki, graf pełny ma 1/2)n(n-1)
+krawędzi
+Graf skierowany - graf, w którym krawędzie mająokreślone kierunki
+Graf ważony - graf, w którym krawędzie mają nadane wagi
+Graf etykietowany - graf, w którym wierzchołki mają nadane etykiety lub numery,
+wierzchołki w gracie można etykietować, kolorować a krawędzie można
+kolorować i ważyć. W ten sposób graf niesie ze sobą więcej informacji
+Ścieżka (droga) - ciąg wierzchołków, w którym każde dwa kolejne wierzchołki są
+połączone ze sobą krawędzią
+Długość drogi - liczba krawędzi w drodze
+Droga prosta - wierzchołki i krawędzie nie powtarzają się
+Graf spójny - graf, w którym dla każdego wierzchołka istnieje droga do każdego
+innego wierzchołka
+Cykl - zamknięta droga, która kończy się w wierzchołku ją rozpoczynającym
+Pętla - krawędź zaczynająca i kończąca się w tym samym wierzchołku
+Rozmiar grafu - liczba krawędzi grafu (oznaczane jako m)
+Rząd grafu - liczba wierzchołków grafu (oznaczane jako n)
+Jeśli m << n^2, graf jest rzadki
+Wierzchołki są sąsiednie, jeśli istnieje krawędź między nimi
+Wierzchołek jest izolowany, jeśli nie jest połączony krawędzią z żadnym innym
+wierzchołkiem
+Krawędź jest incydentna do wierzchołka, jeśli jest on jej początkiem lub końcem
+Liczba krawędzi incydentnych określa stopień wierzchołka, w szczególności
+stopień wejściowy (liczba krawędzi wchodzących do wierzchołka) i stopień
+wyjściowy (liczba wychodzących)
+
+# Reprezentacja cyfrowa grafu
+
+Macierz sąsiedztwa M dla grafu nieskierowanego G=(V,E)
+- Ma rozmiar |V|^2
+- Numer wiersza macierzy = numer wierzchołka grafu
+- Numer kolumny macierzy = numer wierzchołka grafu
+- M[i,j]=1 jeżeli w grafie istnieje krawędź (v(i),v(j))
+- M[i,j]=0 w przeciwnym wypadku
+- Macierz sąsiedztwa dla grafu nieskierowanego jest symetryczna względem
+głównej przekątnej. Cała informacja o strukturze grafu jest zawarta w połowie
+macierzy pod (lub nad) przekątną
+- Zaleta: Bardzo szybka możliwość sprawdzenia czy istnieje krawędź między
+dwoma wierzchołkami
+
+Macierz sąsiedztwa M dla grafu skierowanego G=(V,E)
+- Ma rozmiar |V|^2
+- Numer wiersza macierzy = numer wierzchołka grafu
+- Numer kolumny macierzy = numer wierzchołka grafu
+- M[i,j]=1 jeżeli w grafie G istnieje łuk (v(i),v(j))
+- M[i,j]=-1 jeżeli w grafie G istnieje łuk (v(j),v(i))
+- M[i,j]=0 w przeciwnym wypadku
+- Macierz sąsiedztwa dla grafu skierowanego nie jest symetryczna
+
+Macierz incydencji M dla grafu nieskierowanego G=(V,E)
+- Ma rozmiar |V|*|E|
+- Numer wiersza macierzy = numer wierzchołka grafu
+- Numer kolumny macierzy = numer/etykieta krawędzi grafu
+- Wada: Jest to bardzo nieefektywna reprezentacja. Nie zaleca się jej używać
+
+Macierz incydencji M dla grafu skierowanego G=(V,E)
+- Ma rozmiar |V|*|E|
+- Numer wiersza macierzy = numer wierzchołka grafu
+- Numer kolumny macierzy = etykieta łuku
+- M[i,j]
+- M[i,j]
+- M[i,j]
+- M[i,j]
+
+Lista krawędzi dla grafu nieskierowanego G=(V,E)
+- Ma rozmiar |E|
+- Ta reprezentacja jest często stosowana dla grafów rzadkich
+- Analogicznie dla grafu skierowanego
+
+Lista incydencji (lista sąsiedztwa) dla grafu nieskierowanego G=(V,E)
+- Rozmiar |V| + |E|
+- Z każdym wierzchołkiem związana jest lista jego sąsiadów (wierzchołków, z
+którymi jest on połączony krawędzią)
+
+Lista następników dla grafu skierowanego G=(V,E)
+Z każdy wierzchołkiem związana jest lista jego następników (wierzchołków, do
+których prowadzi z niego krawędź)
+
+Lista poprzedników dla grafu skierowanego G=(V,E)
+Z każdym wierzchołkiem związana jest lista jego poprzedników
+(wierzchołków, do których prowadzi z niego krawędź)
+
+# Grafy
+Jednym z podstawowych problemów w grafach jest poszukiwanie najkrótszej
+ścieżki
+W grafie krawędziami nieważonymi będzie to ścieżka między zadanymi
+wierzchołkami o minimalnej długości
+W grafie ważonym będzie to ścieżka o minimalnej sumie wag krawędzi pomiędzy
+zadanymi wierzchołkami
+
+# Problem najkrótszej ścieżki
+W przypadku pesymistycznym do wyznaczenia optymalnej ścieżki z wierzchołka
+A do wierzchołka B koniecznie jest wyznaczenie najkrótszych ścieżek z
+wierzchołka A do wszystkich pozostałych wierzchołków w grafie. Zagadnienie
+takie jest określane jako poszukiwanie najkrótszych ścieżek z jednego źródła -> al.
+Dijkstry, al. Bellmana-Forda
+Nieco innym zagadnieniem jest poszukiwanie najkrótszych ścieżek pomiędzy
+każdą parą wierzchołków. W tym celu można wykorzystać algorytmy wymienione
+powyżej (wykonując je wielokrotnie)
+
+# Algorytm Dijkstry
+Pozwala na wyznaczenie najkrótszych ścieżek w grafie
+Autorem algorytm jest holenderski naukowiec Edsger Dijkstra
+Algorytm zachłanny dokładny
+Zachłanny - Wykonuje decyzje po każdym kroku?
+Dokładny - Rozwiązanie lokalne zawsze jest najlepsze z możliwych globalnych
+Złożoność między O(E log V) a O(V^2) - w zależności od reprezentacji grafu
+W każdej iteracji wybierany jest wierzchołek, do którego można dotrzeć
+najmniejszym kosztem
+Dla każdego wierzchołka przechowuje się dwie informacje: koszt dotarcia oraz
+wierzchołek poprzedzający na ścieżce
+Ścieżka - wszystkie wierzchołki wymagane do przejścia z jednego elementu do
+drugiego
+Na początku działania algorytmu wierzchołek źródłowy otrzymuje stały koszt
+dotarcia 0 (bo tam już jesteśmy), a pozostałe wierzchołki otrzymują tymczasowe
+wartości nieskończoności
+
+Dopóki zbiór Q nie jest pusty:
+1. Pobierz ze zbioru Q wierzchołek o najmniejszym koszcie dotarcia. Oznacz go
+jako v i usuń ze zbioru Q
+2. Dla każdej krawędzi wychodzącej z wierzchołka v (oznaczamy je jako k)
+wykonaj następujące czynności
+- Oznacz wierzchołek znajdujący się na drugim końcu krawędzi k jako u
+- Jeśli koszt dotarcia do wierzchołka u z wierzchołka v poprzez krawędź k
+jest mniejszy od aktualnego kosztu dotarcia do wierzchołka v to:
+    * Przypisz kosztowi dotarcia do wierzchołka u koszt dotarcia do
+    wierzchołka v powiększony o wagę krawędzi k
+    * Ustaw wierzchołek v jako poprzednik wierzchołka u
+
+WAŻNE: NA ZALICZENIU TRZEBA BĘDZIE NARYSOWAĆ TABELKĘ!! (wezel, koszt, poprzednik)
+
+# Minimalne drzewo rozpinające
+Drzewo - graf nieskierowany, acykliczny, spójny
+Drzewo jest grafem, w którym z każdego wierzchołka można dotrzeć do każdego
+innego wierzchołka tylko jednym sposobem
+Drzewo rozpinające posiada wszystkie wierzchołki grafu oraz podzbiór
+wszystkich krawędzi grafu. Dla n wierzchołków ma n-1 krawędzi
+Minimalne drzewo rozpinające (ang. minimum spanning tree, MST) - drzewo
+rozpinające o najmniejszej wadze
+Może istnieć kilka takich drzew, jednak algorytm zakłada, że wystarczy znaleźć
+jedno takie drzewo
+MST rozwiązują al. Kruskala i al. Prima
+
+# Algorytm Kruskala (al. zachłanny)
+1. Posortuj krawędzie rosnąco według ich wag, umieść je w kolejce
+2. Pobierz z kolejki krawędź o najmniejszej wadze, usuń ją z kolejki
+3. Jeśli wierzchołki łączone przez tę krawędź należą do różnych drzew
+(wówczas dołączenie krawędzi nie spowoduje utworzenia cyklu, dołącz
+krawędź do rozwiązania)
+4. Jeśli liczba krawędzi dołączonych do rozwiązania wynosi v-1 (v jest liczbą
+wierzchołków), zakończ działanie algorytmu, w przeciwnym wypadku wróć do
+punktu 2
+
+# Przeszukiwanie grafu
+- Przeszukiwanie grafu (ang. graph traversal)
+- Przejście przez wszystkie wierzchołki grafu
+- Wyróżniamy dwa podejścia
+    * ang. Depth First Search, DFS  przeszukiwanie w głąb
+    * ang. Breadth First Search, BFS  przeszukiwanie wszerz
+- Stosowane dla grafów skierowanych i nieskierowanych, cyklicznych i
+acyklicznych
+
+# Graph traversal - DFS
+1. Wybierz wierzchołek startowy v (np. ten o najmniejszym indeksie)
+2. Odwiedź v, oznacz jako odwiedzony i odłóż na stosie
+3. Jeśli istnieją nieodwiedzone następniki v to wybierz pierwszy z nich
+(alfabetycznie pierwszy) (v=następnik(v)) i idź do pkt. 2.
+4. Jeśli wszystkie następniki v są odwiedzone oraz odwiedzono już wszystkie
+wierzchołki grafu to koniec
+5. Jeśli wszystkie następniki v są odwiedzone, ale nie odwiedzono jeszcze
+wszystkich wierzchołków grafu zdejmij ze stosu ostatni wierzchołek
+6. Jeśli stos nie jest pusty, to v = bieżący wierzchołek na szczycie stosu, w
+przeciwnym razie v = dowolny nieodwiedzony jeszcze wierzchołek grafu. Idź
+do pkt. 3
+
+# Graph traversal - BFS (Breadth First Search)
+1. Wybierz wierzchołek startowy v (np. ten o najmniejszym indeksie)
+2. Odzwiedź v i oznacz jako odwiedzonego
+3. Jeśli istnieją nieodwiedzone następniki wierzchołka v odwiedź je (w kolejności
+alfabetycznej) i oznacz jako odwiedzone
+4. Jeśli wszystkie wierzchołki grafu są odwiedzone to koniec
+5. Dla i.. licznaNastepnikowV
+    a. v <- następniki(v)
+    b. idź do pkt.2
+
+WAŻNE: ZADANIE TAKIE JAK DFS I BFS MOŻE BYĆ NA KOLOKWIUM!!
+
+# Problem komiwojażera (WAŻNE: MOŻE BYĆ NA ZALICZENIU)
+Wł. problem wędrującego komiwojażera (ang. TPSTravelling Salesman Problem)
+Jeden z klasycznych problemów optymalizacyjnych (inne to np. Problem
+plecakowy, Problem chińskiego listonosza czy Problem stabilnych małżeństw)
+PROBLEM - W danym grafie należy znaleźć ścieżkę o najmniejszej sumie wag
+krawędzi, która przechodzi dokładnie jeden raz przez każdy wierzchołek i wraca
+do wierzchołka startowego -> taką ścieżkę nazywamy cyklem Hamiltona
+Rozważamy graf pełny o n=5. Ile różnych cykli Hamiltona zawiera taki graf?
+Pierwszą krawędź cyklu można wybrać na 4 różne sposoby (bo każdy
+wierzchołek grafu jest połączony krawędzią z pozostałym czterema). Po wyborze
+pierwszej krawędzi pozostają 3 możliwe wybory, później 2 i 1. W efekcie
+otrzymujemy liczbę cykli Hamiltona równą:
+LiczbaCykliHamiltona = 4 * 3 * 2 * 1 * 4! = 24
+Problem NP-trudny
+
+# Algorytm najbliższego sąsiada
+1. Ustaw wybrany wierzchołek jako v, oznacz go jako odwiedzony
+2. Znajdź nieodwiedzony wierzchołek w połączony z v krawędzią k (o
+najmniejszej wadze)
+3. Dołącz do rozwiązania krawędź k
+4. Oznacz wierzchołek w jako odwiedzony, ustaw go jako v
+5. Jeśli pozostały jeszcze nieodwiedzony wierzchołki, przejdź do punktu 2
+6. Dołącz do rozwiązania krawędź łączącą wierzchołek v z wierzchołkiem
+wybranym w punkcie 1, aby zamknąć cykl
+
+# Algorytm najbliższego sąsiada (nearest neighbour)
+Jest to algorytm zachłanny (podejmuje najlepszą decyzję w danym momencie
+działania) niedokładny (nie zawsze otrzymujemy najlepsze rozwiązanie)
+Przykładowo cykl od A ma koszt łączny 19, a cykl rozpoczynający się w B ma
+koszt 18, a cykle rozpoczynające się w F i H mają koszt 17
+Dla grafu pełnego algorytm na złożoność O(n^2)
+Jeśli chcemy sprawdzić rozpoczęcie w każdym z wierzchołków (algorytm
+Repetitive Nearest Neighbour) -> O(n^3)
+NN wyznacza rozwiązanie średnio 25% o gorsze od optymalnego
+RNN wyznacza rozwiązanie średniego o 15% gorsze
+
+# Kolorowanie grafów
+Problem kolorowania grafów ma wiele odmian (np. kolorowanie wierzchołków,
+krawędzi)
+Może być postrzegany m.in. jako model abstrakcyjny reprezentujący rozmaite
+zadania o praktycznym znaczeniu, np:
+- Rozmieszczenie przestrzeni obiektów
+- Przydział zasobów
+- Przydział częstotliwości radiowych
+- Projektowanie map
+Zakładamy, że wszystkie rozważane grafy są spójne
+Przykład zastosowania 1: Dany jest zbiór wykładów do przeprowadzenia, ale
+niektóre wyszczególnione pary wykładów nie mogą się nachodzić czasowo (bo
+np. mają tego samego prowadzącego). Problem: ile najwyżej różnych jednostek
+czasowych (1 jednostka czasowa na 1 wykład) trzeba przeznaczyć na realizację
+kursu?
+Przykład zastosowania 2: W przypadku mapy narysowanej na płaszczyźnie
+istotny jest…
+DEF. Kolorowanie wierzchołków grafu G nazywamy takie przyporządkowanie
+każdemu z jego wierzchołków pewnego koloru, reprezentowanego umownie
+przez liczbę naturalną, że żadne dwa sąsiednie wierzchołki nie mają
+przyporządkowanego tego samego koloru
+Graf jest k-kolorowalny, jeśli wystarczy k kolorów, żeby go pokolorować
+Jeśli graf jest k-kolorowalny to jest też (k+1)-kolorowalny
+Liczbą chromatyczną LG grafu G nazywamy najmniejszą liczbę k taką, że graf G
+jest k-kolorowalny
+Graf G nazywamy k-chromatycznym jeśli L(G)=k
+
+# Twierdzenie o 4 kolorach
+Graf planarny - graf dający się zapisać na płaszczyźnie bez konieczności
+zaznaczenia przecinających się krawędzi. W mapie wierzchołkami będą obszary
+(państwa, województwa), a krawędzie odwzorują granice między obszarami (jeśli
+jest krawędź, obszary są sąsiednie)
+TW. Każda mapa płaska (graf planarny) może być pokolorowana czterema lub
+mniej kolorami
+W praktyce jednak wiele grafów planarnych można pokolorować za pomocą
+mniejszej liczby niż cztery kolory, ale zawsze wystarczą maksymalnie cztery
+
+# Algorytmy (heurestyczne) kolorowania grafów
+Algorytmy zachłanne, heurestyczne - Largest First, Smallest Last, Saturation
+Largest First
+Różnią się kolejnością wybierania wierzchołków (inne kryteria ich sortowania)
+Algorytmy heurestyczne - znajdują przybliżone rozwiązanie problemu w
+rozsądnym czasie. Są stosowane głównie wtedy, gdy znalezienie dokładnego
+rozwiązania jest zbyt kosztowne obliczeniowo
+Szybkie działanie, brak gwarancji rozwiązania optymalnego, prosta implementacja
+Możliwe “utknięcieˮ w lokalnych ekstremach, dobra skalowalność dla dużych
+zbiorów danych, wynik zależy od użytej heurestyki
+
+# Algorytm LF (Largest First)
+1. Uporządkuj wierzchołki grafu G nierosnąco według stopni v(1),…v(n).
+Kolejność pozostaje bez zmian do końca działania algorytmu
+2. Koloruj wierzchołki zachłanne zawsze wybierając pierwszy możliwy kolor z
+listry kolorów
+
+# Algorytm SL (Smallest Last)
+Znajdź wierzchołek o minimalnym stopniu i usuń go z grafu na stos - powtarzaj,
+dopóki graf nie jest pusty
+Koloruj wierzchołki zachłannie rozpoczynając od wierzchołków
+
+# Algorytm SL (Saturacyjny LF)
+Def. Stopień nasycenia wierzchołka - liczba różnych kolor z nim incydentnych
+1. Dopóki istnieją niepokolorowane wierzchołki:
+    a. Znajdź wierzchołek o maksymalnym stopniu spośród wierzchołków o
+    maksymalnych stopniu nasycenia
+    b. Pokoloruj znaleziony wierzchołek zachłannie
+
+# Pytania kontrolne
+
+1. Z jakim problemem mierzył się Euler?
+Mierzył się on z problemem Mostów Królewskich, polegał on na znalezieniu
+odpowiedzi na pytanie, czy można przejść przez wszystkie 7 mostów
+królewskich, bez dwukrotnego przejścia przez ten sam most
+
+2. Podaj matematyczną definicję grafu oraz zastosowania teorii grafów
+Grafem nazwamy dwa niepuste i skończone zbiory, pierwszym z nich będący
+wierzchołkami, a drugi krawędziami. Przykładowymi zastosowanami teorii
+grafów jest znajdowanie ścieżek dla postaci w grach oraz systemu GPS
+
+3. Wymień i opisz cyfrowe sposoby reprezentacji grafów
+Macierz sąsiedztwa - Nazywamy tak macierz o wymiarach |V| * |V| złożoną z
+zer i jedynek, w której wartość i-tego wiersza i j-tej kolumny jest równa 1 (lub
+jest równa wadze) wtedy gdy krawędź (i,j) występuje w grafie
+Macierz incydencji - Jest to macierz o wymiarze NxK, gdzie N jest ilością
+wierzchołków grafu, a K liczbą jego krawędzi. 0 oznacze że wierzchołek nie
+jest końcem ani początkiem danej krawędzi, 1 oznacza że jest jego
+początkiem, a -1 oznacze ze jest jego końcem
+Lista krawędzi - Używamy tablicy dwuelementowej, zawierającej dwie liczby
+oznaczające wierzchołki lub tablicy obiektów, zawierającą informację o tym,
+które z wierzchołków są incydentne z daną krawędzią.
+Lista incydencji - Z każdym wierzchołkiem związana jest lista jego sąsiadów
+Lista następników - Z każdy wierzchołkiem związana jest lista jego
+następników
+Lista poprzedników - Z każdym wierzchołkiem związana jest lista jego
+poprzedników
+
+4. Czym jest algorytm zachłanny?
+Algorytm zachłanny, to taki który wykonuje lokalnie najlepsze decyzje po każdym kroku
+
+5. Jaki jest główny zamysł w algorytmie Dijkstry
+Algorytm Dijkstry pozwala na wyznaczenie najkrótszej ścieżki pomiędzy
+dwoma wierzchołkami w grafie, jest to algorytm zachłanny dokładny. Polega
+on na wybraniu wierzchołka, do którego można dotrzeć najmniejszym
+kosztem w każdej iteracji, dla każdego wierzchołka przechowuje się jego
+koszt dotarcia oraz wierzchołek go poprzedzający.
+
+6. Jaki jest główny zamysł w algorytmie Kruskala
+Jest to algorytm polegający na utworzeniu minimalnego drzewa
+rozpinającego, sortujemy w nim krawędzie rosnąco według ich wag, po czym
+ściągamy element o najmniejszej wagi i dodajemy go do rozwiązania (jeżeli nie
+tworzy on cyklu), kończy się on gdy pozostaje n-1 krawędzi
+
+7. Czym jest (minimalne) drzewo rozpinające
+Minimalne drzewo rozpinające to drzewo rozpinające o najmniejszej wadze,
+samo drzewo rozpinające to drzewo posiadające n wierzchołków i n-1
+krawędzi
+
+8. Jak na dwa sposby realizujemy poszukiwanie w grafie
+Depth First Search (DFS) - Przeszukiwanie w głąb, polega na wybraniu
+wierzchołka, i wybieraniu kolejno to nieodwiedzonych następników, po czym
+dodając ich do stosu, jeżeli wszystie następniki są odwiedzone, ściągamy
+kolejno to elementy z stosu, aż będziemy w stanie przejść do następnego
+następnika (w przypadku gdy nie skończyliśmy odwiedzać całego grafu)
+Breadth First Search (BFS) - Przeszukiwanie wszerz, polega na wybraniu
+wierzchołka, i wybieraniu kolejno to nieodwiedzonych jego następników, aż
+odwiedzimy wzsystkie elementy grafu
+
+9. Na czym polega problem wędrującego komiwojażera?
+Polega na znalezieniu ścieżki która przechodzi dokładnie jeden raz przez
+każdy wierzchołek i wraca do wierzchołka startowego, taką ścieżke
+nazywamy cyklem Hamiltona
+
+10. Jaki jest główna idea działania algorytmu najbliższego sąsiada?
+Polega na rozwiązaniu problemu wędrującego komiwojażera, poprzez
+odwiedzanie następnych to wierzchołków (o krawędziach z najniższą wagą) i
+dodawaniu ich do listy odwiedzonych, robimy to aż skończą nam się
+wierzchołki do odwiedzenia
+
+11. Jakie zmiany wprowadza Repetetive Nearest Neighbour?
+Dodaje on zmiane, w której wykonujemy algorytm najbliższego sąsiada,
+wykonując go dla każdego wierzchołka startowego
+
+12. Czy w każdym grafie spójnym NN doprowadzi do optymalnego rozwiązania?
+Jest to algorytm zachłanny niedokładny, wykonuje on tylko najlepszą decyzję
+lokalną, lecz nie globalną, otrzymane rozwiązanie nie zawsze będzie
+najlepszym
+
+13. Podaj twierdzenie o 4 kolorach
+Twierdzi on, że każdy graf planarny, czyli taki który możemy zapisać na
+płaszczyźnie bez potrzeby zaznaczania przecinających się krawędzi, możemy
+pokolorować tak by żaden kolor nie był sąsiadem takiego samego koloru
+maksymalnie 4 kolorami
+
+14. Wymień realistyczne przykłady zastosowania kolorowania grafów
+Przykładowo mogą to być, przydzielanie zasobów lub projektowanie map
+
+15. Jak można zrealizować kolorowanie wierzchołków. Czym się te podejścia
+różnią
+Algorytm Largest First - Uporządkuj wierzchołki grafu nierosnąco według
+stopni, kolorujemy wierzchołki zachłannie zawsze wybierając pierwszy
+możliwy kolor z listy kolorów
+Algorytm Smallest Last - Znajdujemy wierzchołek o minimalnym stopniu, i
+usuwamy go z grafu po czym dodajemy go na stos, powtarzamy dopóki graf
+nie jest pusty
+Algorytm Saturacyjny LF - Znajdujemy wierzchołek o maksymalnym stopniu
+spośród wierzchołków o maksymalnym stopniu nasycenia, czyli takiego
+posiadającego najwięcej sąsiadów o różnych kolorach, i kolorujemy go
+zachłannie
+
+16. Jakie są wady i zalety algorytmów heurystycznych
+Zalety: Szybkie działanie, prosta implementacja, dobra skalowalność dla
+dużych zbiorów danych
+Wady: Brak gwarancji rozwiązania optymalnego, możliwe “utknięcieˮ w
+lokalnych ekstremach, wynik zależy od wybranej heurestyki
+
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 11+12.pdf (opracowanie wykładów z 2024)
+
+Temat: Szyfry
+
+Pojęcia ogólne - Mówimy tu o kryptologii, jest to połączenie matematyki i
+informatyki
+Kryptologia zajmuje się bezpiecznym przekazywaniem informacji, tak by nie
+dostały się w niepowołane ręce
+Kryptoanaliza - Zajmuje się metodami odczytania zaszyfrowanych wiadomości,
+bez posiadania klucza do jego odblokowania
+Tekst jawny - tekst który chcemy zaszyfrować
+Kryptogram - tekst tajny, niejawny, zaszyfrowany
+Zastosowania szyfrowania:
+- Szyfrowanie połączeń internetowych
+- Podpis szyfrowy
+- Przechowywanie haseł
+- Telewizja, kanały zakodowane
+- Kod binarny/szesnastkowy itp.
+- Kod QR
+- Bezpieczeństwo informacji
+- Bankowość/Kryptowaluty
+
+# Ogólna koncepcja szyfrowania
+Pierwsze udokumentowane szyfry są z czasów przed naszą erą
+Trzej Polacy którzy rozwiązali enigme:
+- Marian Rejewski
+- Jerzy Różycki
+- Henryk Zygalski
+
+# Typy szyfrów
+Szyfry Symetryczne - Szyfry proste, np. przestawieniowe, podstawieniowe, czyli
+taki sam algorytm do szyfrowania i deszyfrowania
+Szyfry Asymetryczne - Szyfry korzystające z dwóch typów kluczy, publicznego i
+prywatnego, publiczny - do napisania wiadomości, prywatny - do odkodowania
+informacji, używane do podpisów szyfrowych
+Funkcje skrótu - Szyfrowanie jednokierunkowe, tylko kodujemy wiadomość, bez
+jej dekodowania, sama funkcja skrótu nie daje nam informacji na temat hasła
+
+# Szyfr Cezara
+Jest to prosty szyfr podstawieniowy (za jedną literkę podstawiamy drugą),
+zazwyczaj przestawiano o 3 znaki (a -> d, dodatkowo, alfabet się zakręca, z -> c)
+
+# Kod Morsa
+Reprezentacja alfabetu za pomocą różnych mediów, poprzez krótkie i długie
+sygnały dźwiękowe lub świetlne (kropka i kreska, kreska trwa tyle samo co trzy
+kropki)
+Sygnał SOS - trzy kropki, trzy kreski, trzy kropki
+Przez 1865 używano kod radiowy CQD jako sygnał pomocy
+
+# Szyfr XOR
+Wymaga zastosowania operacji XOR, oraz utworzenia słowa kodowego (najlepiej
+by było dość długie, gdy słowo kodowe się skończy, powtarzamy je od początku)
+Słowo do zakodowania  ALGORYTM
+Słowo kodowe - SZYFR
+Więc:
+SZYFRSZYF
+Przedstawiamy wszystkie znaki w wartości bitowej ASCII:
+65 76 71 79
+83 90 89 70
+Teraz robimy XOR, pomiędzy tymi wartościami:
+18 22 30 9
+(XOR ma 1 jeżeli bity są różne!!)
+Lecz pojawia się tu problem z wyświetlaniem znaków! Więc zazwyczaj dodajemy
+do tej wartości 33 lub 65
+
+# Szyfr przestawieniowy
+Każdą parę znaków, przestawiamy ze sobą miejscami, więc np.:
+ALGORYTMY (+Q)
+LAOGYRMTQY
+
+# Szyfr płotkowy (WAŻNE: BĘDZIE NA ZALICZENIU)
+Także szyfr przestawieniowy
+Szyfry płotkowe mają podane wysokości, tutaj 3
+PROGRAMOWANIE -> PRWE RGAOAI OMN
+W programowaniu, używamy tablic 2 wymiarowych, w których używamy bool
+upadania lub wzrostu
+1 - dół, 0 - góra
+i++, j++, j--
+By dekodować, tworzymy tablicę, w tym przypadku, h=3 w=13
+Wstawiamy na przekątnych jakiś znak, tak samo jak w kodowaniu, po czym
+zastępujemy ów znaki kontrolne, pierwszą grupą zakodowanych znaków,
+podobnie robimy dla każdej kolejnej grupy, po czym odczytujemy fale, znak
+pierwszy w pierwszej grupie, drugi w drugiej, trzeci w trzecie, czwarty w
+drugiej i tak dalej
+
+# Szyfr przestawieniowy ze słowem kluczem (GADERYPOLUKI)
+Słowo kodowe, jest dzielone na pary, pierwszy z tych znaków, który ma
+odpowiednik w słowie szyfrowany będzie zamieniany na drugi i vice versa,
+sprawdzamy litery w pierwszym wyrazie, i porównujemy je do liter w słowie
+kodowym, po czym zamieniamy literę w słowie która pojawia się w słowie
+kluczowym, na sąsiadujący znak pary liter w słowie kodowym
+PROGRAMOWANIE
+GA DE RY PO LU KI
+OYPAYGMPWGNKD
+Jeżeli jakiś element nie znajduje się w słowie kodowy, to przepisujemy go bez
+zmian
+
+# Szyfr samogłoskowy
+Zbieramy samogłoski z naszego słowa szyfrowanego, i przesuwamy je o jedno w
+prawo, ostatni element jest zamieniany z pierwszym
+AEIOUY - samogłoski
+PROGRAMOWANIE
+PREGROMAWONAI
+Można do tego wykorzystać bufor
+
+# Szyfr ATBASZ
+Literze która ma jakąś odległość od początku/końca alfabetu, przypisujemy
+wartość x, i zamieniamy na literę o wartości x od końca/początku
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ZYXWVUTSRQPONMLKJIHGFEDCBA
+ALGORYTM
+ZOTLIBGN
+E=A+4
+Z=90 => 90-4 => 86
+ele=ʼZʼ-(ʼAʼ-ele)
+
+# Szyfr ułamkowy
+Nasz klucz - 6
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+6/26 = 4 + 1/3
+Dzielimy teraz nasz alfabet na ułamki, jedyne co jest ważne by miało ilość ułamków
+wynoszących nasz klucz
+ABCDE FGHIJ KLMNO PQRST UVWXY Z
+A L G O R Y T M
+1/1 2/3 2/2 5/3 3/4 5/5 5/4 3/3
+Teraz między te znaki wstawiamy dowolne znaki matematyczne, nie mają one
+kompletnie znaczenia, są czysto estetyczne
+1/1 + 2/3 - 2/2/5/3 * 3/4 + 5/5 - 5/4 + 3/3
+By odszyfrować, bierzemy nasz mianownik, mnożymy go przez klucz, po czym
+dodajemy licznik, by znaleźć nasz znak w tablicy
+
+# Szyfr Vigenereʼa
+Jest to szyfr polialfabetyczny, to znaczny że mamy wiele rodzajów alfabetów
+Wykorzystywał szyfr cezara
+1 - ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2 - BCDEFGHIJKLMNOPQRSTUVWXYZA
+… i tak dalej aż Z znajdzie się w miejscu Y
+ALGORYTMY
+SZYFRSZYF
+SKETIQSKD
+Z słowa, bierzemy KOLUMNE zawierającą literę jako jej górę
+Z klucza, bierzemy WIERSZ zawierający literę na jego pierwszym miejscu
+
+# Szyfr Sanatorium
+Tworzono macierz, która na przekątnej miała słowo SANATORIUM, po literze na
+przekątnej, kontynuujemy alfabet od tego miejsca, zawsze przed A znajduje się
+spacja
+Zapisujemy naszą liczbę jako pierw numer wiersza, potem kolumny
+czyli np. D może przyjąć wartość 47 lub 25
+
+# Szyfr VIC
+Podobnie jak w szyfru Sanatorium, każda współrzędna ma przypisany jakąś literę
+3,28,24,4,7,67,1,2
+Generowanie liczb koordynatów, zależało od długiego algorytmu generowania
+nagłówka (kolejności samej góry)
+Zaburzało to częstość wysętępowania liter
+Jest to szyfr podstawieniowy jak i przedstawieniowy
+
+# Pytania Kontrolne: ()
+
+1. Zastosowania szyfrów:
+Szyfry są wykorzystywane do bezpiecznego przekazywania i przechowywania informacji. Stosuje się je m.in. w szyfrowaniu połączeń internetowych, podpisach cyfrowych, przechowywaniu haseł, bankowości i kryptowalutach, telewizji kodowanej, kodach binarnych i szesnastkowych, kodach QR oraz ogólnie w bezpieczeństwie informacji.
+
+2. Jakie mamy trzy typy szyfrowania, oraz czym one się różnią, podaj przykłady
+gdzie są stosowane:
+Szyfry symetryczne - do szyfrowania i deszyfrowania używany jest ten sam klucz. Są proste i szybkie. Przykłady: szyfr Cezara, szyfry przestawieniowe, XOR.
+Szyfry asymetryczne - wykorzystują dwa klucze: publiczny (do szyfrowania) i prywatny (do odszyfrowania). Stosowane m.in. do podpisów cyfrowych.
+Funkcje skrótu - szyfrowanie jednokierunkowe, nie da się odzyskać tekstu jawnego. Stosowane do przechowywania haseł.
+
+3. Co to Szyfr Cezara, jak on działa, oraz jak jest kodowany i dekodowany:
+Jest to prosty szyfr podstawieniowy. Polega na przesunięciu każdej litery alfabetu o stałą liczbę pozycji (najczęściej o 3). Alfabet jest cykliczny (po Z wracamy do A). Kodowanie polega na przesunięciu liter w przód, a dekodowanie na przesunięciu w tył o tę samą wartość.
+
+4. Co to Kod Morsa, jak on działa, oraz jak jest kodowany i dekodowany, oraz gdzie jest on wykorzystywany:
+Jest to sposób kodowania znaków za pomocą krótkich i długich sygnałów (kropki i kreski). Kreska trwa tyle co trzy kropki. Kodowanie polega na zamianie liter na sekwencje kropek i kresek, a dekodowanie na ich interpretacji. Wykorzystywany był w telegrafii, radiokomunikacji i sygnałach alarmowych (np. SOS).
+
+5. Co to Szyfr XOR?
+Szyfr wykorzystuje operację logiczną XOR na wartościach binarnych znaków. Tekst jawny jest łączony z kluczem (słowem kodowym), który w razie potrzeby jest powtarzany. Ten sam algorytm służy do szyfrowania i deszyfrowania. XOR daje 1, gdy bity są różne.
+
+6. Co to szyfr przestawieniowy?
+Polega na zmianie kolejności znaków w tekście bez zmiany samych znaków. Przykładowo zamienia się miejscami każdą parę sąsiednich znaków. Jest to szyfr symetryczny.
+
+7. Co to szyfr przestawieniowy ze kluczem?
+Jest to szyfr przestawieniowy wykorzystujący słowo kluczowe (np. GADERYPOLUKI). Litery klucza są dzielone na pary, a każda litera tekstu jawnego występująca w kluczu jest zamieniana na odpowiadającą jej literę z pary (i odwrotnie). Znaki spoza klucza pozostają bez zmian.
+
+8. Co to szyfr samogłoskowy?
+Polega na wyodrębnieniu samogłosek (A, E, I, O, U, Y) z tekstu i cyklicznym przesunięciu ich o jedno miejsce w prawo. Spółgłoski pozostają na swoich miejscach. Do realizacji można użyć bufora.
+
+9. Co to szyfr ATBASZ?
+Jest to szyfr podstawieniowy, w którym alfabet jest odwrócony. Każdej literze przyporządkowana jest litera symetryczna względem końców alfabetu (A <-> Z, B <-> Y itd.). Kodowanie i dekodowanie odbywa się w ten sam sposób.
+
+10. Co to szyfr ułakmowy?
+Alfabet dzielony jest na określoną liczbę grup (zgodnie z kluczem). Każdej literze przypisywana jest para liczb (ułamek: numer grupy i pozycja w grupie). Tekst szyfrowany jest za pomocą zapisów ułamkowych, często z dodatkowymi znakami matematycznymi. Odszyfrowanie polega na odtworzeniu pozycji litery w alfabecie.
+
+11. Co to szyfr Vigenereʼa
+Jest to szyfr polialfabetyczny oparty na wielu alfabetach Cezara. Do szyfrowania używa się tabeli Vigenere’a. Każda litera tekstu jawnego jest szyfrowana innym przesunięciem zależnym od litery klucza. Dekodowanie polega na cofnięciu przesunięcia.
+
+12. Co to szyfr Sanatorium?
+Wykorzystuje macierz, w której na przekątnej znajduje się hasło „SANATORIUM”. Od każdej litery na przekątnej kontynuowany jest alfabet (przed A występuje spacja). Litery kodowane są jako współrzędne wiersz–kolumna, co daje wiele możliwych zapisów tej samej litery.
+
+13. Co to szyfr VIC?
+Jest to złożony szyfr łączący cechy szyfru podstawieniowego i przestawieniowego. Każdej literze przypisane są współrzędne liczbowe. Kolejność i wartości współrzędnych są generowane przez skomplikowany algorytm nagłówka, co zaburza częstość występowania liter i utrudnia kryptoanalizę.
+
+=============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 13.pdf (opracowanie wykładów z 2024)
+
+Temat: Wyszukiwanie wzorca w tekście
+
+# Czym jest wzorzec?
+Algorytmy poszukujące wzorca w tekście - grupa algorytmów, która w podanym
+tekście poszukuje wystąpień innego tekstu-wzorca
+Długość tekstu to n, długość wzorca to m
+Aby zadanie miało sens: m < n
+Prefiks - łańcuch s jest łańcuchem zbudowanym z k początkowych znaków
+Sufiks - łańcuch s jest łańcuchem zbudowanym z k końcowych znaków
+Prefiks i sufiks mogą być puste, tzn. mogą nie zawierać żadnego znaku
+Prefiks i sufiks są właściwe, jeśli nie obejmują całego łańcucha s
+Zastosowanie:
+- Wyszukiwarki internetowe
+- Znajdź i zamień (edytory tekstowe)
+- Filtrowanie treści
+- Analiza sekwencji DNA
+- Cyberbezpieczeństwo
+- Systemy antyplagiatowe
+- inne
+
+# Algorytm brute-force (naiwny)
+1. Określ tekst text (o długości n) oraz wzorzec pattern (o długości m)January 21, 2025 221 PMAlgorytmy 131
+2. Dla i = 0,…,n-m wykonaj:
+    a. k = 0
+    b. Dopóki (text[i+k]==pattern[k]&& k<m) wykonaj k++;
+    c. Jeśli k==m wypisz “Znaleziono na pozycji iˮ
+Złożoność obliczeniowa algorytmu to O(n*m)
+text = PoliPoliPolitechnika, pattern = Politechnika
+n = 20, m = 12
+Brute-force - algorytm polegający na sukcesywnym sprawdzaniu wszystkich
+możliwych kombinacji w poszukiwaniu rozwiązaniu problemu
+Zalety:
+- Łatwy do implementacji
+- Nie wymaga dodatkowej pamięci poza tekstem i wzorcem
+Wady:
+- Nieefektywny przy długich tekstach i wzorcach
+
+# Algorytm Boyera - Mooreʼa
+Algorytm zapamiętuje dodatkowo tablicę przesunięć
+Algorytm analizuje tekst od początku, ale wzorzec od końca
+W bazowej (prezentowanej) wersji szuka pierwszego wystąpienia
+
+Lista kroków:
+1. Utwórz tablicę przesunięć - jeśli znak nie należy do wzorca, zapisz m; w
+przeciwnym wypadku zapisz m-i-1 (gdzie i to pozycja w pattern)
+2. Rozpocznij “przykładającˮ pattern do początku text; analizę rozpocznij od k =
+m-1 (k jest indeksem wskazującym na pozycję w pattern)
+3. Jeśli znaki są niezgodne, wykonaj taki skok, jak podaje tablica przesunięć
+4. Jeśli są zgodne, porównaj znak poprzedzający
+5. Zakończ, jeśli wyskoczysz poza długość tekstu
+6. Powtarzaj kroki 35 dopóki nie znajdziesz pozycji wzorca
+
+text = alamakota
+pattern = kot
+tablica przesunięć (shift) = {2, 1, 0}
+//shift = m - i  1 (dł. pattern - ostatnia pozycja w pattern - 1)
+alamakota
+kot (przykładamy pattern od początku i porównuję od końca, a nie
+występuje w
+pattern -> skok 0 3 (dł. pattern))
+kot (kolejne ułożenie pattern t <-> k; k ma shift = 2)
+kot (bingo!)
+Złożoność obliczeniowa algorytmu to O(n*m)
+Dla większości przypadków będzie to O(n)
+Najlepszy przypadek pozwoli osiągnąć O(n/m)
+Wady:
+- Trudniejszy do implementacji
+- Wymaga dodatkowych zapisów poza tekstem i wzorcem
+Zalety:
+- Bardzo szybki w praktyce, zwłaszcza przy długich tekstach i krótkich
+wzorcach
+
+# Algorytm Knutha-Morrisa-Pratta (KNP)
+Algorytm zapamiętuje dodatkowe tablicę prefikso-sufiksów (LPS - Longest Prefix
+Suffix)
+Dzięki tej tablicy unika ponownego porównywania już dopasowanych znaków
+(LPS określa skok, jaki należy wykonać)
+LPS jest obliczana dla każdego wzorca indywidualnie i bada samopodobieństwo
+wzorca (szuka prefikso-sufiksów we wzorcu)
+Np KArtKA
+Złożoność to O(n+m): Obliczanie LPS ma złożoność O(m), a przeszukiwanie
+tekstu z jej użyciem - O(n)
+Wady:
+- Trudniejszy do implementacji
+- Wymaga dodatkowych zapisów poza tekstem i wzorcem
+- W rozwiązaniach rzeczywistych zwykle wypada gorzej od al. Booyera-Mooreʼa
+Zalety:
+Ma stabilną złożoność niezależną od wartości text/pattern
+
+# Pytania kontrolne
+
+1. Jaka jest zasada działania algorytmow z rodziny Brute-Force?
+Algorytmy typu Brute-Force polegają na sprawdzaniu wszystkich możliwych rozwiązań w sposób bezpośredni i sekwencyjny. W kontekście wyszukiwania wzorca oznacza to porównywanie wzorca z każdym możliwym fragmentem tekstu, bez stosowania żadnych optymalizacji. Algorytm kończy działanie po znalezieniu rozwiązania lub po sprawdzeniu wszystkich możliwości.
+
+2. Jak działa naiwny algorytm poszukiwania wzorca?
+Naiwny algorytm (Brute-Force) przesuwa wzorzec po tekście znak po znaku. Dla każdej pozycji w tekście porównuje kolejne znaki wzorca z odpowiadającymi im znakami tekstu. Jeśli wszystkie znaki wzorca pasują, zgłaszane jest znalezienie wzorca. W przypadku niezgodności algorytm przesuwa wzorzec o jedną pozycję w prawo i rozpoczyna porównanie od nowa.
+
+3. Jakie złozonosci mają poznane algorytmy poszukiwania wzorcow?
+- Algorytm naiwny (Brute-Force): złożoność czasowa O(n · m), gdzie n to długość tekstu, a m to długość wzorca.
+- Algorytm Boyera–Moore’a: w najgorszym przypadku O(n · m), w praktyce bardzo często O(n), a w najlepszym przypadku O(n / m).
+- Algorytm Knutha–Morrisa–Pratta (KMP): złożoność czasowa O(n + m), gdzie O(m) dotyczy budowy tablicy LPS, a O(n) przeszukiwania tekstu.
+
+4. Jakie zmiany wprowadzają w algorytmie naiwnym algorytmy Boyera i Moore’a oraz Knutha-Morrisa-Pratta?
+Algorytm Boyera–Moore’a wprowadza porównywanie wzorca od końca oraz wykorzystuje tablicę przesunięć, dzięki czemu może przeskakiwać większe fragmenty tekstu po wykryciu niezgodności.
+Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), która pozwala uniknąć ponownego porównywania znaków, które zostały już wcześniej dopasowane. Oba algorytmy eliminują zbędne porównania występujące w algorytmie naiwnym.
+
+5. Jak działa algorytm Boyera i Moore’a?
+Algorytm Boyera–Moore’a rozpoczyna porównywanie wzorca z tekstem od ostatniego znaku wzorca. W przypadku niezgodności wykorzystuje wcześniej przygotowaną tablicę przesunięć, aby przesunąć wzorzec o kilka pozycji w prawo zamiast o jedną. Jeśli znaki są zgodne, algorytm porównuje kolejne znaki wstecz. Proces powtarza się aż do znalezienia wzorca lub wyjścia poza długość tekstu.
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB05.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Algorytmy sortowania - część 1.
+
+# 1. Sortowanie bąbelkowe
+Lista kroków:
+1. Dla j=1 ,2 , … , n− 1 wykonuj krok a.
+    a. Dla i= j, … , n −1 : jeśli d [ i]<d [ i−1 ] , to zamień elementy miejscami.
+2. Zakończ.
+Algorytm ten jest jednak bardzo wolny, co dyskwalifikuje go dla dużych zbiorów danych.
+Cechuje się wysoką złożonością obliczeniową O ( n^2 ) .
+
+# 2. Sortowanie przez wstawienie - InsertionSort
+Opis słowny:
+1. Utwórz zbiór elementów posortowanych.
+2. Przenieś do niego dowolny element ze zbioru nieposortowanego.
+3. Wybierz element ze zbioru nieposortowanego:
+    a. Element ten porównuj z elementami w zbiorze posortowanym dopóki nie
+    trafisz na element większy lub równy (ciąg niemalejący) lub dotrzesz do
+    końca zbioru.
+    b. Wstaw element miejscy zakończenia porównania.
+4. Czy zbiór nieposortowany jest pusty?
+    a. Jeśli nie jest, wróć do punktu 3.
+5. Zakończ.
+Algorytm ten również nie należy do szybkich. Jego złożoność obliczeniowa to O ( n^2 ).
+Sprawdza się jednak dobrze dla zbiorów niewielkich i wstępnie uporządkowanych.
+Odwzorowuje zachowanie człowieka, który dobierając karty z talii, układa je w ręku.
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB06.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Algorytmy sortowania - część 2.
+
+# 1. Sortowanie przez wybór – SelectionSort
+Główną ideą algorytmu jest podział sortowanego zbioru na dwa podzbiory – posortowany
+i nieposortowany. W części nieposortowanej szuka się najmniejszego elementu i przestawia
+się do na koniec zbioru uporządkowanego.
+Opis algorytmu:
+1. Dla i=1 , 2 ,… , n (dla wszystkich elementów tablicy) wykonuj:
+    a. Wyszukaj minimum (dla ciągu niemalejącego) spośród elementów ⟨ i , n⟩
+    b. Zamień element minimalny z elementem na pozycji i .
+2. Zakończ.
+Złożoność obliczeniowa tego algorytmu wynosi O ( n^2 ).
+
+# 2. Sortowanie szybkie – QuickSort
+Jest to algorytm oparty na taktyce „Dziel i zwyciężaj”. Standardowo możemy go podzielić
+na trzy etapy:
+1. Dziel – podział zbioru na mniejsze, podczas którego określa się:
+    a. Pivot – jako element centralny,
+    b. Lewa partycja – elementy mniejsze od pivotu (dla zbioru niemalejącego),
+    c. Prawa partycja – elementy większe od pivotu
+2. Zwyciężaj – rozwiązanie podproblemów,
+3. Połącz – połączenie wcześniej podzielonego zbioru.
+Jest to algorytm uważany za jeden z najszybszych sposobów sortowania. Jego złożoność
+określa się jako O ( n log n) , jednak dla niektórych zbiorów może zostać zdegradowana do
+O ( n^2 ). Dodatkowo, jest on algorytmem rekurencyjnym, co może spowodować przepełnienie
+stosu.
+Lista kroków:
+1. Dla tablic posiadających więcej niż jeden element wykonuj:
+    a. Wybierz pivot.
+    b. Podziel tablicę na elementy mniejsze i niemniejsze od pivotu.
+    c. Posortuj tablicę mniejszych i niemniejszych.
+2. Zakończ.
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB07.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Algorytmy sortowania - część 3.
+
+# 1. Sortowanie przez scalenie - MergeSort
+Jest klasycznym przykładem techniki dziel i zwyciężaj. Ma złożoność obliczeniową n * log n.
+Jest to algorytm rekurencyjny.
+Lista korków przedstawia się następująco:
+1. Podziel zbiór danych na dwie możliwie równe części.
+2. Posortuj przez scalenie każdy ze zbiorów, chyba że został już tylko jeden element.
+3. Połącz posortowane zbiory A i B zgodnie z procedurą scalania:
+    a. Ustaw wartowników: a dla zbioru A, b dla zbioru B;
+    b. Jeśli zbiór A jest wyczerpany, wstaw pozostałe elementy z B i zakończ;
+    c. Jeśli zbiór B jest wyczerpany, wstaw pozostałe elementy z A i zakończ;
+    d. Jeśli A[a] <= B[b], wstaw A[a] do zbioru wynikowego, zwiększ a;
+    e. Jeśli A[a] > B[b], wstaw B[b] do zbioru wynikowego, zwiększ b;
+    f. Powtarzaj kroki b – e aż wszystkie elementu trafią do zbioru wynikowego.
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB09.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Algorytmy selekcji
+
+# 1. Algorytm Hoare’a
+Algorytm ten bazuje na pomyśle realizowanym w sortowaniu QuickSort, czyli na podziale
+zbioru na mniejsze podzbiory.
+Algorytm jest rekurencyjny, a jego lista kroków przedstawia się następująco:
+1. Niech n oznacza długość tablicy, a k szukany element.
+2. Dla zbiorów 1-elementowych, zwróć element i zakończ działanie algorytmu.
+3. Dokonaj podziału elementów na mniejsze i większe (większe i równe) od wybranego
+elementu (analogicznie do QuickSort) i zapamiętaj jego indeks jako r. Należy jednak
+zapewnić, że element dzielący nie jest najmniejszym elementem zbioru.
+4. Jeśli ilość elementów mniejszych jest mniejsza od k:
+    a. tak - dokonaj selekcji na zbiorze mniejszych elementów,
+    b. nie - dokonaj selekcji na zbiorze większych bądź równych elementów.
+
+# 2. Algorytm magicznych piątek
+Algorytm ten jest rozwinięciem algorytmu Hoare’a. Pozwala osiągać lepsze rezultaty dla
+pesymistycznych zbiorów. Zapewnia on bowiem w najgorszym przypadku liniowy czas
+działania.
+W działaniu tych algorytmów są dwie różnice:
+a) Sposób wyboru elementu dzielącego (w al. Hoare’a był to dowolny element). W al.
+magicznych piątek wszystkie elementy tablicy dzieli się na podciągi
+pięcioelementowe. Ostatni podciąg może być niepełną piątką (np. dla 24
+elementów należy podzielić tablicę na 5 podciągów o długościach 5, 5, 5, 5, 4).
+Następnie w każdym podciągu oblicza się medianę i umieszcza się ją w zbiorze M
+(zbiór median). Elementem dzielącym zostaje mediana ze zbioru M.
+b) Druga to podział tablicy względem elementu dzielącego jest wykonywany na trzy
+podzbiory. Pierwszy zawiera elementy mniejsze, drugi elementu równe, a trzeci
+elementu większe od wcześniej wyznaczonego elementu dzielącego.
+
+Mediana jest środkowym elementem zbioru. Nie przysparza problemów dla zbiorów o
+nieparzystej ilości elementów, jednak może być kłopotliwa dla zbiorów o parzystej ilości
+elementów. W takim wypadku można mówić o medianie dolnej i górnej. Ponieważ jednak
+element dzielący nie może być najmniejszym elementem w zbiorze, lepiej wybrać górną
+medianę.
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB10.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Kolejka
+
+# 1. Kolejka
+Jest to struktura danych, która przypomina kolejkę w sklepie. Osoba, która pierwsza
+przyszła, pierwsza zostanie obsłużona – FIFO (ang. first in, first out). Poniżej zamieszczono
+kod implementacji kolejki stringów za pomocą tablicy (do funkcji queue podaje się wielkość
+tablicy). Taka implementacja ma pewną wadę, gdyż jest ona ograniczona deklarowaną
+wielkością tablicy. W kolejce możemy przechowywać różne rodzaje danych, np. liczby,
+teksty, struktury itp.
+
+# 2. Kolejka priorytetowa
+Jest ona specjalnym przypadkiem kolejki, gdyż każdy
+element ma ustawiony priorytet. Elementy nie są wstawiane
+na koniec kolejki, ale zgodnie ze swoim priorytetem.
+Dodawanie (polecenie push) i usuwanie elementów
+(polecenie pop) zostało przedstawione na rysunku obok,
+gdzie priorytety oznaczono kolorami (czerwony to najwyższy
+priorytet, żółty – średni, zielony – najniższy).
+Element „4” trafił na początek kolejki, bo nie było w niej
+żadnego elementu czerwonego.
+Element „5” trafił na swoje miejsce, gdyż przybył najpóźniej
+ze wszystkich elementów żółtych, a ma wyższy priorytet niż
+element „2”, który jest zielony.
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB11.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Stos
+
+# 1. Stos
+Jest to struktura danych, która przypomina stos książek. Książka, która zostanie położona
+na początku, zostanie podniesiona na końcu, gdyż najpierw trzeba podnieść wszystkie
+leżące na niej książki – LIFO (ang. first in, last out). Poniżej zamieszczono kod implementacji
+stosu stringów za pomocą tablicy (do funkcji stack podaje się wielkość tablicy). Taka
+implementacja ma pewną wadę, gdyż jest ona ograniczona deklarowaną wielkością tablicy.
+Na stosie możemy przechowywać różne rodzaje danych, np. liczby, teksty, struktury itp.
+
+# 2. Notacja ONP
+Jest to szczególny sposób zapisu działań matematycznych stworzony, który pozwala on na
+zapis formuł matematycznych bez użycia nawiasów, np.
+Zwykła notacja:
+( ( 12 – 5 ) + ( 7 + 1 ) / 4 ) * 2
+ONP:
+12 5 – 7 1 + 4 / + 2 *
+Algorytm obliczania wartości wyrażeń ONP wykorzystuje stos i jest następujący:
+1. Dla wszystkich symboli wyrażenia wykonaj:
+    a. Jeśli symbol jest liczbą, odłóż go na stos.
+    b. Jeśli jest operatorem:
+        i. Zdejmij ze stosu jeden element (a),
+        ii. Zdejmij ze stosu drugi element (b),
+        iii. Wykonaj działanie b operator a, wynik odłóż na stos.
+2. Zdejmij wynik ze stosu.
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB12.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Struktury danych w bibliotece STL
+
+# 1. Kontenery
+Są to po prostu struktury, które przechowują dane w sposób uporządkowany. Należy
+jednak pamiętać, że dane muszą mieć jeden typ. W zależności od wybranego kontenera
+można uzyskać lepsze lub gorsze rezultaty w zakresie wydajności. W bibliotece
+zaimplementowano:
+- listę,
+- wektor,
+- mapę,
+- zbiór,
+- stos,
+- kolejki.
+
+# 2. Stos
+Był on tematem poprzednich zajęć, więc jego działanie jest doskonale znane. W bibliotece
+STL ma następujące operacje:
+- push – odłożenie elementu na górę stosu,
+- pop – zdjęcie górnego elementu ze stosu,
+- empty – informacja czy stos jest pusty,
+- size – informacja o wielkości stosu, aktualna liczba jego elementów,
+- top – pobranie wartości najwyżej położonego elementu.
+
+# 3. Kolejka
+Była ona tematem jednych z poprzednich zajęć, więc jej działanie jest doskonale znane. W
+bibliotece STL ma następujące operacje:
+- push – dodanie elementu na koniec kolejki,
+- pop – usunięcie początkowego elementu kolejki,
+- empty – informacja czy kolejka jest pusta,
+- size – informacja o wielkości kolejki, aktualna liczba jej elementów,
+- front – pobranie wartości pierwszego elementu kolejki,
+- back – pobranie wartości ostatniego elementu kolejki.
+
+# 4. Wektor
+Jest to struktura, która swoją budową przypomina tablicę. Nie trzeba jednak znać wielkości
+tej struktury w momencie rozpoczęcia działania. W bibliotece STL ma następujące operacje:
+- push_back – dodanie elementu na koniec tablicy,
+- pop_back – usunięcie elementu z końca tablicy,
+- insert – dodanie elementu we wskazane miejsce w tablicy,
+- size – informacja o wielkości tablicy, aktualna liczba jej elementów,
+- front, back – pobranie wartości pierwszego i ostatniego elementu tablicy.
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB13.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Algorytmy szyfrowania – część 1.
+
+# 1. Szyfr Cezara
+Znany już w czasach przed naszą erą. Niestety jest szyfrem bardzo łatwym do złamania.
+Zamiast każdej z liter podstawia literę znajdującą się o 3 pozycje dalej w alfabecie.
+Deszyfrowanie natomiast postawia literę znajdującą się 3 pozycje wcześniej. Należy
+pamiętać, że szyfr „zawija” alfabet – oznacza to, że po literze Z następuje litera A.
+Przykład: Napis „ABCXYZ” zostanie przedstawiony jako „CEFABC”.
+
+# 2. Prosty szyfr XOR
+Aby zaszyfrować tekst tym kodem należy wybrać klucz. Klucz ten powinien być znany
+zarówno nadawcy, jak i odbiorcy zaszyfrowanej wiadomości. Powinien on być możliwie
+długi – użycie długiego klucza poprawia bezpieczeństwo szyfru. Szyfr wykorzystuje
+operacją bitową XOR. Z wybranego klucza należy stworzyć sekwencję kodującą, która ma
+długość szyfrowanej wiadomości i zawiera powtórzenia klucza. Następnie między kolejnymi
+znakami wiadomości do zaszyfrowania i sekwencji kodującej wykonuje się operacją XOR.
+Ciąg będący wynikiem tej operacji jest tekstem zaszyfrowanym. Deszyfrowkanie wykonuje
+się poprzez wykonanie dokładnie tych samych kroków.
+Do przedstawienia litery za pomocą kodu binarnego można wykorzystać następującą
+tabelę lub stworzyć własną:
+A 00000 F 01000 M 10000 Ś 11000
+Ą 00001 G 01001 N 10001 T 11001
+B 00010 H 01010 Ń 10010 U 11010
+C 00011 I 01011 O 10011 W 11011
+Ć 00100 J 01100 Ó 10100 Y 11100
+D 00101 K 01101 P 10101 Z 11101
+E 00110 L 01110 R 10110 Ź 11110
+Ę 00111 Ł 01111 S 10111 Ż 11111
+Słowo do zaszyfrowania: PROGRAMOWANIE
+Klucz: SZYFR
+Sekwencja kodująca: SZYFRSZYFRSZY
+Wiadomość zaszyfrowana: BGŁĄASŁŁOREÓU
+
+=============================================================================================================== ŹRÓDŁO: wejsciowki/LAB14.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
+
+Temat: Algorytmy szyfrowania – część 2.
+
+# 1. Szyfr przestawieniowy
+W najmniej skomplikowanej postać przestawia on litery w dwu znakach, jak pokazano na
+przykładzie:
+tekst do zaszyfrowania PROGRAMOWANIE
+podział na dwuznaki PR – OG – RA – MO – WA – NI – E
+zamiana wewnątrz dwuznaków RP – GO – AR – OM – AW – IN – E
+tekst zaszyfrowany RPGOAROMAWIN E
+Deszyfrowanie wygląda bardzo podobnie: należy podzielić tekst na dwuznaki, zamienić
+miejscami poszczególne element dwuznaków i połączyć je w całość.
+
+# 2. Szyfr płotkowy
+Jego nazwa wzięła się od graficznego przedstawienia jego działania. Był znany już
+w starożytności. Złamanie tego szyfru można zrealizować przez ataki typu „brute force”,
+czyli metodą siłową. Aby zaszyfrować tekst tą metodą na początku należy określić
+wysokość płotu h (niech będzie to 3). Następnie tworzy się tablicę o h wierszach i wpisuje
+tekst do zaszyfrowania.
+Aby odczytać zakodowany tekst, należy przeczytać zawartość tabeli wierszami, czyli:
+„PRWARGAOAIOMN”
+
+# 3. Szyfr ścieżkowy
+Jest on bardzo podobny do szyfru płotkowego. Aby zakodować wiadomość należy ją
+wpisać do tabeli o określonej szerokości (w = 3), a następnie odczytać zgodnie z ustaloną
+ścieżką. Działanie szyfru zostało przedstawione na przykładzie (puste komórki wypełniono
+znakiem X)
+Tekst do zaszyfrowania: PROGRAMOWANIEXX
+Tekst po zaszyfrowaniu: OAWIXXNORRPGMAE
+
+=============================================================================================================== ŹRÓDŁO: prompt_algorytmy.md
 
 ## ZASTOSOWANIA PRAKTYCZNE (Real-World Applications)
 
@@ -1038,3 +3811,207 @@ TODO
 | **KMP** | Wyszukiwarki, edytory tekstu (Ctrl+F), antywirus (sygnatura wzorców) |
 | **Szyfr XOR** | Proste szyfrowanie plików, checksums, obfuskacja |
 | **Grafy** | Mapy, sieci społecznościowe, systemy rekomendacji |
+
+=============================================================================================================== ŹRÓDŁO: laby/LAB02.pdf (opisy z instrukcji z laboratorium przedmiotu Algorytmy i Struktury Danych z roku 2025/2026)
+
+Temat: Schematy blokowe
+
+# 1. Dlaczego się uczymy schematów blokowych?
+- Schematy blokowe pozwalają na wizualizację problemu.
+- Dobrze wykonane są bardzo czytelne.
+- Sa szczególnie dobre do pracy w grupie i dla „wzrokowców”.
+- Pozwalają na wstępne przetestowanie algorytmu (warunki wejścia do pętli etc.).
+- Są podstawą inżynierii oprogramowania (mogą być łącznikiem między światem
+inżynierskim i nieinżynierskim).
+
+# 2. Bloki początku i końca
+- Zaczynamy od bloku START, kończymy blokiem STOP
+- Elementy łączymy strzałkami
+- Schematy można tworzyć na kartce, na tablecie
+graficznym lub w oprogramowaniu (np. PowerPoint o365)
+- Schemat ma być jak wodospad – przepływ działania
+zawsze od góry do doł
+
+# 3. Operacje wejścia / wyjścia
+- Oznaczone równoległobokiem
+- Można ozaczyć strzałkami blok
+wejścia (strzałka do bloku)
+i wyjścia (strzałka od bloku)
+- Można wprowadzić / wypisać
+całą tablicę (zwiększa to
+czytelność schematu).
+
+# 4. Bloki operacyjne
+- Oznaczone prostokątami
+- Mogą zawierać więcej niż jedną operację
+- Umieszczamy w nich:
+    * deklaracje i inicjalizacje zmiennych (i = 0)
+    * operacje podstawienia (=)
+    * operacje matematyczne (+, -, *, /, %)
+    * operacje inkrementacji i dekrementacji (++, --)
+    * operacje bitowe: (|, &, ^, ~, <<, >>)
+
+# 5. Bloki warunkowe
+- Służą do przedstawienia warunków i pętli
+- Muszą mieć opisane wyjścia
+- Mogą zawierać >1 warunek jednocześnie
+- Stosujemy operatory:
+    * porównania: >, <, >=, <=, ==
+    * logiczne: &&, ||, !
+
+# 6. Podprogramy
+- Wybrane fragmenty można przedstawić za pomocą bloku podprogramu (prostokąt
+z podwójnymi kreskami po bokach)
+- Wcześniej jednak trzeba ten blok zdefiniować!
+
+# 7. Informacje ogólne
+- Zawsze ograniczone symbolami START – STOP
+- Jak wodospad z góry na dół→
+- Pętle przedstawiamy za pomocą bloku warunkowego
+- Jedno wejście – jedno wyjście (wyjątek: blok warunkowy)
+- Wyjścia warunkowe muszą być opisane
+- Wszystkie elementy muszą być połączone
+- Strzałki są niezbędne
+- == i = to dwie różne operacje
+- Warto dodać „legendę
+
+=============================================================================================================== ŹRÓDŁO: laby/LAB03.pdf (opisy z instrukcji z laboratorium przedmiotu Algorytmy i Struktury Danych z roku 2025/2026)
+
+Temat: Pseudokod
+
+# 1. Pseudokod
+Pseudokod jest podobny do listy kroków, jednak jest mniej opisowy. Co ciekawe nie ma
+jednego standardu zapisu. Stosuje się w nim operacje matematyczne. Dopuszcza się
+stosowanie zdań w języku naturalnym, o ile nie zaburza to czytelności zapisu.
+Wybrane elementy pseudokodu:
+
+A. Wejście / wyjście – w pseudokodzie nie deklaruje się zmiennych, nie alokuje się pamięci
+itp. Dlatego też zmienne mogą pojawiać się dośc niespodziewanie.
+Zapisy b a – 1 oraz b := a – 1 są tożsame. Dobrze jest jednak wybrać jeden sposób zapisu←
+przypisania wartości i trzymać się jej w obrębie całego algorytmu.
+Do wprowadzenia danych od użytkownika wykorzystujemy słowo Wprowadź, do wypisania
+danych Wypisz.
+
+B. Operatory – tak jak w schemacie blokowym korzystać będziemy z operatorów
+matematycznych <, >, >=, <=, == oraz !=. Zamiast operatorów logicznych wykorzystamy
+słowa i (iloczyn logiczny), lub (suma logiczna) oraz jest/nie jest. Wartości logiczne
+w pseudokodzie to prawda i fałsz.
+
+C. Instrukcje warunkowe – wykorzystywać będziemy słowa jeżeli oraz w przeciwnym
+wypadku (przeciwnie). Instrukcje warunkowe wprowadzają „bloki” oznaczone wcięciami.
+
+D. Pętle – wprawdzone słowami dopóki, wykonuj, dla – są to odpowiedniki pętli while,
+do–while oraz for. Pętle również wprowadzają „bloki” oznaczone wcięciami.
+
+E. Przykład – jest to najprostszy algorytm sortowania liczb, przykład pokazuje wcięcia
+spowodowane przez pętle, przez warunek, a także sposób wejścia i wyjścia danych. Zwracać
+uwagę może zapis tablicy. Pseudokod nie wymusza stosowania tablic numerowania od
+1 lub od 0. Najlepiej wybrać jeden sposób notacji i jej się konsekwentnie trzymać. Być może
+numerowanie elementów od 0 będzie bardziej intuicyjne, gdyż od kolejnych zajęć
+zaczniemy korzystać z języka C/Cpp.
+
+n <- 10
+wprowadź tablica[1..n]
+dla i = 1, 2, ..., n - 1 wykonuj
+    dla j = 2, 3, ..., n - (i - 1) wykonuj
+        jeżeli tablica[j - 1] > tablica[j]
+            tymczasowy <- tablica[j - 1]
+            tablica[j - 1] <- tablica[j]
+            tablica[j] <- tymczasowy
+wypisz tablica
+
+=============================================================================================================== ŹRÓDŁO: laby/LAB08.pdf (opisy z instrukcji z laboratorium przedmiotu Algorytmy i Struktury Danych z roku 2025/2026)
+
+Temat: Badanie algorytmów Sortowanie
+
+Podczas poprzednich laboratoriów przedstawiono popularne algorytmy sortujące dane
+liczbowe. Każdy z zaimplementowanych algorytmów zostanie sprawdzony przy użyciu
+następujących zbiorów danych:
+1. Optymistyczny (dane posortowane lub częściowo posortowane);
+2. Losowy (dane generowane losowo);
+3. Pesymistyczny (dane uporządkowane w przeciwnym kierunku).
+
+=============================================================================================================== ŹRÓDŁO: laby/LAB12.pdf (opisy z instrukcji z laboratorium przedmiotu Algorytmy i Struktury Danych z roku 2025/2026)
+
+Temat: Algorytmy grafowe
+
+# 1. Graf
+Graf podstawowa struktura matematyczna, za pomocą której można opisywać różne
+zależności między elementami. W uproszczeniu można stwierdzić, że graf składa się z listy
+wierzchołków oraz krawędzi poprowadzonych między nimi. Wierzchołki wtedy zwykle
+symbolizują obiekty/elementy, a krawędzie zależności między nimi.
+Grafy są stosowane w wielu codziennych sytuacjach: nawigacja pojazdów, wyznaczanie trasy
+pakietów w sieci teleinformatycznej, gry komputerowe, logistyka.
+
+# 2. Definicje
+- graf pełny – graf posiadający wszystkie wierzchołki połączone ze sobą
+- graf skierowany – graf, w którym krawędzie mają określone kierunki
+- graf ważony – graf, w którym krawędzie mają nadane wagi
+- graf etykietowany – graf, w którym wierzchołki mają nadane etykiety lub numery
+- graf spójny – graf, w którym dla każdego wierzchołka istnieje droga do każdego
+innego wierzchołka
+- droga – ciąg wierzchołków, w którym każde dwa kolejne wierzchołki są połączone ze
+sobą krawędzią
+- cykl – zamknięta droga, która kończy się w wierzchołku ją rozpoczynającym
+- pętla – krawędź zaczynająca i kończąca się w tym samym wierzchołku
+- rozmiar grafu – liczba krawędzi grafu
+- rząd grafu – liczba wierzchołków grafu.
+
+# 3. Reprezentacja grafu
+Istnieją różne reprezentacje grafu (macierz sąsiedztwa, listy sąsiedztwa). Na potrzeby
+laboratorium można przyjąć reprezentację krawędzi za pomocą poniższej struktury, w której
+p1 i p2 to wierzchołki połączone krawędzią, a weight to waga tej karawędzi.
+struct edge
+{
+int p1;
+int p2;
+int weight;
+};
+
+# 4. Algorytm Dijkstry
+Algorytm służy do wyznaczenia najkrótszej ścieżki między wierzchołkami.
+Kroki algorytmu:
+1. Pobierz wszystkie krawędzie grafu o m krawędziach i n wierzchołkach
+2. Utwórz tablice o wielkości n do przechowywania kosztu dojścia do wierzchołka (int
+*cost), poprzedników (int *prev) oraz informacji o przejrzeniu wierzchołka (bool
+*seen). Tablicę cost wypełnij maksymalną wartością INT. Tablicę prev wypełnij
+wartością -1. Tablicę seen wypełnij wartością false.
+3. Ustaw cost[0] = 0 (rozpoczynamy od wierzchołka 0, więc koszt dotarcia do niego jest
+zerowy).
+4. Dopóki są nieprzejrzane wierzchołki (co najmniej jedno false w tablicy seen)
+wykonaj:
+    a. Wybierz nieprzejrzany wierzchołek u o najmniejszym koszcie w tablicy cost,
+    b. Dla wszystkich krawędzi v wychodzących z u wykonaj:
+        i. Jeśli: koszt przejścia v -> u + cost[u] < cost[v], to ustaw cost[v] = koszt przejścia v -> u + cost[u];
+    c. Ustaw seen[u] = true (wszystkie krawędzie wychodzące z u zostały przejrzane).
+5. W tablicy cost znajdują się całkowite koszty dojścia do wierzchołka
+6. Na podstawie tablicy prev można odtworzyć ścieżkę.
+
+Na podstawie tablicy prev można wyznaczyć minimalną ścieżkę
+
+# 5. Algorytm Kruskala
+Algorytm Kruskala pozwala na wyznaczenie minimalnego drzewa rozpinającego.
+Drzewo – graf nieskierowany, acykliczny, spójny.
+Drzewo jest grafem, w którym z każdego wierzchołka można dotrzeć do każdego innego
+wierzchołka tylko jednym sposobem.
+Drzewo rozpinające posiada wszystkie wierzchołki grafu oraz podzbiór wszystkich krawędzi
+grafu. Dla n wierzchołków ma n-1 krawędzi. Przykłady drzewa rozpinającego zaznaczono
+zielonym kolorem na poniższych rysunkach.
+Minimalne drzewo rozpinające (ang. minimum spanning tree, w skrócie MST) – drzewo
+rozpinające o najmniejszej wadze. Może istnieć kilka takich drzew, jednak algorytm zakłada,
+że wystarczy znaleźć jedno takie drzewo.
+
+Kroki algorytmu Kruskala:
+1. Utworzyć pusty zbiór krawędzi Tree oraz uporządkowaną listę m krawędzi (wagi
+posortowane niemalejąco) Edges,
+2. Dopóki w Tree nie ma m-1 krawędzi należy wykonać:
+    a. zdjąć krawędź o najmniejszej wadze z listy
+    b. jeśli nie tworzy ona cyklu z obecnymi krawędziami w Tree, dodać ją do Tree
+    c. jeśli tworzy ona cykl, odrzucić ją
+3. W Tree znajdują się krawędzie należące do MST.
+
+Wyzwaniem może być sprawdzenie cyklu. Można założyć, że na początku każdy wierzchołek
+zostaje przypisany do oddzielnego zbioru. Dodanie krawędzi do Tree jest możliwe jedynie w
+przypadku gdy wierzchołki tej krawędzi należą do innych zbiorów. Po dodaniu krawędzi
+należy zaktualizować zbiory w taki sposób, aby oba wierzchołki tej krawędzi były w jednym
+zbiorze.
