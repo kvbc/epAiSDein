@@ -12,11 +12,11 @@ export const knowledgeSources = [
         path: "/assets/opracowanie_AISD_wyklad.pdf",
         type: "pdf",
       },
-      {
-        label: "Prompt algorytmy (meta)",
-        path: "/assets/prompt_algorytmy.md",
-        type: "md",
-      },
+      // {
+      //   label: "Prompt algorytmy (meta)",
+      //   path: "/assets/prompt_algorytmy.md",
+      //   type: "md",
+      // },
       {
         label: "Pytania egzaminacyjne",
         path: "/assets/pytania.pdf",

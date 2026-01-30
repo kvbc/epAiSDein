@@ -4,12 +4,12 @@
 
 <div class="bg-zinc-900 border border-zinc-700 rounded-xl p-4 space-y-4">
   <h3 class="text-lg font-bold text-white">
-    📚 Źródła wiedzy używane przez mentora
+    📚 Źródła wiedzy używane przez model
   </h3>
 
   <p class="text-sm text-zinc-400">
-    Poniższe materiały stanowią bazę wiedzy (RAG), na podstawie której mentor
-    ocenia odpowiedzi. AI nie korzysta z wiedzy zewnętrznej.
+    Poniższe materiały stanowią bazę wiedzy (RAG), na podstawie której model
+    ocenia odpowiedzi.
   </p>
 
   {#each knowledgeSources as section}

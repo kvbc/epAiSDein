@@ -295,6 +295,7 @@ Jeśli jest niejednoznaczna – obniż score.
   let typedTip = "";
   let talking = false;
   let typingSound;
+  let resultsSection;
 
   let mouthOpen = false;
   let mouthInterval = null;
@@ -319,6 +320,8 @@ Jeśli jest niejednoznaczna – obniż score.
   let sources = [];
 
   let results = [];
+  let resultRefs = [];
+
   // let results = questions.map(() => ({
   //   answers: [], // wszystkie odpowiedzi usera (string)
   //   scores: [], // score z każdej próby
@@ -336,6 +339,27 @@ Jeśli jest niejednoznaczna – obniż score.
 
   $: mentor = mentors.find((m) => m.id === selectedMentorId);
   $: mentorIndex = mentors.findIndex((m) => m.id === selectedMentorId);
+
+  function scrollToResult(i) {
+    resultRefs[i]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  function scrollToResults() {
+    if (!resultsSection) return;
+
+    resultsSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    // resultsSection.classList.add("ring", "ring-blue-500");
+    // setTimeout(() => {
+    //   resultsSection.classList.remove("ring", "ring-blue-500");
+    // }, 1200);
+  }
 
   onMount(() => {
     const saved = localStorage.getItem("mentor");
@@ -532,6 +556,15 @@ Jeśli jest niejednoznaczna – obniż score.
     }
   }
 
+  function isSkipped(r) {
+    return (
+      r &&
+      r.answers.length === 1 &&
+      r.answers[0] === null &&
+      r.verdicts[0] === "Pominięte"
+    );
+  }
+
   function stopTypingSound() {
     if (typingSound) {
       typingSound.pause();
@@ -565,7 +598,7 @@ Jeśli jest niejednoznaczna – obniż score.
     // ❌ NIE odpalamy mentora
 
     // oznacz jako „pominięte” (opcjonalne)
-    const r = results[realIndex];
+    const r = results[current];
     if (r.answers.length === 0) {
       r.answers.push(null);
       r.scores.push(0);
@@ -786,6 +819,47 @@ Jeśli jest niejednoznaczna – obniż score.
     playSound("intro", { volume: 0.5 });
   }
 
+  function finalVerdict(percentFS) {
+    if (percentFS >= 70) {
+      return {
+        status: "pass",
+        title: "✅ Jesteś gotowy na kolokwium",
+        text: `
+Twoja wiedza jest wystarczająco ugruntowana.
+Odpowiedzi były spójne i w większości poprawne egzaminacyjnie.
+Na realnym kolokwium powinieneś sobie poradzić.
+      `.trim(),
+        color: "green",
+      };
+    }
+
+    if (percentFS >= 50) {
+      return {
+        status: "borderline",
+        title: "⚠️ Jesteś na granicy zaliczenia",
+        text: `
+Rozumiesz większość zagadnień, ale brakuje konsekwencji.
+Jedno słabsze pytanie na kolokwium może Cię pogrążyć.
+Powtórka wybranych działów jest wskazana.
+      `.trim(),
+        color: "yellow",
+      };
+    }
+
+    return {
+      status: "fail",
+      title: "❌ Nie jesteś jeszcze gotowy",
+      text: `
+Wiedza jest fragmentaryczna i niespójna.
+Na kolokwium taki poziom odpowiedzi prawdopodobnie nie wystarczy.
+Zrób quiz jeszcze raz po solidnej powtórce materiału.
+      `.trim(),
+      color: "red",
+    };
+  }
+
+  $: final = finalVerdict(percentFS);
+
   async function typeVerdict(text, runId) {
     skipTyping = false;
     typedVerdict = "";
@@ -903,7 +977,7 @@ Jeśli jest niejednoznaczna – obniż score.
       class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl text-lg"
       on:click={startGame}
     >
-      Płynę na wyspe
+      Lecimy z koksem
     </button>
   </div>
 {/if}
@@ -919,7 +993,7 @@ Jeśli jest niejednoznaczna – obniż score.
 
   <div class="max-w-[520px] mx-auto mt-16 flex flex-col gap-4 px-2">
     <h2 class="text-lg font-semibold">
-      Pytanie {current + 1}
+      Pytanie {current + 1} / {questions.length}
     </h2>
 
     <p class="text-base leading-relaxed">
@@ -985,15 +1059,20 @@ Jeśli jest niejednoznaczna – obniż score.
         hover:scale-105
         {orderIdx === current
             ? 'border-blue-500 bg-blue-600 text-white'
-            : results[orderIdx]?.fs === null
-              ? 'border-zinc-700 bg-zinc-900 text-zinc-400'
-              : results[orderIdx].fs < 40
-                ? 'border-red-500 bg-red-600 text-white'
-                : results[orderIdx].fs < 70
-                  ? 'border-yellow-400 bg-yellow-400 text-black'
-                  : 'border-green-500 bg-green-500 text-black'}
+            : isSkipped(results[orderIdx])
+              ? 'border-zinc-500 bg-zinc-400 text-zinc-700'
+              : results[orderIdx]?.fs === null
+                ? 'border-zinc-700 bg-zinc-900 text-zinc-400'
+                : results[orderIdx].fs < 40
+                  ? 'border-red-500 bg-red-600 text-white'
+                  : results[orderIdx].fs < 70
+                    ? 'border-yellow-400 bg-yellow-400 text-black'
+                    : 'border-green-500 bg-green-500 text-black'}
+
       "
-          title={`Pytanie ${realIdx + 1}`}
+          title={isSkipped(results[orderIdx])
+            ? "Pominięte (Nie wiem)"
+            : `Pytanie ${realIdx + 1}`}
         >
           {realIdx + 1}
         </button>
@@ -1132,13 +1211,44 @@ Jeśli jest niejednoznaczna – obniż score.
       </div>
     {/if}
 
+    <details class="bg-zinc-900 border border-zinc-700 rounded-lg p-4">
+      <summary class="font-semibold text-white cursor-pointer">
+        ℹ️ Jak liczone są punkty?
+      </summary>
+
+      <div class="mt-3 text-sm text-zinc-300 space-y-2">
+        <p>
+          <b>FS (First Score)</b> – punkty za <u>pierwszą odpowiedź</u>.
+        </p>
+        <p>
+          <b>RS (Retry Score)</b> – najlepszy wynik po poprawkach.
+        </p>
+        <p class="text-zinc-400 italic">
+          Wysokie wyniki mogą być lekko zaniżone przez surowość mentora.
+        </p>
+      </div>
+    </details>
+
+    <details class="bg-zinc-900 border border-zinc-700 rounded-lg p-4">
+      <summary class="font-semibold text-white cursor-pointer">
+        📚 Z jakiej wiedzy korzysta model AI?
+      </summary>
+
+      <p class="mt-3 mb-3 text-sm text-zinc-400">
+        Ocenianie odbywa się wyłącznie na podstawie oficjalnych materiałów z
+        przedmiotu (wykłady, notatki, opracowania).
+      </p>
+
+      <KnowledgeBrowser />
+    </details>
+
     <div class="mt-8 flex justify-center">
       <button
         on:click={() => {
           unlockAudio();
           finishTest();
         }}
-        class="text-red-400 border border-red-500 px-4 py-2 rounded-md hover:bg-red-500 hover:text-white"
+        class="w-full text-red-400 border mb-4 border-red-500 px-4 py-2 rounded-md hover:bg-red-500 hover:text-white"
       >
         Zakończ test
       </button>
@@ -1239,6 +1349,46 @@ Jeśli jest niejednoznaczna – obniż score.
           </div>
         </div>
 
+        <div
+          class="mt-8 rounded-xl p-6 border-l-4 bg-zinc-900"
+          class:border-green-500={final.color === "green"}
+          class:border-yellow-400={final.color === "yellow"}
+          class:border-red-500={final.color === "red"}
+        >
+          <h3 class="text-lg font-bold mb-2 text-white">
+            {final.title}
+          </h3>
+
+          <p class="text-zinc-300 leading-relaxed mb-4">
+            {final.text}
+          </p>
+
+          <!-- <div
+            class="bg-black/30 rounded-md px-4 py-3 text-sm text-zinc-200 mb-4"
+          >
+            🎉 <b>Gratulacje!</b><br />
+            Ukończyłeś cały quiz obejmujący
+            <b>{questions.length} pytań</b> z Algorytmów i Struktur Danych. Niezależnie
+            od wyniku — to pełne przejście materiału egzaminacyjnego.
+          </div> -->
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button
+              on:click={() => location.reload()}
+              class="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded-md py-2 font-semibold"
+            >
+              🔁 Rozwiąż quiz ponownie i popraw wynik
+            </button>
+
+            <button
+              on:click={scrollToResults}
+              class="flex-1 bg-zinc-700 hover:bg-zinc-600 text-white rounded-md py-2"
+            >
+              📋 Przejrzyj swoje odpowiedzi
+            </button>
+          </div>
+        </div>
+
         {#if !submitted}
           <div class="mt-6 flex flex-col sm:flex-row gap-2">
             <input
@@ -1257,7 +1407,10 @@ Jeśli jest niejednoznaczna – obniż score.
             </button>
           </div>
         {:else}
-          <div class="text-green-400 mt-4">✔ Wynik zapisany</div>
+          <div class="text-green-400 mt-4">
+            ✔ Wynik zapisany. Zmiana w tabelach wyników zajdzie po odświeżeniu
+            strony.
+          </div>
         {/if}
 
         <div
@@ -1281,21 +1434,43 @@ Jeśli jest niejednoznaczna – obniż score.
           </i>
         </div>
 
-        <details class="mt-6">
+        <details
+          class="bg-zinc-900 border border-zinc-700 rounded-lg p-4
+         transition-all open:border-blue-500"
+        >
           <summary
-            class="cursor-pointer text-sm text-zinc-400 hover:text-zinc-200"
+            class="list-none cursor-pointer select-none
+           flex items-center justify-between gap-4"
           >
-            📚 Zobacz źródła wiedzy
+            <div class="flex items-center gap-3">
+              <span class="text-lg">📚</span>
+
+              <div class="text-sm font-semibold text-white">
+                Materiały użyte do oceniania
+              </div>
+            </div>
+
+            <span
+              class="text-zinc-400 transition-transform
+                 group-open:rotate-180"
+            >
+              ▼
+            </span>
           </summary>
 
-          <div class="mt-3">
-            <KnowledgeBrowser />
-          </div>
+          <div class="mb-4"></div>
+
+          <KnowledgeBrowser />
         </details>
 
-        <div class="space-y-6">
+        <hr class="mb-4" />
+
+        <div class="space-y-6" bind:this={resultsSection}>
           {#each results as r, i}
-            <div class="bg-zinc-900 border border-zinc-700 rounded-xl p-4">
+            <div
+              bind:this={resultRefs[i]}
+              class="bg-zinc-900 border border-zinc-700 rounded-xl p-4"
+            >
               <!-- HEADER -->
               <div class="flex justify-between items-center mb-3">
                 <div
