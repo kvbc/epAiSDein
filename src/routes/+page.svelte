@@ -34,7 +34,7 @@
     "Jakie dwie modyfikacje mozna wprowadzic, aby przyspieszyc sortowanie bąbelkowe?",
     "Jaka jest podstawowa idea sortowania przez wstawianie?",
     "Jaka jest podstawowa idea sortowania przez wybor?",
-    "Jakie złozonosci obliczeniowe mają poznane algorytmy?",
+    "Jakie złozonosci obliczeniowe mają poznane algorytmy? (sortowania)",
     "Jaka jest podstawowa idea sortowania szybkiego?",
     "Jaka jest podstawowa idea sortowania przez scalanie?",
     "Jak przyspieszyc QuickSort i MergeSort?",
@@ -46,7 +46,7 @@
     "Jak realizuje się selekcję za pomocą algorytmu Hoare’a?",
     "Jakie zmiany wprowadza algorytm magicznych piątek?",
     "Dlaczego zbiory dzielimy na piątki, a nie na trojki, siodemki etc.?",
-    "Jakie złozonosci mają poznane na wykładzie algorytmy?",
+    "Jakie złozonosci mają poznane na wykładzie algorytmy? (selekcja i wyszukiwanie)",
     "Gdzie mozna zastosowac przedstawione algorytmy wyszukiwania i selekcji?",
     // Struktury danych 1
     "Czym jest struktura danych?",
@@ -108,7 +108,7 @@ w drzewie BST?`,
     // Przeszukiwanie tekstow
     "Jaka jest zasada działania algorytmow z rodziny Brute-Force?",
     "Jak działa naiwny algorytm poszukiwania wzorca?",
-    "Jakie złozonosci mają poznane algorytmy poszukiwania wzorcow?",
+    "Jakie złozonosci mają poznane algorytmy poszukiwania wzorcow? (przeszukiwanie tekstów)",
     "Jakie zmiany wprowadzają w algorytmie naiwnym algorytmy Boyera i Moore’a oraz Knutha-Morrisa-Pratta?",
     "Jak działa algorytm Boyera i Moore’a?",
   ];
@@ -1994,6 +1994,11 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     talking = false;
     skipTyping = true;
 
+    showAskMentor = false;
+    mentorQuestion = "";
+    mentorAnswer = "";
+    loadingMentor = false;
+
     // reset stanu pytania
     answer = "";
     sources = [];
@@ -2086,6 +2091,15 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     isLoading = false;
   }
 
+  let showQuizNotice =
+    typeof localStorage !== "undefined" &&
+    !localStorage.getItem("quiz_global_notice_seen");
+
+  function hideQuizNotice() {
+    localStorage.setItem("quiz_global_notice_seen", "1");
+    showQuizNotice = false;
+  }
+
   function nextQuestion() {
     if (isFinished) return;
     if (isAdvancing) return;
@@ -2134,6 +2148,15 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
         stopTypingSound();
       }
     });
+
+    let showMentorNotice =
+      typeof localStorage !== "undefined" &&
+      !localStorage.getItem("mentor_notice_seen");
+
+    function hideMentorNotice() {
+      localStorage.setItem("mentor_notice_seen", "1");
+      showMentorNotice = false;
+    }
 
     questionOrder = questions.map((_, i) => i);
     shuffle(questionOrder);
@@ -2291,7 +2314,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           question: questions[realIndex],
-          answer,
+          answer: answer + ".",
           mentor: {
             id: mentor.id,
             personality: mentor.personality,
@@ -2359,11 +2382,58 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
     class="fixed top-0 left-0 right-0 bg-zinc-900 text-white px-4 py-2 flex justify-between text-sm z-50"
   >
     <div>FS: {totalFS} pkt</div>
-    <div>epstein AiSDland</div>
+    <div>epstein AiSDland — 21,000 słów notatek — v1.0</div>
     <div>RS: {totalRS} pkt</div>
   </div>
 
   <div class="max-w-[520px] mx-auto mt-16 flex flex-col gap-4 px-2">
+    {#if showQuizNotice}
+      <div
+        class="bg-zinc-900 border border-zinc-700 rounded-lg p-4 text-sm text-zinc-300"
+      >
+        <div class="flex justify-between items-start gap-4">
+          <div class="space-y-2">
+            <div class="font-semibold text-white flex items-center gap-2">
+              ℹ️ Ważne informacje przed rozpoczęciem
+            </div>
+
+            <p>
+              <span class="font-medium text-white"
+                >Mentorzy mogą różnić się stylem oceniania</span
+              >
+              — niektórzy są bardziej
+              <span class="text-green-400 font-medium">łagodni (kind)</span>,
+              inni bardziej
+              <span class="text-red-400 font-medium">surowi (strict)</span>.
+              Wpływa to na ton feedbacku i punktację, ale nie na treść pytań.
+            </p>
+
+            <p class="text-zinc-400">
+              <span class="text-white">Czasami (rzadko)</span> może zdarzyć się sytuacja,
+              że mentor zwróci pustą lub błędną odpowiedź techniczną. Jeśli tak się
+              stanie:
+            </p>
+
+            <ul class="list-disc list-inside text-zinc-400">
+              <li>
+                kliknij <span class="text-white font-medium">„Powtórz”</span>
+              </li>
+              <li>lekko zmień treść swojej odpowiedzi (nawet jedno zdanie)</li>
+              <li>ponów ocenę — wtedy wszystko powinno zadziałać poprawnie</li>
+            </ul>
+          </div>
+
+          <button
+            on:click={hideQuizNotice}
+            class="text-zinc-400 hover:text-white text-sm"
+            aria-label="Zamknij"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    {/if}
+
     {#if showStudyNotice}
       <div
         class="bg-[#0b1d33] text-blue-100
@@ -3075,7 +3145,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
                 <div
                   class="bg-[#0f0f0f] border-l-4 border-blue-500 rounded-md px-3 py-2 text-sm text-zinc-200"
                 >
-                  <b class="text-zinc-400">Ostatni verdict mentora:</b><br />
+                  <b class="text-zinc-400">Ostatni werdykt mentora:</b><br />
                   {r.verdicts.at(-1)}
                 </div>
               {/if}

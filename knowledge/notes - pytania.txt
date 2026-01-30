@@ -1119,6 +1119,37 @@ Negacja - !=
 8x - operacja bitowa
 88x - operacja prawdziwa
 
+# Pytania Kontrolne
+
+1. Co to algorytm?
+Algorytm to zestaw instrukcji opisujących, jak wykonać pewne zadanie, krok o
+kroku, w określonej kolejności
+
+2. Co to struktura danych?
+Struktura danych to sposób na uporządkowanie i przechowanie typów
+podstawowych i złożonych (w pamięci komputera)
+
+3. Cechy algorytmu
+Poprawność Działa wraz z założeniami) ,Skończoność Ma określony
+początek i koniec), Jednoznaczność Za każdym razem wykonywany jest tak
+samo), Efektywność Jest zbudowany w najlepszy możliwie sposób w ramach
+założeń)
+
+4. Jak można zapisać algorytm
+Lista kroków, Pseudokod, Schemat blokowy, Program komputerowy
+
+5. Jak dzielimy struktury danych?
+Struktury danych dzielimy na liniowe, które same w sobie dzielimy na
+statyczne (np. tablica) i dynamiczne (np. stos), oraz nieliniowe (np. drzewo)
+
+6. Co to jest analiza algorytmu
+Jest to sprawdzenie wydajności algorytmu poprzez zwrócenie uwagi na
+elementy takie jak: pobór zasobów, prędkość wykonania, złożoność czasowa
+
+7. Elementy schematów blokowych
+Strzałki, blok graniczny, blok wejścia-wyjścia, blok operacyjny, blok
+warunkowy, blok podprogramu, blok zdefiniowanego fragmentu, łącznik
+
 =============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 2.pdf (opracowanie wykładów z 2024)
 
 Temat: Podstawowe algorytmy matematyczne - Pojęcie rekurencji
@@ -1319,6 +1350,32 @@ int funk2(int n)
     return b;
 }
 
+# Pytania kontrolne
+
+1. Do czego stosujemy algorytm Euklidesa?
+By znaleźć największy wspólny dzielnik dwóch liczb całkowitych, w jego
+zmodyfikowanej wersji, możemy znaleźć najmniejszą wspólną wielokrotność
+dwóch liczb
+
+2. Iteracja vs rekurencja
+Iteracja to powtarzanie danego segmentu kodu aż do spełnienia danego
+wymogu, rekurencja to wywoływanie funkcji przez samą siebie z innymi
+danymi, aż do spełnienia danego wymogu
+
+3. Zagrożenia wynikające z rekurencji
+Większe zużycie pamięci operacyjne, możliwość przepełnienia stosu
+
+4. Co otrzymujemy z wyniku działania Sita Erastotenesa
+Otrzymujemy listę liczb pierwszych
+
+5. Jak tworzy się kolejne elementy ciągu Fibonacciego
+Kolejne elementy ciągu Fibbonaciego powstają poprzez zsumowanie
+poprzednich dwóch elementów
+
+6. Algorytm obliczania ciągu Fibonacciego jest rekurencyjne czy iteracyjne?
+Może być wykonany rekurencyjnie i iteracyjnie, lecz wersja iteracyjna jest
+wydajniesza
+
 =============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 3.pdf (opracowanie wykładów z 2024)
 
 # 1. Po co nam system binarny?
@@ -1444,6 +1501,41 @@ Przy pomocy tablicy ASCII, jesteśmy przykładowo w stanie zapisać liczby
 hexadecymalne w tablicy int, zapisując przykładowo liczbę A2(hex)=162(dec),
 zostanie ona zapisana jako 65 w pierwszym indeksie tabelki, i 2 w drugim indeksie
 tabelki
+
+# Pytania kontrolne
+
+1. Czym jest system bitowy?
+Jest to system zero jedynkowy, inaczej dwójkowy, bardzo prosty do
+zrozumienia przez komputer, podobnie do systemu dziesiętnego jesteśmy w
+stanie zapisywać liczby przy jego pomocy
+
+2. Jak wykonać konwersję dec2bin?
+Wyznaczamy modulo przez 2 danej liczby, oraz wynik dzielenia przez 2
+zaokrąglonej w dół, robimy to aż nie uzyskamy 0 dla liczby dzielonej, wynik
+zapisany w systemie binarnym, to reszta z dzielenia, pierwszym znakiem w
+wartości binarnej jest ostatnia reszta, drugim, przed ostatnia, itd.
+
+3. Jak wykonać sprawdzenie działania algorytmu dec2bin?
+Możemy to zrobić poprzez wykorzystanie algorytmu bin2dec, lub ręcznego
+obliczenia wyniku
+
+4. Czym jest zapis heksadecymalny? Gdzie go spotykamy?
+Jest to system który ma na celu skrócić długie liczby binarne lub decymalne,
+spotykamy go w adresach IPv6, stylach CSS czy adresach rejestrów w
+mikroprocesorach
+
+5. Jakie znaki występują w zapisie heksadecymalnym
+0-9, no i A dla 10, B dla 11, C dla 12, D dla 13, E dla 14, F dla 15
+
+6. Jak dokonać konwersji dec2hex?
+Podobnie jak w dec2bin, obliczamy resztę z dzielenia naszej wartości przez
+16, oraz dzielimy ów wartość przez 16 i zaokrąglamy w dół, dopuki nie
+otrzymamy 0 dla liczby dzielonej, wynik zapisany w systemie
+hexadecymalnym to reszty z dzielenia, pierwszym znakiem wartości
+heksadecymalnej jest ostatnia reszta, drugim, przed ostatnia, itd.
+
+7. Czym jest tablica ASCII
+Jest to tablica która opisuje wartości różnych znaków w systemie decymalnym
 
 =============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 4+5.pdf (opracowanie wykładów z 2024)
 
@@ -1824,6 +1916,62 @@ Można również zastosować hybrydę i dzielić do momentu osiągnięcia
 niewielkiego zbioru (np. 3 elementowego), a uzyskane niewielkie zbiory sortować
 innym, prostszym algorytmem.
 
+# Pytania kontrolne
+
+1. Na czym polega notacja dużego O?
+Notacja dużego O to sposób na wyrażenie złożoności czasowej danego
+algorytmu, nie jest ona wyrażana poprzez średni czas, tylko poprzez tępo
+wzrostu złożoności w zależności od ilości danych wejściowych
+
+2. Jaka jest podstawowa idea sortowania bąbelkowego?
+Polega na porównaniu dwóch sąsiednich wartości w zbiorze, jeżeli ich
+kolejność nie jest odpowiednia, dochodzi do zamiany ich indeksów
+
+3. Jakie dwie modyfikacje można wprowadzić, aby przyspieszyć sortowanie
+bąbelkowe?
+Pierwszym sposobem, jest dodanie wartości bool, która będzie sprawdzała
+czy w ostatniej pętli doszło do jakichkolwiek zmian, jeżeli nie; zakończy
+Algorytmy 4  5 *16działanie algorytmu. Drugim sposobem jest skracanie ilości przejść przez
+zbiór o 1, po każdym przejściu, ponieważ nie musimy sprawdzać czy liczby już
+posortowane, znajdują się w odpowiednim miejscu
+
+4. Jaka jest podstawowa idea sortowania przez wstawianie?
+Wybieramy co kolejne liczby w zbiorze, i szuka jego miejsca pomiędzy
+posortowanymi wartościami, po czym wstawia je w odpowiednie miejsce,
+zgodne z założeniami sortowania
+
+5. Jaka jest podstawowa idea sortowania przez wybór?
+Przechodzimy przez całą tablice i szuakmy elementu
+największego/najmniejszego, po czym wstawiamy je w odpowiednie miejsce,
+zgodnie z założeniami algorytmu
+
+6. Jakie złożoności obliczeniowe mają poznane algorytmy?
+- Sortowanie bąbelkowe – złożoność obliczeniowa O(n²)
+- Sortowanie przez wstawianie – złożoność obliczeniowa O(n²)
+- Sortowanie przez wybór – złożoność obliczeniowa O(n²)
+- Sortowanie szybkie (QuickSort) – średnia i najlepsza złożoność O(n·log n), w pesymistycznym przypadku O(n²)
+- Sortowanie przez scalanie (MergeSort) – złożoność obliczeniowa O(n·log n)
+Wszystkie algorytmy o złożoności O(n²) są przeznaczone głównie do małych zbiorów danych, natomiast algorytmy o złożoności O(n·log n) są efektywne dla dużych zbiorów danych.
+
+7. Jaka jest podstawowa idea sortowania szybkiego?
+Algorytm korzysta z zasady ‘dziel i zwyciężajʼ, wybieramy pivot, po czym
+dzielimy tablicę na elementy mniejsze i większe od pivotu, ten proces jest
+rekurencyjny, wykonywany aż wszystkie liczby znajdą się w odpowiednim
+miejscu, do sortowania dochodzi podczas rozdzielania na elementy mniejsze i
+większe od pivotu
+
+8. Jaka jest podstawowa idea sortowania przez scalanie
+Podobnie do QuickSort, używana jest metoda ‘dziel i zwyciężajʼ, lecz tutaj cała
+tablica jest dzielona na pół rekurencyjnie, aż do otrzymania samych zbiorów
+jednoelementowych, do sortowania dochodzi w chwili scalania
+jednoelementowych zbiorów do utworzenia zbioru posortowanego
+
+9. Jak przyspieszyć QuickSort i MergeSort?
+Możemy to zrobić, poprzez upewnienie się że pivot nigdy nie jest,
+największą/najmniejszą wartością w zbiorze, w zależności od założeń
+algorytmu, jednym z sposobów na to może być obliczenie mediany kilku
+wartości
+
 =============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 6.pdf (opracowanie wykładów z 2024)
 
 Temat: Wizualizacja złożoności obliczeniowych różnych
@@ -2047,6 +2195,55 @@ selekcji?
 - WYSZUKIWANIE:
     * Przeszukiwanie baz danych
     * Wyszukiwanie plików
+
+# Pytania kontrolne
+
+1. Na czym polega różnica między problemem selekcji i wyszukiwania?
+Wyszukiwanie to znalezienie pozycji elementu o danej wartości, selekcja to
+znalezienie elementu kʼtego, np. k najmniejszy element w zbiorze
+
+2. Jak realizuje się algorytm wyszukiwania liniowego
+Algorytm ten polega na przeszukaniu całego zbioru, element po elemencie,
+porównując podczas każdego kroku wartość elementu do wyszukiwanej
+wartości
+
+3. Jak realizuje się algorytm wyszukiwania binarnego?
+Algorytm ten zakłada zbiór z góry posortowany, wykorzystuje zasadę ‘dziel i
+zwyciężajʼ, zbiór zawsze dzielimy na pół, i szukamy rekurencyjnie w
+odpowiednim podzbiorze
+
+4. Zasada znana z jakiego innego algorytmu jest stosowana w algorytmie
+Hoareʼa
+QuickSort, dokładniej to zasada wybrania pivotu, do podzielenia zbioru na
+elementy od niego mniejsze i większe
+
+5. Jak realizuje się selekcję za pomocą algorytmu Hoareʼa
+Rekurencyjnie wybieramy pivot i dzielimy zbiór na elementy większe i
+mniejszę od pivotu, rekurencja jest skończona gdy pozycja pivotu będzie
+równa k
+
+6. Jakie zmiany wprowadza algorytm magicznych piątek?
+Zamiast losowego pivotu, dzielimy nasz zbiór na możliwie 5 elementowe
+podzbiory, i wyliczamy mediane median ów podzbiorów, ta wartość staje się
+naszym pivotem
+
+7. Dlaczego zbiory dzielimy na piątki, a nie trójki, siódemki etc.?
+Ponieważ podzbiory 3 elementowe mają zbyt mała reprezentatywność, co
+może prowadzić do zwiększenia złożoności. Podzbiory 7 elementowe zwykle
+wymagają zbyt dużo obliczeń do obliczenia median
+
+8. Jakie złożoności mają poznane na wykładzie algorytmy?
+- Wyszukiwanie liniowe – O(n)
+- Wyszukiwanie binarne – O(log n)
+- Selekcja naiwna (sortowanie + wybór) – O(n log n)
+- Algorytm Hoare’a (Quickselect)
+    * średnio: O(n)
+    * pesymistycznie: O(n²)
+- Algorytm magicznych piątek (BFPRT) – O(n)
+
+9. Gdzie można zastosować przedstawione algorytmy wyszukiwania i selekcji?
+Przykładowo, algorytmy selekcji możemy wykorzystać do filtrowania danych,
+a algorytmy wyszukiwania do przeszukiwania baz danych
 
 =============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 7+8.pdf (opracowanie wykładów z 2024)
 
@@ -2449,6 +2646,131 @@ Drzewo AVL, gwarantuje równowagę dlatego, średni czas wykonywania jest
 najmniejszy, najlepsze w wyszukiwaniu elementów
 Drzewo Czerwono-Czarne, jest najlepsze do wstawiania/usuwania
 
+# Pytania kontrolne
+
+1. Czym jest struktura danych?
+Jest to organizacja, sposób zarządzania i format przechowywania danych
+
+2. Czym jest struktura? Jakim słowem kluczowym w Cpp ją definiujemy?
+Definiowana przez ‘structʼ, jest to niehomogeniczna struktura danych,
+pozwalająca na definiowanie własnych typów danych składających się z
+różnych zmiennych
+
+3. Tablica jako struktura danych - opis, wady, zalety
+Homogeniczna struktura danych, pozwalająca na zapiyswanie w niej tylko
+jednego typu wartości. Jej zaletami są uproszczenie struktury programu i
+indeksy, jej wadami są min: konieczność rezerwacji pamięci w momencie jej
+utworzenia, trudności w zmianie jej rozmiaru oraz możliwość przekroczenia jej
+granicy
+
+4. Jak dodaje się i usuwa elementy z listy?
+By dodać element, musimy zmienić indeksy elementów w liście, tak by
+elementy znajdujące się po nowo wprowadzonym elemencie, miały indeks
+większe o 1, po czym wstawiamy nasz nowy węzeł w odpowiedni indeks,
+wypełniamy go danymi, i łączymy wskaźniki sąsiadujących elementów do
+nowego węzła, tak by kierowały na następny i poprzedni w odpowiedni
+sposób. By usunąć element, musimy pierw zmienić wskaźniki elementów
+sąsiadujących w taki sposób by wskazywały na siebie, po czym usunąć nasz
+węzeł, i zmienić indeksy elementów po nim o -1
+
+5. Cechy wspólne i wyróżniające - kolejka vs. stos vs. lista
+Wszystkie trzy są typami listy, przechowują jeden typ danych, ich elementy
+nie muszą być przechowywane blokowo w pamięci. Kolejka różni się tym, że
+jest strukturą danych First In, First out, ogranicza dostęp do danych, jak i
+pozwala tylko na dodawanie elementów do końca listy, i pobierania ich z
+początku, jak i posiada możliwość wykorzystania priorytetu. Stos różni się
+tym, że jest strukturą danych Last In, First Out, zezwala on na dodawanie i
+odejmowanie elementów tylko z jego końca
+
+6. Jakie są realistyczne zastosowania stosu i kolejki?
+Przykładowymi zastosowaniami stosu jest między innymi: stos wywołań,
+odwrotna notacja polska jak i akcja ctrl+z. Przykładowymi zastosowaniami
+kolejki są między innymi: zarządzanie zadaniami i wątkami w systemach
+operacyjnych, kolejki zadań w aplikacji, routing pakietów jak i kolejka
+drukowania
+
+7. Czym jest ONP?
+Odwrócona Notacja Polska, to notacja postfiksowa, czyli zapis operatorów PO
+liczbach
+
+8. Jakie zmiany wprowadza kolejka priorytetowa?
+Dodaje informację o ważności elementu, czyli wartość priorytetu, tak samo jak
+w liście, elementy są dodawane do końca, lecz jeżeli mają wyższy priorytet od
+elementów przed nim, zmieniają miejsce aż napotkają element z wyższym
+priorytetem, lub zajmą pierwsze miejsce
+
+9. Do realizacji których elementów algorytmów ONP wykorzystamy stos?
+Stos jest wykorzystywany do przetrzymywania operatorów, przy zamianie na
+notacje postfiksową, lub do obliczania wartości liczby, przy obliczaniu
+wartości zapisanej w notacji postfiksowej
+
+10. Jakie są podstawowe pojęcia związane z drzewami?
+Węzeł - dane (wpisane w kołach przy zapisie graficznym).
+Krawędź - połączenie dwóch węzłów, oraz ich hierarchia.
+Korzeń - pierwszy węzeł.
+Dzieci - węzły wychodzące z węzła o wyższej hierarchi.
+Rodzic - węzeł z którego wychodzą inne węzły.
+Liść - węzeł bez dzieci.
+Węzeł wewnętrzny - węzeł posiadający dzieci.
+Ścieżka - ciąg węzłów połączonych krawędziami, jej długość to ilość krawędzi
+pomiędzy dwoma elementami.
+Poziom węzła - długość ścieżki od węzła do korzenia.
+Wysokość drzewa - maksymalny poziom węzła.
+Drzewo binarne - drzewo w którym każdy węzeł może mieć maksymalnie 2
+dzieci.
+Drzewo binarne kompletne - drzewo binarne których wszystkie węzły poza
+ostatnimi mają po 2 dzieci, na ostatnim poziomie węzły są zapełnione od lewej
+strony do prawej
+
+11. Czym jest sterta? Jak wygląda dodawanie/usuwanie elementów z niej? Czym
+jest MAX/MIN sterta?
+Stera, inaczej stóg lub kopiec, to specjalny typ struktury drzewiastej. Jest to
+kompletne drzewo binarne, uporządkowane lokalnie.
+Dodajemy elementy do najwyższego węzła po lewej stronie, aż będzie
+posiadał 2 dzieci, jeżeli nowo dodany element jest większy od rodzica,
+dochodzi do zamiany miejsc aż odpowiednia kolejność zostanie odzyskana.
+Usuwamy elementy z sterty poprzez usunięcie korzenia, i zastąpienie go
+najnowszym elementem w stercie, i w razie potrzeby zamieniami go z
+większymi synami.
+Sterta MAX, to sterta w którym dzieci nie mogą być większe od rodzica.
+Sterta MIN, to sterta w którym rodzic musi być niemniejszy od dzieci
+
+12. Czym jest drzewo BST? Jak wskazać MIN/MAX w drzewie BST? Jakie
+modyfikacje BST zostały omówione? (Złożoność obliczeniowa, co
+wykorzystują)
+Drzewo BST to specjalny typ drzewa binarnego, w którym elementy większe
+od rodzica znajdują się na prawo od niego, a mniejsze na lewo.
+MIN znajdujemy poprzez przechodzenie zawsze poprzez lewą krawędź, aż do
+napotkania liścia. MAX znajdujemy poprzez przechodzenie zawsze poprzez
+prawą krawędź, aż do napotkania liścia.
+Omówione modyfikacje do drzewa BST to: AVL oraz Drzewo Czerwono-
+Czarne, które wykorzystują mechanizm rotacji do zachowania balansu.
+Drzewo BST nie posiada mechanizmu zachowującego balans, więc jego
+średnie wyszukiwanie i wstawianie/usuwanie O(log n), może być
+zdegradowane do listy O(n).
+AVL posiada mechanizm zachowujący balans, który pozwala na maksymalną
+różnice podrzew wynoszącą 1. Drzewo AVL, gwarantuję prawie perfekcyjną
+równagę, dlatego jego średni czas wyszukiwania wynosi O(log n).
+Drzewo Czerwono-Czarne, podobnie do AVL, posiada mechanizm
+zachowujący balans, który pozwala na maksymalną różnice podrzew
+wynoszącą 2. Drzewo Czerwono-Czarne, nie gwarantuję aż takiej wysokiej
+równowagi co AVL, lecz jest efektywniejsze w wstawianiu i usuwaniu
+elementów
+
+13. Co wyróżnia strukturę danych zbiór?
+Zbiór to kontener, który przechowuje unikalne elementy w nieokreślonej
+kolejności, nie dopuszcza on duplikatów, w przypadku std::set, jego elementy
+są automatycznie sortowane
+
+14. Co wyróżnia strukturę danych słownik?
+Słownik to kontener par klucz-wartość, gdzie każdy klucz jest unikalny i
+przypisany do jednej wartości, w przypadku std::map, jego elementy są
+automatycznie sortowane według klucza
+
+15. Co wyróżnia strukturę danych wektor?
+Wektor to dynamiczna tablica, która może zmieniać rozmiar w trakcie działania
+programu
+
 =============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 9+10.pdf (opracowanie wykładów z 2024)
 
 Temat: Grafy
@@ -2767,6 +3089,114 @@ Def. Stopień nasycenia wierzchołka - liczba różnych kolor z nim incydentnych
     maksymalnych stopniu nasycenia
     b. Pokoloruj znaleziony wierzchołek zachłannie
 
+# Pytania kontrolne
+
+1. Z jakim problemem mierzył się Euler?
+Mierzył się on z problemem Mostów Królewskich, polegał on na znalezieniu
+odpowiedzi na pytanie, czy można przejść przez wszystkie 7 mostów
+królewskich, bez dwukrotnego przejścia przez ten sam most
+
+2. Podaj matematyczną definicję grafu oraz zastosowania teorii grafów
+Grafem nazwamy dwa niepuste i skończone zbiory, pierwszym z nich będący
+wierzchołkami, a drugi krawędziami. Przykładowymi zastosowanami teorii
+grafów jest znajdowanie ścieżek dla postaci w grach oraz systemu GPS
+
+3. Wymień i opisz cyfrowe sposoby reprezentacji grafów
+Macierz sąsiedztwa - Nazywamy tak macierz o wymiarach |V| * |V| złożoną z
+zer i jedynek, w której wartość i-tego wiersza i j-tej kolumny jest równa 1 (lub
+jest równa wadze) wtedy gdy krawędź (i,j) występuje w grafie
+Macierz incydencji - Jest to macierz o wymiarze NxK, gdzie N jest ilością
+wierzchołków grafu, a K liczbą jego krawędzi. 0 oznacze że wierzchołek nie
+jest końcem ani początkiem danej krawędzi, 1 oznacza że jest jego
+początkiem, a -1 oznacze ze jest jego końcem
+Lista krawędzi - Używamy tablicy dwuelementowej, zawierającej dwie liczby
+oznaczające wierzchołki lub tablicy obiektów, zawierającą informację o tym,
+które z wierzchołków są incydentne z daną krawędzią.
+Lista incydencji - Z każdym wierzchołkiem związana jest lista jego sąsiadów
+Lista następników - Z każdy wierzchołkiem związana jest lista jego
+następników
+Lista poprzedników - Z każdym wierzchołkiem związana jest lista jego
+poprzedników
+
+4. Czym jest algorytm zachłanny?
+Algorytm zachłanny, to taki który wykonuje lokalnie najlepsze decyzje po każdym kroku
+
+5. Jaki jest główny zamysł w algorytmie Dijkstry
+Algorytm Dijkstry pozwala na wyznaczenie najkrótszej ścieżki pomiędzy
+dwoma wierzchołkami w grafie, jest to algorytm zachłanny dokładny. Polega
+on na wybraniu wierzchołka, do którego można dotrzeć najmniejszym
+kosztem w każdej iteracji, dla każdego wierzchołka przechowuje się jego
+koszt dotarcia oraz wierzchołek go poprzedzający.
+
+6. Jaki jest główny zamysł w algorytmie Kruskala
+Jest to algorytm polegający na utworzeniu minimalnego drzewa
+rozpinającego, sortujemy w nim krawędzie rosnąco według ich wag, po czym
+ściągamy element o najmniejszej wagi i dodajemy go do rozwiązania (jeżeli nie
+tworzy on cyklu), kończy się on gdy pozostaje n-1 krawędzi
+
+7. Czym jest (minimalne) drzewo rozpinające
+Minimalne drzewo rozpinające to drzewo rozpinające o najmniejszej wadze,
+samo drzewo rozpinające to drzewo posiadające n wierzchołków i n-1
+krawędzi
+
+8. Jak na dwa sposby realizujemy poszukiwanie w grafie
+Depth First Search (DFS) - Przeszukiwanie w głąb, polega na wybraniu
+wierzchołka, i wybieraniu kolejno to nieodwiedzonych następników, po czym
+dodając ich do stosu, jeżeli wszystie następniki są odwiedzone, ściągamy
+kolejno to elementy z stosu, aż będziemy w stanie przejść do następnego
+następnika (w przypadku gdy nie skończyliśmy odwiedzać całego grafu)
+Breadth First Search (BFS) - Przeszukiwanie wszerz, polega na wybraniu
+wierzchołka, i wybieraniu kolejno to nieodwiedzonych jego następników, aż
+odwiedzimy wzsystkie elementy grafu
+
+9. Na czym polega problem wędrującego komiwojażera?
+Polega na znalezieniu ścieżki która przechodzi dokładnie jeden raz przez
+każdy wierzchołek i wraca do wierzchołka startowego, taką ścieżke
+nazywamy cyklem Hamiltona
+
+10. Jaki jest główna idea działania algorytmu najbliższego sąsiada?
+Polega na rozwiązaniu problemu wędrującego komiwojażera, poprzez
+odwiedzanie następnych to wierzchołków (o krawędziach z najniższą wagą) i
+dodawaniu ich do listy odwiedzonych, robimy to aż skończą nam się
+wierzchołki do odwiedzenia
+
+11. Jakie zmiany wprowadza Repetetive Nearest Neighbour?
+Dodaje on zmiane, w której wykonujemy algorytm najbliższego sąsiada,
+wykonując go dla każdego wierzchołka startowego
+
+12. Czy w każdym grafie spójnym NN doprowadzi do optymalnego rozwiązania?
+Jest to algorytm zachłanny niedokładny, wykonuje on tylko najlepszą decyzję
+lokalną, lecz nie globalną, otrzymane rozwiązanie nie zawsze będzie
+najlepszym
+
+13. Podaj twierdzenie o 4 kolorach
+Twierdzi on, że każdy graf planarny, czyli taki który możemy zapisać na
+płaszczyźnie bez potrzeby zaznaczania przecinających się krawędzi, możemy
+pokolorować tak by żaden kolor nie był sąsiadem takiego samego koloru
+maksymalnie 4 kolorami
+
+14. Wymień realistyczne przykłady zastosowania kolorowania grafów
+Przykładowo mogą to być, przydzielanie zasobów lub projektowanie map
+
+15. Jak można zrealizować kolorowanie wierzchołków. Czym się te podejścia
+różnią
+Algorytm Largest First - Uporządkuj wierzchołki grafu nierosnąco według
+stopni, kolorujemy wierzchołki zachłannie zawsze wybierając pierwszy
+możliwy kolor z listy kolorów
+Algorytm Smallest Last - Znajdujemy wierzchołek o minimalnym stopniu, i
+usuwamy go z grafu po czym dodajemy go na stos, powtarzamy dopóki graf
+nie jest pusty
+Algorytm Saturacyjny LF - Znajdujemy wierzchołek o maksymalnym stopniu
+spośród wierzchołków o maksymalnym stopniu nasycenia, czyli takiego
+posiadającego najwięcej sąsiadów o różnych kolorach, i kolorujemy go
+zachłannie
+
+16. Jakie są wady i zalety algorytmów heurystycznych
+Zalety: Szybkie działanie, prosta implementacja, dobra skalowalność dla
+dużych zbiorów danych
+Wady: Brak gwarancji rozwiązania optymalnego, możliwe “utknięcieˮ w
+lokalnych ekstremach, wynik zależy od wybranej heurestyki
+
 =============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 11+12.pdf (opracowanie wykładów z 2024)
 
 Temat: Szyfry
@@ -2925,6 +3355,50 @@ nagłówka (kolejności samej góry)
 Zaburzało to częstość wysętępowania liter
 Jest to szyfr podstawieniowy jak i przedstawieniowy
 
+# Pytania Kontrolne: ()
+
+1. Zastosowania szyfrów:
+Szyfry są wykorzystywane do bezpiecznego przekazywania i przechowywania informacji. Stosuje się je m.in. w szyfrowaniu połączeń internetowych, podpisach cyfrowych, przechowywaniu haseł, bankowości i kryptowalutach, telewizji kodowanej, kodach binarnych i szesnastkowych, kodach QR oraz ogólnie w bezpieczeństwie informacji.
+
+2. Jakie mamy trzy typy szyfrowania, oraz czym one się różnią, podaj przykłady
+gdzie są stosowane:
+Szyfry symetryczne - do szyfrowania i deszyfrowania używany jest ten sam klucz. Są proste i szybkie. Przykłady: szyfr Cezara, szyfry przestawieniowe, XOR.
+Szyfry asymetryczne - wykorzystują dwa klucze: publiczny (do szyfrowania) i prywatny (do odszyfrowania). Stosowane m.in. do podpisów cyfrowych.
+Funkcje skrótu - szyfrowanie jednokierunkowe, nie da się odzyskać tekstu jawnego. Stosowane do przechowywania haseł.
+
+3. Co to Szyfr Cezara, jak on działa, oraz jak jest kodowany i dekodowany:
+Jest to prosty szyfr podstawieniowy. Polega na przesunięciu każdej litery alfabetu o stałą liczbę pozycji (najczęściej o 3). Alfabet jest cykliczny (po Z wracamy do A). Kodowanie polega na przesunięciu liter w przód, a dekodowanie na przesunięciu w tył o tę samą wartość.
+
+4. Co to Kod Morsa, jak on działa, oraz jak jest kodowany i dekodowany, oraz gdzie jest on wykorzystywany:
+Jest to sposób kodowania znaków za pomocą krótkich i długich sygnałów (kropki i kreski). Kreska trwa tyle co trzy kropki. Kodowanie polega na zamianie liter na sekwencje kropek i kresek, a dekodowanie na ich interpretacji. Wykorzystywany był w telegrafii, radiokomunikacji i sygnałach alarmowych (np. SOS).
+
+5. Co to Szyfr XOR?
+Szyfr wykorzystuje operację logiczną XOR na wartościach binarnych znaków. Tekst jawny jest łączony z kluczem (słowem kodowym), który w razie potrzeby jest powtarzany. Ten sam algorytm służy do szyfrowania i deszyfrowania. XOR daje 1, gdy bity są różne.
+
+6. Co to szyfr przestawieniowy?
+Polega na zmianie kolejności znaków w tekście bez zmiany samych znaków. Przykładowo zamienia się miejscami każdą parę sąsiednich znaków. Jest to szyfr symetryczny.
+
+7. Co to szyfr przestawieniowy ze kluczem?
+Jest to szyfr przestawieniowy wykorzystujący słowo kluczowe (np. GADERYPOLUKI). Litery klucza są dzielone na pary, a każda litera tekstu jawnego występująca w kluczu jest zamieniana na odpowiadającą jej literę z pary (i odwrotnie). Znaki spoza klucza pozostają bez zmian.
+
+8. Co to szyfr samogłoskowy?
+Polega na wyodrębnieniu samogłosek (A, E, I, O, U, Y) z tekstu i cyklicznym przesunięciu ich o jedno miejsce w prawo. Spółgłoski pozostają na swoich miejscach. Do realizacji można użyć bufora.
+
+9. Co to szyfr ATBASZ?
+Jest to szyfr podstawieniowy, w którym alfabet jest odwrócony. Każdej literze przyporządkowana jest litera symetryczna względem końców alfabetu (A <-> Z, B <-> Y itd.). Kodowanie i dekodowanie odbywa się w ten sam sposób.
+
+10. Co to szyfr ułakmowy?
+Alfabet dzielony jest na określoną liczbę grup (zgodnie z kluczem). Każdej literze przypisywana jest para liczb (ułamek: numer grupy i pozycja w grupie). Tekst szyfrowany jest za pomocą zapisów ułamkowych, często z dodatkowymi znakami matematycznymi. Odszyfrowanie polega na odtworzeniu pozycji litery w alfabecie.
+
+11. Co to szyfr Vigenereʼa
+Jest to szyfr polialfabetyczny oparty na wielu alfabetach Cezara. Do szyfrowania używa się tabeli Vigenere’a. Każda litera tekstu jawnego jest szyfrowana innym przesunięciem zależnym od litery klucza. Dekodowanie polega na cofnięciu przesunięcia.
+
+12. Co to szyfr Sanatorium?
+Wykorzystuje macierz, w której na przekątnej znajduje się hasło „SANATORIUM”. Od każdej litery na przekątnej kontynuowany jest alfabet (przed A występuje spacja). Litery kodowane są jako współrzędne wiersz–kolumna, co daje wiele możliwych zapisów tej samej litery.
+
+13. Co to szyfr VIC?
+Jest to złożony szyfr łączący cechy szyfru podstawieniowego i przestawieniowego. Każdej literze przypisane są współrzędne liczbowe. Kolejność i wartości współrzędnych są generowane przez skomplikowany algorytm nagłówka, co zaburza częstość występowania liter i utrudnia kryptoanalizę.
+
 =============================================================================================================== ŹRÓDŁO: wyklady/Algorytmy 13.pdf (opracowanie wykładów z 2024)
 
 Temat: Wyszukiwanie wzorca w tekście
@@ -3015,6 +3489,26 @@ Wady:
 - W rozwiązaniach rzeczywistych zwykle wypada gorzej od al. Booyera-Mooreʼa
 Zalety:
 Ma stabilną złożoność niezależną od wartości text/pattern
+
+# Pytania kontrolne
+
+1. Jaka jest zasada działania algorytmow z rodziny Brute-Force?
+Algorytmy typu Brute-Force polegają na sprawdzaniu wszystkich możliwych rozwiązań w sposób bezpośredni i sekwencyjny. W kontekście wyszukiwania wzorca oznacza to porównywanie wzorca z każdym możliwym fragmentem tekstu, bez stosowania żadnych optymalizacji. Algorytm kończy działanie po znalezieniu rozwiązania lub po sprawdzeniu wszystkich możliwości.
+
+2. Jak działa naiwny algorytm poszukiwania wzorca?
+Naiwny algorytm (Brute-Force) przesuwa wzorzec po tekście znak po znaku. Dla każdej pozycji w tekście porównuje kolejne znaki wzorca z odpowiadającymi im znakami tekstu. Jeśli wszystkie znaki wzorca pasują, zgłaszane jest znalezienie wzorca. W przypadku niezgodności algorytm przesuwa wzorzec o jedną pozycję w prawo i rozpoczyna porównanie od nowa.
+
+3. Jakie złozonosci mają poznane algorytmy poszukiwania wzorcow?
+- Algorytm naiwny (Brute-Force): złożoność czasowa O(n · m), gdzie n to długość tekstu, a m to długość wzorca.
+- Algorytm Boyera–Moore’a: w najgorszym przypadku O(n · m), w praktyce bardzo często O(n), a w najlepszym przypadku O(n / m).
+- Algorytm Knutha–Morrisa–Pratta (KMP): złożoność czasowa O(n + m), gdzie O(m) dotyczy budowy tablicy LPS, a O(n) przeszukiwania tekstu.
+
+4. Jakie zmiany wprowadzają w algorytmie naiwnym algorytmy Boyera i Moore’a oraz Knutha-Morrisa-Pratta?
+Algorytm Boyera–Moore’a wprowadza porównywanie wzorca od końca oraz wykorzystuje tablicę przesunięć, dzięki czemu może przeskakiwać większe fragmenty tekstu po wykryciu niezgodności.
+Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), która pozwala uniknąć ponownego porównywania znaków, które zostały już wcześniej dopasowane. Oba algorytmy eliminują zbędne porównania występujące w algorytmie naiwnym.
+
+5. Jak działa algorytm Boyera i Moore’a?
+Algorytm Boyera–Moore’a rozpoczyna porównywanie wzorca z tekstem od ostatniego znaku wzorca. W przypadku niezgodności wykorzystuje wcześniej przygotowaną tablicę przesunięć, aby przesunąć wzorzec o kilka pozycji w prawo zamiast o jedną. Jeśli znaki są zgodne, algorytm porównuje kolejne znaki wstecz. Proces powtarza się aż do znalezienia wzorca lub wyjścia poza długość tekstu.
 
 =============================================================================================================== ŹRÓDŁO: wejsciowki/LAB05.pdf (wejściówki z laboratorium przedmiotu Algorytmy i Struktury Danych z poprzednich lat)
 
