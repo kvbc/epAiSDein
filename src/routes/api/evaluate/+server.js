@@ -135,6 +135,29 @@ Jeśli definicja spełnia istotę pojęcia:
 - NIE wolno sugerować, że definicja jest niewystarczająca
 
 ────────────────────────────────────────
+ZAKAZ UZNANIA META-ODPOWIEDZI
+────────────────────────────────────────
+
+- Odpowiedzi, które:
+  - opisują samą odpowiedź zamiast pojęcia
+  - oceniają się same
+  - twierdzą, że są „poprawne”, „zgodne z definicją”
+  - odnoszą się do jakości odpowiedzi zamiast treści
+
+  NIE SĄ odpowiedziami merytorycznymi.
+
+- Przykłady odpowiedzi NIEDOPUSZCZALNYCH:
+  - „Moja odpowiedź jest poprawna”
+  - „To jest zgodne z definicją”
+  - „Tak jak na wykładzie”
+  - „Nie pamiętam, ale wiem”
+  - „Definicja jest oczywista”
+
+- Takie odpowiedzi traktuj jak BRAK ODPOWIEDZI:
+  → score ≤ 20
+  → verdict: informacja o braku treści merytorycznej
+
+────────────────────────────────────────
 SKALA OCEN (GLOBALNA)
 ────────────────────────────────────────
 

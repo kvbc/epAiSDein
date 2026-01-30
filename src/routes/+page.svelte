@@ -2075,6 +2075,8 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
   async function retry() {
     interruptMentor(); // 🔥 KLUCZ
     stopSound();
+    stopMentorTalk();
+    stopTypingSound();
 
     showAskMentor = false;
     mentorQuestion = "";
@@ -2314,7 +2316,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           question: questions[realIndex],
-          answer: answer + ".",
+          answer: answer.at(-1) === "." ? answer : answer + ".",
           mentor: {
             id: mentor.id,
             personality: mentor.personality,
@@ -2335,6 +2337,9 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
       talking = true;
       stopSound();
 
+      if (data.tip && data.tip.at(-1) !== ".") {
+        data.tip += ".";
+      }
       data.tip += " Czujesz?";
 
       saveResult({
@@ -2557,6 +2562,38 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
       {/each}
     </div>
 
+    <!-- <button on:click={nextQuestion}>Dalej</button> -->
+    <div class="flex gap-2">
+      <button
+        on:click={retry}
+        class="flex-1 bg-red-500 hover:bg-red-600 text-white rounded-md py-2"
+      >
+        Powtórz
+      </button>
+
+      <button
+        on:click={() => {
+          unlockAudio();
+          nextQuestion();
+        }}
+        class="flex-1 bg-zinc-700 hover:bg-zinc-600 text-white rounded-md py-2"
+      >
+        Dalej
+      </button>
+    </div>
+
+    <div class="mt-2 flex justify-center">
+      <button
+        on:click={() => {
+          unlockAudio();
+          finishTest();
+        }}
+        class="w-full text-red-400 border mb-4 border-red-500 px-4 py-2 rounded-md hover:bg-red-500 hover:text-white"
+      >
+        Zakończ test
+      </button>
+    </div>
+
     {#if score !== null}
       <div
         class="bg-zinc-900 text-zinc-100 px-4 py-3 rounded-md border-l-4"
@@ -2744,39 +2781,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
         <strong class="text-white">wystarczająco poprawna egzaminacyjnie</strong
         >. Mentor bywa zbyt drobiazgowy przy wyższych ocenach.
       </div>
-
-      <!-- <button on:click={nextQuestion}>Dalej</button> -->
-      <div class="flex gap-2">
-        <button
-          on:click={retry}
-          class="flex-1 bg-red-500 hover:bg-red-600 text-white rounded-md py-2"
-        >
-          Powtórz
-        </button>
-
-        <button
-          on:click={() => {
-            unlockAudio();
-            nextQuestion();
-          }}
-          class="flex-1 bg-zinc-700 hover:bg-zinc-600 text-white rounded-md py-2"
-        >
-          Dalej
-        </button>
-      </div>
     {/if}
-
-    <div class="mt-8 flex justify-center">
-      <button
-        on:click={() => {
-          unlockAudio();
-          finishTest();
-        }}
-        class="w-full text-red-400 border mb-4 border-red-500 px-4 py-2 rounded-md hover:bg-red-500 hover:text-white"
-      >
-        Zakończ test
-      </button>
-    </div>
 
     <details class="bg-zinc-900 border border-zinc-700 rounded-lg p-4">
       <summary class="font-semibold text-white cursor-pointer">
