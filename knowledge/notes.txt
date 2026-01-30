@@ -1,3 +1,5 @@
+=============================================================================================================== Algorytmy i struktury danych opracowane zagadnienia by Temus (Iza edit).pdf (opracowanie zagadnień do kolokwium z wykładów)
+
 Algorytmy i struktury baz danych wykład
 Zagadnienia do kolokwium
 
@@ -692,3 +694,347 @@ Schematy Blokowe
     Blok wywołania programu
     Blok fragmentu
     Łącznik wewnętrzny (ta sama strona)
+
+=============================================================================================================== kol-alg-01.png (zalieczenie z algorytmów 2022 - strona 1)
+
+Zadanie 1.
+
+a) Co to jest algorytm?
+
+Algorytm to skończony, uporządkowany ciąg jasno zdefiniowanych czynności koniecznych do wykonania pewnego zadania.
+
+b) Podaj sposób zapisu/przedstawienia algorytmów.
+
+- lista kroków,
+- schemat blokowy,
+- pseudokod,
+- język naturalny,
+- język programowania
+
+c) Wymień cechy algorytmu.
+
+- poprawność – algorytm powinien zwracać poprawne wyniki,
+- jednoznaczność – algorytm powinien przy takim samym zbiorze danych wejściowych zwracać takie same wyniki,
+- skończoność – dla każdego zbioru poprawnych danych wejściowych algorytm powinien zwracać wyniki w skończonej liczbie kroków,
+- efektywność – algorytm powinien prowadzić do rozwiązania problemu w jak najmniejszej liczbie kroków,
+- determinizm – algorytm posiada ciąg przyczynowo-skutkowy,
+- złożoność – algorytm posiada określoną ilość zasobów (pamięci, czasu) niezbędnych do rozwiązania problemu.
+
+d) Podaj parametry oceny algorytmu.
+
+Idealnym algorytmem będzie taki, który:
+- posiada prosty kod,
+- jest łatwy do zrozumienia,
+- wykonuje się szybko,
+- może być napisany w każdym języku,
+- zawsze daje poprawne wyniki,
+- zajmuje niewiele pamięci (jest efektywny).
+
+=============================================================================================================== kol-alg-02.png (zalieczenie z algorytmów 2022 - strona 2)
+
+Zadanie 4. Opisz czym jest złożoność pamięciowa oraz złożoność obliczeniowa algorytmu.
+
+Złożoność obliczeniowa (czasowa) algorytmu określa, jak liczba wykonywanych operacji elementarnych zależy od rozmiaru danych wejściowych. Najczęściej wyrażana jest za pomocą notacji asymptotycznej, np. O(n), O(n²), O(log n).
+Złożoność pamięciowa algorytmu określa ilość pamięci potrzebnej do jego wykonania w zależności od rozmiaru danych wejściowych, z uwzględnieniem zmiennych pomocniczych oraz struktur danych.
+
+Zadanie 5. Scharakteryzuj poniższe typy struktur danych:
+
+a) rekord - złożona struktura danych składająca się z pól, które mogą być różnych typów. Poszczególne pola rekordu są identyfikowane nazwami. Rekordy służą do przechowywania logicznie powiązanych danych, np. danych osobowych.,
+b) stos - dynamiczna struktura danych działająca zgodnie z zasadą LIFO (Last In, First Out). Dostęp możliwy jest tylko do elementu znajdującego się na wierzchu stosu. Podstawowe operacje to push (dodanie elementu) oraz pop (usunięcie elementu).,
+c) kopiec - specjalna struktura drzewiasta, najczęściej binarna, spełniająca własność kopca (minimum lub maksimum w korzeniu). Stosowany jest m.in. w implementacji kolejek priorytetowych oraz w algorytmie sortowania przez kopcowanie.,
+d) kolejka - struktura danych działająca według zasady FIFO (First In, First Out). Elementy dodawane są na koniec, a usuwane z początku kolejki. Występują różne odmiany kolejek, np. kolejka cykliczna lub kolejka priorytetowa.,
+e) macierz - dwuwymiarowa struktura danych w postaci tablicy elementów uporządkowanych w wiersze i kolumny. Jest powszechnie stosowana w obliczeniach numerycznych, grafice komputerowej oraz algorytmach matematycznych..
+
+Zadanie 6. Scharakteryzuj poniższe problemy:
+
+a) wieża Hanoi - Problem wież Hanoi polega na przeniesieniu stosu krążków z jednego palika na drugi, przy użyciu palika pomocniczego, zgodnie z zasadami: 1. można przenosić tylko jeden krążek naraz, 2. większy krążek nie może leżeć na mniejszym. Problem ten ma rozwiązanie rekurencyjne, a minimalna liczba ruchów wynosi 2^n - 1
+b) problem komiwojażera - polega na znalezieniu najkrótszej trasy, która odwiedza każde miasto dokładnie jeden raz i wraca do miasta początkowego. Jest to problem NP-trudny, często rozwiązywany metodami przybliżonymi lub heurystycznymi.,
+c) problem skoczka szachowego - Polega na znalezieniu takiej sekwencji ruchów skoczka, aby odwiedził każde pole szachownicy dokładnie jeden raz. Jest to problem kombinatoryczny, często rozwiązywany metodą przeszukiwania z nawrotami (backtracking).,
+d*) problem ośmiu hetmanów - Problem polega na rozmieszczeniu ośmiu hetmanów na szachownicy w taki sposób, aby żadne dwa nie atakowały się wzajemnie. Również rozwiązywany jest za pomocą algorytmów backtrackingowych..
+
+Zadanie 7. Opisz poszczególne typy sortowania danych:
+
+a) sortowanie przez wstawienie (insertion sort) - Algorytm polega na budowaniu posortowanej części tablicy poprzez wstawianie kolejnych elementów na odpowiednie miejsce. złożoność: O(n²). zaleta: prostota, dobre dla małych zbiorów danych,
+b) sortowanie przez wybór (selection sort) - Algorytm wyszukuje najmniejszy element i umieszcza go na początku tablicy, powtarzając operację dla kolejnych pozycji. złożoność: O(n²). liczba zamian jest stała,
+c) sortowanie przez zamianę (exchange sort) - Polega na wielokrotnym porównywaniu i zamienianiu sąsiednich elementów (np. sortowanie bąbelkowe). złożoność: O(n²). proste, lecz mało efektywne,
+d) sortowanie szybkie (quick sort) - Algorytm dzieli dane względem elementu zwanego pivotem, a następnie rekurencyjnie sortuje podzbiory. średnia złożoność: O(n log n). najgorszy przypadek: O(n²). bardzo szybki w praktyce.
+
+Zadanie 8. Opisz czym jest:
+
+a) ścieżka Hamiltona (oraz kiedy nazywana jest cyklem) - Ścieżka Hamiltona to ścieżka w grafie, która odwiedza każdy wierzchołek dokładnie jeden raz. Jeżeli ścieżka zaczyna się i kończy w tym samym wierzchołku, nazywana jest cyklem Hamiltona.,
+b) ścieżka Eulera (cykl Eulera) - Ścieżka Eulera to ścieżka przechodząca przez każdą krawędź grafu dokładnie jeden raz. Jeżeli ścieżka zaczyna się i kończy w tym samym wierzchołku, mówimy o cyklu Eulera..
+
+=============================================================================================================== opracowanie_AISD_wyklad.pdf (opracowanie zagadnień podanych na egzamin z algorytmów z wykładów; 2022/2023 )
+
+1 Co to jest algorytm, jakie ma cechy, złożoność dla przykładu.
+
+Algorytm to skończony, uporządkowany ciąg jasno zdefiniowanych czynności,
+koniecznych do wykonania pewnego zadania.
+Cechy algorytmu:
+- Poprawność
+- Jednoznaczność
+- Skończoność
+- Określony deterministycznie
+- Posiada złożoność
+
+2. W jaki sposób można zapisać algorytm?
+- lista kroków
+- schemat blokowy
+- pseudokod
+- język naturalny
+- język programowania
+
+4. Opisz i narysuj przykład (funkcje zapisu i odczytu) struktury danych:
+
+- tablica jednowymiarowa (wektor) - Tablica jednowymiarowa (wektor) - lista uporządkowanych danych takiego samego typu, w której poszczególne elementy dostępne są za pomocą indeksów.
+- tablica wielowymiarowa (macierz) - Tablica wielowymiarowa (macierz) to układ liczb, symboli lub wyrażeń zapisanych w postaci prostokątnej tablicy.
+- stos - Stos jest sekwencyjną strukturą danych. Najprościej możemy go sobie wyobrazić jako stos książek na biurku. Nowe książki układamy na szczycie stosu, wtedy stos rośnie w górę - zasada LIFO (Last In First Out - ostatni wchodzi, pierwszy wychodzi)
+- kolejka - Kolejka jest sekwencyjną strukturą danych o takiej własności, iż element zapisany jako pierwszy jest również odczytywany jako pierwszy - zasada FIFO (First In First Out – pierwszy wchodzi, pierwszy wychodzi). Kolejkę możemy sobie wyobrazić jako kolejkę w sklepie.
+- lista - Lista jest to liniowo uporządkowany zbiór elementów, z których dowolny element można usunąć oraz dodać w dowolnym miejscu.
+- drzewo binarne - drzewo, w którym stopień każdego wierzchołka jest nie większy od 3.
+- kopiec/stóg/sterta - Kopiec jest kompletnym drzewem binarnym, co oznacza, że posada zapełnione wszystkie poziomy za wyjątkiem ostatniego, a ostatni poziom jest zapełniany bez przerwy od strony lewej do prawej. Kopiec posiada dodatkowy warunek: żaden z synów węzła nie jest od niego większy, czyli nie przechowuje w swoim polu data wartości większej od wartości pola swojego ojca.
+- rekord/struktura - jest najprostszą strukturą danych. W trakcie działania algorytmu rekord nie zmienia ani rozmiaru, ani struktury. Jest to statyczna struktura danych. Można z wizualizować jako dowolną figurę 2D (np. kwadrat).
+
+5.
+a) Jakie elementy algorytmu oceniamy (jaki algorytm będzie idealnym)?
+b) na podstawie jakich parametrów?
+c) co decyduje o wyborze algorytmu?
+
+a) Cechy algorytmu idealnego:
+- Posiada prosty kod
+- Jest łatwy do zrozumienia
+- Może być napisany w każdym języku
+- Wykonuje się szybko
+- Zajmuje niewiele pamięci
+- Zawsze daje poprawne wyniki
+
+b) Parametry oceny algorytmu:
+- Zajmowana pamięć
+- Czas wykonania
+
+c) Co decyduje o wyborze algorytmu?
+- Czasowa złożoność obliczeniowa – rozumiemy ilość czasu niezbędnego do
+rozwiązania problemu w zależności od liczby danych wejściowych.
+- Złożoność pamięciowa – określa z kolei liczbę komórek pamięci, która będzie
+zajęta przez dane i wyniki pośrednie tworzone w trakcie pracy algorytmu.
+
+6. Opisz sortowanie przez wstawianie (insertion sort)
+
+Sortowanie przez wstawianie to algorytm sortowania, którego zasada działania
+odzwierciedla sposób w jaki ludzie ustawiają karty – kolejne elementy wejściowe są
+ustawiane na odpowiednie miejsca docelowe. Jest efektywny dla niewielkiej liczby
+elementów, jego złożoność wynosi O(n2).
+
+7. Opisz sortowanie przez wybór (selection sort)
+
+Polega na wyszukaniu elementu mającego się znaleźć na żądanej pozycji i zamianie
+miejscami z tym, który jest tam obecnie. Operacja jest wykonywana dla wszystkich
+indeksów sortowanej tablicy.
+
+Algorytm przedstawia się następująco:
+1.wyszukaj minimalną wartość z tablicy spośród elementów od ”i” do końca tablicy
+2.zamień wartość minimalną, z elementem na pozycji ”i”
+
+Gdy zamiast wartości minimalnej wybierana będzie maksymalna, wówczas tablica
+będzie posortowana od największego do najmniejszego elementu.
+Jego złożoność wynosi O(n2).
+
+8. Opisz sortowanie przez zamianę (exchange sort)
+
+Idea algorytmu sortowania przez zamianę polega na przenoszeniu coraz to
+mniejszych elementów na początek tablicy. Po dojściu do elementu minimalnego
+podczas przeglądania tablicy, zostanie on umieszczony na pierwszej pozycji, a w
+każdym następnym kroku będzie on tylko porównywany z następnymi elementami.
+W każdej fazie rozmiar problemu redukuje się więc o 1, bo element minimalny
+znajdzie się na właściwej, pierwszej pozycji w tablicy. Jego złożoność wynosi O(n2).
+
+9. Opisz (bez algorytmu) inne sortowania -> wybrane przeze mnie sortowanie to sortowanie bąbelkowe (bubble sort)
+
+Idea sortowania bąbelkowego polega na przesuwaniu coraz to większych elementów
+na koniec tablicy. Po dojściu do elementu maksymalnego podczas przeglądania
+tablicy, będzie on dalej przepychany o jedną pozycję aż do końca. W każdej fazie
+rozmiar problemu redukuje się więc o 1, bo element maksymalny znajdzie się na
+właściwej, ostatniej pozycji w tablicy.Jego złożoność wynosi O(n2).
+
+10. Algorytmy iteracyjne
+
+Algorytm iteracyjny – algorytm, który uzyskuje wynik poprzez iterację, czyli
+powtarzanie danej operacji z góry określoną liczbę razy lub aż do spełnienia
+określonego warunku.
+
+11. Algorytmy rekurencyjne
+
+Algorytm rekurencyjny - polega na tym, że obiekt składa się częściowo z samego
+siebie (sam się wywołuje).
+
+12 Grafy (definicja, parametry, zapis, przeglądanie)
+
+W informatyce grafem nazywamy strukturę G = (V,E) składającą się z węzłów (V)
+połączonych za pomocą krawędzi (E).
+
+Grafy mogą być:
+- nieskierowane
+- skierowane (ze strzałką kierunkową)
+
+Jeśli krawędź łączy 2 wierzchołki to jest incydentna.
+
+Pętla własna - wychodzi i wchodzi do tego samego wierzchołka.
+Stopień wierzchołka - liczba krawędzi połączonych z wierzchołkiem.
+Ścieżka / droga - w grafie skierowanym sekwencja przejścia.
+Długość ścieżki / drogi - ilość krawędzi przez które idziemy.
+
+Sposoby przechowywania grafu w pamięci:
+- lista sąsiedztwa
+- macierz sąsiedztwa
+- lista krawędzi
+- macierz incydencji
+
+Przeszukiwanie grafu:
+
+a) przeszukiwawie wgłąb (DFS = Depth First Search)
+Z wierzchołka początkowego przechodzimy do pierwszego połączonego z nim -
+nazwijmy go wierzchołkiem A. Następnie z wierzchołka A przechodzimy do
+pierwszego nieodwiedzonego do tej pory z nim połączonego, nazwijmy go B. Z tego
+zaś do pierwszego nieodwiedzonego itd. Gdy w ten sposób skończą nam się
+wierzchołki, cofamy się do wierzchołka, z którego ostatnio przyszliśmy i wchodzimy z
+tego miejsca do następnego nieodwiedzonego (jeśli taki jest). Czynności te
+powtarzamy do momentu odwiedzenia wszystkich wierzchołków. Każdorazowe
+przejście do wierzchołka odznaczamy ustawiając flagę jako odwiedzony.
+
+b) Przeszukiwanie wszerz (BFS = Breadth First Search)
+Przechodzenie grafu rozpoczyna się od zadanego wierzchołka s i polega na
+odwiedzeniu wszystkich osiągalnych z niego wierzchołków. Wynikiem działania
+algorytmu jest drzewo przeszukiwania wszerz o korzeniu w s, zawierające wszystkie
+wierzchołki osiągalne z s. Do każdego z tych wierzchołków prowadzi dokładnie jedna
+ścieżka z s, która jest jednocześnie najkrótszą ścieżką w grafie wejściowym. Algorytm
+działa prawidłowo zarówno dla grafów skierowanych jak i nieskierowanych.
+
+13. Na czym polegał problem grafu Eulera?
+
+Problem grafu Eulera polegał znalezieniu takiej drogi w grafie która wyznaczyłaby
+cykl / ścieżkę Eulera.
+
+Cykl Eulera jest cyklem w grafie, który zawiera każdą krawędź grafu dokładnie raz.
+Warunkiem istnienia cyklu jest spójność grafu. Dla grafu skierowanego należy
+sprawdzić czy do każdego wierzchołka wchodzi tyle samo krawędzi co wychodzi. Dla
+grafu nieskierowanego z każdego wierzchołka musi wychodzić parzysta liczba
+krawędzi.
+
+Ścieżka Eulera jest ścieżką, która przecina każdą krawędź dokładnie raz bez
+powtarzania, jeśli kończy się na początkowym wierzchołku, to jest to cykl Eulera.
+
+14. Problemy trudne: Wieże Hanoi
+
+Wieże Hanoi to problem polegający na odbudowaniu, z zachowaniem kształtu, wieży
+z krążków o różnych średnicach, przy czym podczas przekładania wolno się
+posługiwać buforem (dodatkowe 2 słupki - ”b” oraz ”c”) przy ogólnym założeniu, że
+nie wolno kłaść krążka o większej średnicy na mniejszy ani przekładać kilku krążków
+jednocześnie. Jest to przykład zadania, którego złożoność obliczeniowa wzrasta
+niezwykle szybko w miarę zwiększania parametru wejściowego - liczby elementów
+wieży.
+
+Rozwiązanie rekurencyjne
+1. przenieś (rekurencyjnie) n-1 krążków ze słupka A na słupek B posługując się
+słupkiem C
+2. przenieś jeden krążek ze słupka A na słupek C
+3. przenieś (rekurencyjnie) n-1 krążków ze słupka B na słupek C posługując się
+słupkiem A
+
+Rozwiązanie iteracyjne
+1) przenieś najmniejszy krążek na kolejny (*) słupek
+2) wykonaj jedyny możliwy do wykonania ruch, nie zmieniając położenia krążka
+najmniejszego
+3) powtarzaj punkty 1 i 2, aż do odpowiedniego ułożenia wszystkich krążków
+(*) Kolejny słupek wyznaczamy w zależności od liczby krążków. Jeśli liczba krążków
+jest parzysta, kolejnym słupkiem jest ten po prawej stronie (gdy dojdziemy do słupka
+C w następnym ruchu używamy słupka A). Natomiast jeśli liczba krążków jest
+nieparzysta, kolejnym słupkiem jest ten po lewej stronie (gdy dojdziemy do słupka A
+w następnym ruchu używamy słupka C).
+
+15 Problemy trudne: Generowanie permutacji
+* matematyczny sposób liczenia permutacji
+
+a) Permutacja bez potwórzeń
+
+Definicja: permutacją bez powtórzeń zbioru złożonego z n różnych elementów nazywamy każdy n wyrazowy ciąg utworzony ze wszystkich wyrazów zbioru. Wszystkich możliwych permutacji zbioru n-elementowego jest P_n = n!
+Przykład: Elementy zbioru A={a,b,c} można ustawić w ciąg na P_3 = 3! = 6 sposobów: abc,acb,bac,bca,cab,cba
+
+b) Permutacja z powtórzeniami
+
+Niech A oznacza zbiór złożony z k różnych elementów A={a_1,a_2,...a_k}. Permutacją n elementową z powtórzeniami, w której elementy a_1,a_2,...,a_k powtarzają się odpowiednio n_1,n_2,...,n_k razy n_1+n_2+...+n_k = n, jest każdy n-wyrazowy ciąg, w którym elementy a_1,a_2,...,a_k powtarzają się podaną liczbę razy.
+Liczba takich permutacji z powtórzeniami wynosi n!/((n_1)! * (n_2)! * ... * (n_k)!)
+Przykład: Przestawiając litery b,a,b,k,a można otrzymać 5!/(2!*2!*1!) = 30 różnych napisów
+
+16 Problemy trudne: Problem komiwojażera
+
+Problem: W danym grafie znaleźć ścieżkę o najmniejszej sumie wag krawędzi, która
+przechodzi dokładnie jeden raz przez każdy wierzchołek i wraca do wierzchołka
+startowego.
+
+Wyobraźmy sobie komiwojażera, który podróżuje od miasta do miasta, sprzedając
+swoje produkty lub zawierając różne oferty handlowe. Wyrusza z miasta rodzinnego,
+po czym jego trasa przebiega dokładnie jeden raz przez każde z miast. Na koniec
+komiwojażer powraca do swojego miasta rodzinnego. Z oczywistych powodów chce,
+aby trasa podróży była najkrótszą ze wszystkich możliwych tras. W ten sposób
+powstaje problem wędrującego komiwojażera.
+
+W terminologii grafów miasta są wierzchołkami grafu, a trasy pomiędzy nimi to
+krawędzie z wagami. Waga krawędzi może odpowiadać odległości pomiędzy
+miastami połączonymi tą krawędzią, czasowi podróży lub kosztom przejazdu - zależy,
+co chcemy w podróżny komiwojażera zminimalizować. Trasa komiwojażera jest
+cyklem przechodzącym przez każdy wierzchołek grafu dokładnie jeden raz - jest to
+zatem cykl Hamiltona.
+
+Dla n miast liczba wszystkich kombinacji k (przy założeniu że droga w jedną i w drugą
+stronę ma taki sam koszt) wyraża się poniższą zależność.
+
+k = ((n-1)!)/2
+
+17 Problemy trudne: ścieżki Hamiltona i ścieżki Eulera.
+
+Cykl Eulera jest cyklem w grafie, który zawiera każdą krawędź grafu dokładnie raz.
+Warunkiem istnienia cyklu jest spójność grafu. Dla grafu skierowanego należy
+sprawdzić czy do każdego wierzchołka wchodzi tyle samo krawędzi co wychodzi. Dla
+grafu nieskierowanego z każdego wierzchołka musi wychodzić parzysta liczba
+krawędzi.
+
+Cykl Hamiltona jest cyklem, który odwiedza każdy wierzchołek grafu dokładnie jeden
+raz. Znalezienie cyklu Hamiltona w grafie jest bardzo trudne obliczeniowo. Problem
+ten zalicza się to tzw. problemów NP zupełnych, co oznacza, że dla dużej liczby
+wierzchołków jest on praktycznie nierozwiązywalny w sensownym czasie.
+
+Różnice między ścieżkami Eulera a Hamiltona:
+Ścieżka Eulera jest ścieżką, która przecina każdą krawędź dokładnie raz bez
+powtarzania, jeśli kończy się na początkowym wierzchołku, to jest to cykl Eulera.
+Ścieżka Hamiltona przechodzi przez każdy wierzchołek (nie każdą krawędź),
+dokładnie jeden raz, jeśli kończy się na początkowym wierzchołku, to jest to cykl
+Hamiltona.
+W ścieżce Eulera możesz przejść przez wierzchołek więcej niż jeden raz.
+Na ścieżce Hamiltona nie można przejść przez wszystkie krawędzie.
+
+=============================================================================================================== wykłady
+
+TODO
+
+=============================================================================================================== wejściówki
+
+TODO
+
+=============================================================================================================== prompt_algorytmy.md
+
+## ZASTOSOWANIA PRAKTYCZNE (Real-World Applications)
+
+| Algorytm/Struktura | Zastosowanie w praktyce |
+|--------------------|------------------------|
+| **QuickSort** | Sortowanie w bazach danych, systemy plików (np. Unix sort) |
+| **MergeSort** | Git merge, sortowanie zewnętrzne dla big data, stabilne sortowanie |
+| **Dijkstra** | Nawigacja GPS, routing pakietów w sieciach, pathfinding w grach |
+| **BFS** | Crawlery webowe, znajdowanie najkrótszej ścieżki w grafie nieważonym |
+| **DFS** | Wykrywanie cykli, sortowanie topologiczne, analiza sieci społecznościowych |
+| **Stosy** | Cofanie operacji (Undo), parsowanie wyrażeń, wywołania funkcji |
+| **Kolejki** | Bufory drukarek, obsługa zdarzeń, BFS |
+| **Drzewa BST** | Słowniki, indeksy baz danych, autouzupełnianie |
+| **Tablice haszujące** | Cache, bazy NoSQL, sprawdzanie duplikatów |
+| **KMP** | Wyszukiwarki, edytory tekstu (Ctrl+F), antywirus (sygnatura wzorców) |
+| **Szyfr XOR** | Proste szyfrowanie plików, checksums, obfuskacja |
+| **Grafy** | Mapy, sieci społecznościowe, systemy rekomendacji |

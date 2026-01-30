@@ -18,8 +18,10 @@
 	},
 	"dependencies": {
 		"@supabase/supabase-js": "^2.93.2",
+		"@tailwindcss/vite": "^4.1.18",
 		"better-sqlite3": "^12.6.2",
 		"dotenv": "^17.2.3",
-		"openai": "^6.16.0"
+		"openai": "^6.16.0",
+		"tailwindcss": "^4.1.18"
 	}
 }
