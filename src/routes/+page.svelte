@@ -1830,8 +1830,6 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     }
   }
 
-  $: mentor = mentors.find((m) => m.id === selectedMentorId);
-
   onMount(() => {
     sounds = {
       intro: new Audio("/sfx/intro.mp3"),
