@@ -253,6 +253,18 @@ Jeśli jest niejednoznaczna – obniż score.
       gradingBias: "neutral",
     },
     {
+      id: "firtana",
+      label: "🤖 Flirtana",
+      realLabel: "Firtana z youtube oi oi a eye eye - belgijczyk",
+      avatarIdle: "/mentors/firtana_idle.png",
+      avatarTalk: "/mentors/firtana_talk.png",
+      talkSound: "/mentors/firtana_talk.mp3",
+      personality: `
+      memiczny belgijczyk ze smieszna twarza
+`,
+      gradingBias: "chill",
+    },
+    {
       id: "skeleton",
       label: "🛡️ RAR",
       realLabel: "Szkielet walący w tarcze mem RARRR",
@@ -2387,7 +2399,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
     class="fixed top-0 left-0 right-0 bg-zinc-900 text-white px-4 py-2 flex justify-between text-sm z-50"
   >
     <div>FS: {totalFS} pkt</div>
-    <div>epstein AiSDland — 21,000 słów notatek — v1.0</div>
+    <div>epstein AiSDland — 21,000 słów notatek — v1.1</div>
     <div>RS: {totalRS} pkt</div>
   </div>
 
