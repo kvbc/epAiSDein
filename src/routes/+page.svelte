@@ -1876,17 +1876,30 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
   }
 
   let online = 0;
+  const id = crypto.randomUUID();
+
+  let pingInterval;
+  let countInterval;
 
   onMount(() => {
-    const es = new EventSource("/api/online");
+    pingInterval = setInterval(() => {
+      fetch("/api/online/ping", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id }),
+      });
+    }, 10000);
 
-    es.onmessage = (e) => {
-      online = Number(e.data);
-    };
+    countInterval = setInterval(async () => {
+      const r = await fetch("/api/online/count");
+      const j = await r.json();
+      online = j.online;
+    }, 5000);
+  });
 
-    return () => {
-      es.close();
-    };
+  onDestroy(() => {
+    clearInterval(pingInterval);
+    clearInterval(countInterval);
   });
 
   onMount(() => {
