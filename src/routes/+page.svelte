@@ -1875,7 +1875,7 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     return `${a}${n}#${Math.abs(hash % 1000)}`;
   }
 
-  let online = "-";
+  let online = "⌛";
   const id = crypto.randomUUID();
 
   let pingInterval;
