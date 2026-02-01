@@ -96,7 +96,9 @@
     >
       {#if e.duration_ms}
         <span class="mr-3">
-          ⚡ <b>{Math.round(e.duration_ms / 1000)}s/pyt.</b>
+          ⚡ <b
+            >{Math.round(e.duration_ms / e.questions_answered / 1000)}s/pyt.</b
+          >
         </span>
       {/if}
 
