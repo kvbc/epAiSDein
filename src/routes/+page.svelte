@@ -1875,10 +1875,20 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     return `${a}${n}#${Math.abs(hash % 1000)}`;
   }
 
-  function acceptNotice() {
-    localStorage.setItem("quiz_notice_seen", "true");
-    showNotice = false;
-  }
+  let online = 0;
+  let es;
+
+  onMount(() => {
+    const es = new EventSource("/api/online");
+
+    es.onmessage = (e) => {
+      online = Number(e.data);
+    };
+
+    return () => {
+      es.close();
+    };
+  });
 
   onMount(() => {
     anonId = localStorage.getItem("anon_id");
@@ -2722,11 +2732,50 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
 
 {#if !isFinished}
   <div
-    class="fixed top-0 left-0 right-0 bg-zinc-900 text-white px-4 py-2 flex justify-between text-sm z-50"
+    class="fixed top-0 left-0 right-0 z-50
+         bg-zinc-900 text-white
+         px-3 py-2 text-sm"
   >
-    <div>FS: {totalFS} pkt</div>
-    <div>epstein AiSDland — 21,000 słów notatek — v1.6</div>
-    <div>RS: {totalRS} pkt</div>
+    <!-- ROW 1: FS / RS (Zawsze się mieszczą) -->
+    <div class="flex justify-between items-center">
+      <div>
+        FS: <b>{totalFS}</b>
+      </div>
+
+      <div>
+        RS: <b>{totalRS}</b>
+      </div>
+    </div>
+
+    <!-- ROW 2: INFO -->
+    <div
+      class="mt-1
+           flex flex-wrap justify-center
+           gap-x-3 gap-y-0.5
+           text-[11px] text-zinc-300
+           sm:hidden"
+    >
+      <span>🏝️ epstein AiSDland v1.7</span>
+      <span>📝 21,000 słów notatek</span>
+      <span class="flex items-center gap-1">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        {online}
+      </span>
+    </div>
+
+    <!-- DESKTOP -->
+    <div
+      class="hidden sm:flex
+           items-center justify-center
+           gap-6 text-zinc-300"
+    >
+      <span>🏝️ epstein AiSDland 1.7</span>
+      <span>📝 21,000 słów notatek</span>
+      <span class="flex items-center gap-1">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        Online: {online}
+      </span>
+    </div>
   </div>
 
   <div class="max-w-[520px] mx-auto mt-16 flex flex-col gap-4 px-2">
