@@ -1,5 +1,5 @@
 export const config = {
-  runtime: "nodejs",
+  runtime: "nodejs20.x",
 };
 
 let clients = new Set()
