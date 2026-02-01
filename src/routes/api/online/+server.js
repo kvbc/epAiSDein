@@ -2,43 +2,49 @@ export const config = {
   runtime: "nodejs20.x",
 };
 
-let clients = new Set()
-let online = 0
+let clients = new Set();
 
 function broadcast() {
-  const msg = `data: ${online}\n\n`
-
+  const data = `data: ${clients.size}\n\n`;
   for (const controller of clients) {
     try {
-      controller.enqueue(msg)
-    } catch (err) {
-      // controller martwy → usuwamy
-      clients.delete(controller)
+      controller.enqueue(data);
+    } catch {
+      clients.delete(controller);
     }
   }
 }
 
 export function GET() {
-  return new Response(
-    new ReadableStream({
-      start(controller) {
-        clients.add(controller)
-        online++
-        broadcast()
-      },
+  const stream = new ReadableStream({
+    start(controller) {
+      clients.add(controller);
+      broadcast();
 
-      cancel(controller) {
-        clients.delete(controller)
-        online--
-        broadcast()
+      const interval = setInterval(() => {
+        try {
+          controller.enqueue(":\n\n"); // keep-alive
+        } catch {
+          cleanup();
+        }
+      }, 15000);
+
+      function cleanup() {
+        clearInterval(interval);
+        clients.delete(controller);
+        broadcast();
       }
-    }),
-    {
-      headers: {
-        "Content-Type": "text/event-stream",
-        "Cache-Control": "no-cache",
-        "Connection": "keep-alive"
-      }
+
+      // 🔥 KLUCZOWE
+      controller.signal?.addEventListener("abort", cleanup);
     }
-  )
+  });
+
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "text/event-stream",
+      "Cache-Control": "no-cache",
+      "Connection": "keep-alive",
+    },
+  });
 }
