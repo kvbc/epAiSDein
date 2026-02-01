@@ -1894,6 +1894,7 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
       const r = await fetch("/api/online/count");
       const j = await r.json();
       online = j.online;
+      if (online < 1) online = 1;
     }, 5000);
   });
 
