@@ -1703,31 +1703,165 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     showNotice = localStorage.getItem("quiz_notice_seen") !== "true";
   });
 
+  function formatDateTime(ts) {
+    const d = new Date(ts);
+    return d.toLocaleDateString("pl-PL", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+  }
+
+  function stopAllAudio() {
+    // 1. aktualny sound
+    stopSound();
+
+    // 2. mentor loop
+    stopMentorTalk();
+
+    // 3. mentor preview
+    if (mentorAudio) {
+      mentorAudio.pause();
+      mentorAudio.currentTime = 0;
+    }
+
+    // 4. wszystkie preloadowane sfx
+    Object.values(sounds || {}).forEach((a) => {
+      try {
+        a.pause();
+        a.currentTime = 0;
+      } catch {}
+    });
+
+    // 5. typing
+    stopTypingSound();
+  }
+
   function generateFunnyNick(seed) {
     const adj = [
-      "Zgubiony",
+      // ogólne / egzamin
+      "Lost",
+      "Wkuwający",
+      "Zaspany",
+      "Pomyłkowy",
       "Losowy",
-      "Cichy",
-      "Wkurzony",
-      "Turbo",
-      "Pijany",
-      "Anonimowy",
-      "Zapomniany",
-      "Senny",
-      "Lagujący",
+      "NaCzuja",
+
+      // algorytmy
+      "Greedy",
+      "Brute",
+      "BigO",
+      "Pseudo",
+      "Optymalny",
+      "Kwadratowy",
+
+      // iteracja / rekurencja
+      "Rek",
+      "Iter",
+      "ZaGłęboki",
+      "Stacked",
+
+      // sortowania
+      "Bąbel",
+      "Szybki",
+      "Scalony",
+      "Wstawny",
+
+      // wyszukiwanie
+      "Binarny",
+      "Liniowy",
+      "Hoare",
+
+      // struktury
+      "Pusty",
+      "Pełny",
+      "Prioryt",
+      "Zbalans",
+
+      // grafy
+      "Zgubny",
+      "Kolorowy",
+      "Zachł",
+      "Minimalny",
+
+      // szyfry
+      "Zakod",
+      "XORowy",
+      "Cezar",
+
+      // tekst
+      "Naiwny",
     ];
 
     const noun = [
-      "Student",
-      "Algorytm",
+      // Wprowadzenie
+      "Algo",
+      "Strukt",
+      "Schemat",
+      "Analiza",
+
+      // Iteracja / rekurencja
+      "Rekur",
+      "Iter",
+      "Fib",
+      "Euklid",
+      "Sito",
+
+      // Systemy liczbowe
       "Bit",
-      "Pointer",
-      "Rekurencja",
-      "Stack",
+      "Bin",
+      "Hex",
+      "ASCII",
+
+      // Sortowanie
+      "Bubble",
+      "Quick",
+      "Merge",
+      "Insert",
+      "Select",
+
+      // Selekcja / wyszukiwanie
+      "Search",
+      "Binary",
+      "Linear",
+      "Piątki",
+
+      // Struktury danych
+      "Tablica",
+      "Lista",
+      "Stos",
+      "Queue",
+      "ONP",
       "Heap",
-      "Segfault",
-      "Node",
+      "BST",
+      "Zbiór",
+      "Dict",
+      "Wektor",
+
+      // Drzewa
+      "Węzeł",
+      "Liść",
+      "Korzeń",
+
+      // Grafy
       "Graf",
+      "Euler",
+      "Dijkstra",
+      "Kruskal",
+      "MST",
+      "NN",
+
+      // Szyfry
+      "XOR",
+      "Cezar",
+      "Vigen",
+      "Atbasz",
+      "Polibi",
+
+      // Tekst
+      "Brute",
+      "KMP",
+      "BM",
     ];
 
     let hash = 0;
@@ -2058,8 +2192,8 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     isFinished = true;
     endTime = Date.now();
     durationMs = endTime - startTime;
-    // fixme drugie zabija pierwsze
-    playSound("fnaf", { volume: 0.6 });
+    // fixme drugie zabija pierwsze (outro zabija fnaf)
+    // playSound("fnaf", { volume: 0.6 });
     playSound("outro", { volume: 0.6 });
     submitLeaderboardOnce();
   }
@@ -2270,11 +2404,27 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     });
   }
 
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
+
+  onDestroy(() => {
+    stopAllAudio();
+  });
 
   onMount(() => {
     // typingSound = new Audio("/sfx/type-2.mp3");
     // typingSound.volume = 0.2;
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("beforeunload", () => {
+        stopAllAudio();
+      });
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          stopAllAudio();
+        }
+      });
+    }
 
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) {
@@ -2327,9 +2477,21 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     leaderboard = await res.json();
     console.log("Leaderboard: ", leaderboard);
   });
-  const topRS = () => [...leaderboard].sort((a, b) => b.total_rs - a.total_rs);
+  const topRS = () =>
+    [...leaderboard].sort((a, b) => b.total_rs - a.total_rs).slice(0, 100);
 
-  const topFS = () => [...leaderboard].sort((a, b) => b.total_fs - a.total_fs);
+  function newestEntries() {
+    return [...leaderboard]
+      .filter((e) => e.created_at)
+      .sort(
+        (a, b) =>
+          new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
+      )
+      .slice(0, 100);
+  }
+
+  const topFS = () =>
+    [...leaderboard].sort((a, b) => b.total_fs - a.total_fs).slice(0, 100);
 
   const fastest = () =>
     [...leaderboard]
@@ -2338,7 +2500,8 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
         (a, b) =>
           a.duration_ms / a.questions_answered -
           b.duration_ms / b.questions_answered,
-      );
+      )
+      .slice(0, 100);
 
   function startGame() {
     startTime = Date.now();
@@ -2383,6 +2546,18 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
       `.trim(),
       color: "red",
     };
+  }
+
+  let showLeaderboardNotice = false;
+
+  if (typeof localStorage !== "undefined") {
+    showLeaderboardNotice =
+      localStorage.getItem("leaderboardRestartNoticeSeen") !== "1";
+  }
+
+  function closeLeaderboardNotice() {
+    showLeaderboardNotice = false;
+    localStorage.setItem("leaderboardRestartNoticeSeen", "1");
   }
 
   $: final = finalVerdict(percentFS);
@@ -2550,7 +2725,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
     class="fixed top-0 left-0 right-0 bg-zinc-900 text-white px-4 py-2 flex justify-between text-sm z-50"
   >
     <div>FS: {totalFS} pkt</div>
-    <div>epstein AiSDland — 21,000 słów notatek — v1.5</div>
+    <div>epstein AiSDland — 21,000 słów notatek — v1.6</div>
     <div>RS: {totalRS} pkt</div>
   </div>
 
@@ -3202,6 +3377,29 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
           </div>
         {/if}
 
+        {#if showLeaderboardNotice}
+          <div
+            class="mt-4 mb-4 bg-[#1a1f2b] text-zinc-200
+           border-l-4 border-amber-500
+           rounded-lg px-4 py-3 text-sm leading-relaxed"
+          >
+            <b>ℹ️ Leaderboardy</b><br /><br />
+
+            Rankingi <b>nie odświeżają się w czasie rzeczywistym</b>.<br />
+            Aktualizacja następuje dopiero po <b>odświeżeniu strony</b>. Jeśli
+            jesteś na urządzeniu mobilnym, rankingi znajdują sie
+            <b>na samym dole strony</b>.
+
+            <button
+              class="mt-4 w-full bg-amber-600 hover:bg-amber-700
+             text-black rounded-md py-2 font-semibold"
+              on:click={closeLeaderboardNotice}
+            >
+              OK, nie pokazuj ponownie
+            </button>
+          </div>
+        {/if}
+
         <div
           class="mt-4 mb-4 bg-[#0b1d33] text-blue-100 border-l-4 border-blue-500 rounded-md px-4 py-3 text-sm leading-relaxed"
         >
@@ -3421,13 +3619,15 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
         {/if}
       </LeaderboardBox>
 
-      <!-- PLACEHOLDER -->
-      <div
-        class="h-[220px] rounded-xl border border-dashed border-zinc-700 opacity-40
-              flex items-center justify-center text-zinc-500 text-sm"
-      >
-        —
-      </div>
+      <LeaderboardBox title="🕒 Najnowsze">
+        {#if leaderboard.length === 0}
+          <div class="py-6 text-center text-zinc-500">⏳ Ładowanie…</div>
+        {:else}
+          {#each newestEntries() as e}
+            <Row {e} fastest={false} value={""} />
+          {/each}
+        {/if}
+      </LeaderboardBox>
     </aside>
   </div>
 {/if}
