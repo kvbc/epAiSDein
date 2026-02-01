@@ -3273,7 +3273,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
     class="max-w-[1400px] mx-auto px-4 sm:px-6 py-6
          grid gap-6
          grid-cols-1
-         lg:grid-cols-[400px_1fr_400px]"
+         lg:grid-cols-[320px_1fr_320px]"
   >
     <!-- LEWY -->
     <aside
