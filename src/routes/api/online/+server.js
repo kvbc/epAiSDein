@@ -2,7 +2,7 @@ export const config = {
   runtime: "nodejs20.x",
 };
 
-let clients = new Set();
+const clients = new Set();
 
 function broadcast() {
   const data = `data: ${clients.size}\n\n`;
@@ -15,9 +15,12 @@ function broadcast() {
   }
 }
 
-export function GET() {
+export function GET({ request }) {
+  let controllerRef;
+
   const stream = new ReadableStream({
     start(controller) {
+      controllerRef = controller;
       clients.add(controller);
       broadcast();
 
@@ -33,17 +36,20 @@ export function GET() {
         clearInterval(interval);
         clients.delete(controller);
         broadcast();
+        try {
+          controller.close();
+        } catch {}
       }
 
-      // 🔥 KLUCZOWE
-      controller.signal?.addEventListener("abort", cleanup);
+      // ✅ JEDYNE WIARYGODNE ŹRÓDŁO ROZŁĄCZENIA
+      request.signal.addEventListener("abort", cleanup);
     }
   });
 
   return new Response(stream, {
     headers: {
       "Content-Type": "text/event-stream",
-      "Cache-Control": "no-cache",
+      "Cache-Control": "no-cache, no-transform",
       "Connection": "keep-alive",
     },
   });
