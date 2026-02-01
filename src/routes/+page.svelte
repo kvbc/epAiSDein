@@ -1915,7 +1915,7 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
       if (!mouthInterval) {
         mouthInterval = setInterval(() => {
           mouthOpen = !mouthOpen;
-        }, 85);
+        }, 300);
       }
     } else {
       stopMentorTalk();
@@ -2343,8 +2343,9 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
       character = mentor.label;
       sources = data.sources ?? [];
 
-      typedVerdict = "";
-      typedTip = "";
+      typedVerdict = typeof data.verdict === "string" ? data.verdict : "";
+      typedTip =
+        typeof data.tip === "string" && data.tip.length ? "💡 " + data.tip : "";
 
       talking = true;
       stopSound();
@@ -2399,7 +2400,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
     class="fixed top-0 left-0 right-0 bg-zinc-900 text-white px-4 py-2 flex justify-between text-sm z-50"
   >
     <div>FS: {totalFS} pkt</div>
-    <div>epstein AiSDland — 21,000 słów notatek — v1.1</div>
+    <div>epstein AiSDland — 21,000 słów notatek — v1.2</div>
     <div>RS: {totalRS} pkt</div>
   </div>
 
@@ -2655,6 +2656,8 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
               <img
                 src={mouthOpen ? mentor.avatarTalk : mentor.avatarIdle}
                 class="w-full h-full object-cover image-rendering-pixelated"
+                loading="eager"
+                decoding="async"
               />
             </div>
 
@@ -2678,39 +2681,6 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
               </button>
             </div>
           </div>
-        </div>
-
-        <!-- 🔥 DÓŁ: SOLUTION FULL WIDTH -->
-        <!-- 🔽 ROZWIJANA WZORCOWA ODPOWIEDŹ -->
-        <div class="mt-6">
-          {#if !solutionOpen}
-            <button
-              on:click={() => (solutionOpen = true)}
-              class="w-full bg-zinc-800 hover:bg-zinc-700
-             text-zinc-200 py-3 rounded-lg
-             border border-zinc-700
-             flex items-center justify-center gap-2"
-            >
-              📘 Pokaż wzorcową odpowiedź
-            </button>
-          {/if}
-
-          {#if solutionOpen}
-            <div
-              class="mt-4 bg-zinc-900 border border-zinc-700 rounded-xl p-4 space-y-4"
-            >
-              <SolutionBlock solution={solutions[realIndex]} />
-
-              <!-- 🔼 ZWIJANIE NA DOLE -->
-              <button
-                on:click={() => (solutionOpen = false)}
-                class="w-full mt-4 bg-zinc-800 hover:bg-zinc-700
-               text-zinc-300 py-2 rounded-md text-sm"
-              >
-                ⬆️ Zwiń wzorcową odpowiedź
-              </button>
-            </div>
-          {/if}
         </div>
       </div>
 
@@ -2756,6 +2726,39 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
           </p>
         </div>
       {/if}
+
+      <!-- 🔥 DÓŁ: SOLUTION FULL WIDTH -->
+      <!-- 🔽 ROZWIJANA WZORCOWA ODPOWIEDŹ -->
+      <div class="mt-6">
+        {#if !solutionOpen}
+          <button
+            on:click={() => (solutionOpen = true)}
+            class="w-full bg-zinc-800 hover:bg-zinc-700
+             text-zinc-200 py-3 rounded-lg
+             border border-zinc-700
+             flex items-center justify-center gap-2"
+          >
+            📘 Pokaż wzorcową odpowiedź
+          </button>
+        {/if}
+
+        {#if solutionOpen}
+          <div
+            class="mt-4 bg-zinc-900 border border-zinc-700 rounded-xl p-4 space-y-4"
+          >
+            <SolutionBlock solution={solutions[realIndex]} />
+
+            <!-- 🔼 ZWIJANIE NA DOLE -->
+            <button
+              on:click={() => (solutionOpen = false)}
+              class="w-full mt-4 bg-zinc-800 hover:bg-zinc-700
+               text-zinc-300 py-2 rounded-md text-sm"
+            >
+              ⬆️ Zwiń wzorcową odpowiedź
+            </button>
+          </div>
+        {/if}
+      </div>
 
       {#if sources && sources.length > 0}
         <div
