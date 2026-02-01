@@ -2337,6 +2337,36 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
         }),
       });
 
+      /* ===== 🚨 RATE LIMIT HANDLING ===== */
+      if (res.status === 429) {
+        const data = await res.json();
+
+        // reset stanu – NIE zapisujemy wyniku
+        interruptMentor();
+        stopSound();
+        stopTypingSound();
+
+        verdict = "⏳ System chwilowo przeciążony";
+        tip =
+          "Ocena zostanie wykonana automatycznie za chwilę. Spróbuj ponownie.";
+
+        typedVerdict = verdict;
+        typedTip = "💡 " + tip;
+
+        isSubmitting = false;
+        isLoading = false;
+
+        // opcjonalnie: auto-retry
+        if (data.retryAfter) {
+          setTimeout(() => {
+            retry(); // albo checkAnswer()
+          }, data.retryAfter * 1000);
+        }
+
+        return; // ⛔ KLUCZ – NIE IDZIEMY DALEJ
+      }
+
+      /* ===== NORMAL FLOW ===== */
       const data = await res.json();
 
       score = normalizeScore(data.score);
@@ -2400,7 +2430,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
     class="fixed top-0 left-0 right-0 bg-zinc-900 text-white px-4 py-2 flex justify-between text-sm z-50"
   >
     <div>FS: {totalFS} pkt</div>
-    <div>epstein AiSDland — 21,000 słów notatek — v1.2</div>
+    <div>epstein AiSDland — 21,000 słów notatek — v1.3</div>
     <div>RS: {totalRS} pkt</div>
   </div>
 

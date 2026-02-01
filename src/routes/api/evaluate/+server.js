@@ -6,6 +6,7 @@ import {
   SUPABASE_URL,
   SUPABASE_ANON_KEY
 } from "$env/static/private";
+import { groqChatWithFallback } from "$lib/groqWithFallback";
 
 /* ======================
    SUPABASE
@@ -14,7 +15,7 @@ const supabase = createClient(
   SUPABASE_URL,
   SUPABASE_ANON_KEY
 );
-2
+
 /* ======================
    GROQ (OpenAI-compatible)
 ====================== */
@@ -97,6 +98,7 @@ ${answer}
    API ENDPOINT
 ====================== */
 export async function POST({ request }) {
+  try {
   const { question, answer, mentor } = await request.json();
 
     // -------- ANTI-CHEAT / META CHECK --------
@@ -128,8 +130,7 @@ export async function POST({ request }) {
     .join("\n---\n");
 
   /* -------- MAIN COMPLETION -------- */
-  const completion = await groq.chat.completions.create({
-    model: "llama-3.1-8b-instant",
+  const completion = await groqChatWithFallback(groq, {
     temperature: 0.2,
     messages: [
       {
@@ -299,8 +300,7 @@ Oceń i naucz.
 
   /* -------- REPAIR PROMPT (JEŚLI JSON SIĘ WYWALI) -------- */
   if (!result) {
-    const repair = await groq.chat.completions.create({
-      model: "llama-3.1-8b-instant",
+    const repair = await groqChatWithFallback(groq, {
       temperature: 0,
       messages: [
         {
@@ -343,4 +343,30 @@ Zwróć WYŁĄCZNIE JSON w formacie:
   }
 
   return json(result);
+  } catch (err) {
+    /* ===== 🚨 RATE LIMIT FALLBACK ===== */
+    if (err?.code === 429) {
+      console.warn("[Groq] ALL MODELS RATE LIMITED");
+
+      return json(
+        {
+          score: null,
+          verdict: "System chwilowo przeciążony",
+          tip: "Automatyczna ocena zostanie wykonana za chwilę. Spróbuj ponownie.",
+          sources: [],
+          retryAfter: Math.ceil(err.retryAfter)
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(Math.ceil(err.retryAfter))
+          }
+        }
+      );
+    }
+
+    // 🔥 inny błąd
+    console.error(err);
+    throw err;
+  }
 }
