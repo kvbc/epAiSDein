@@ -1603,6 +1603,8 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
   let mentorRunId = 0;
   let testStartedAt = Date.now();
   let audioUnlocked = false;
+  let anonId = "";
+  let autoNick = "";
 
   let startTime = null;
   let endTime = null;
@@ -1701,10 +1703,59 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     showNotice = localStorage.getItem("quiz_notice_seen") !== "true";
   });
 
+  function generateFunnyNick(seed) {
+    const adj = [
+      "Zgubiony",
+      "Losowy",
+      "Cichy",
+      "Wkurzony",
+      "Turbo",
+      "Pijany",
+      "Anonimowy",
+      "Zapomniany",
+      "Senny",
+      "Lagujący",
+    ];
+
+    const noun = [
+      "Student",
+      "Algorytm",
+      "Bit",
+      "Pointer",
+      "Rekurencja",
+      "Stack",
+      "Heap",
+      "Segfault",
+      "Node",
+      "Graf",
+    ];
+
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    const a = adj[Math.abs(hash) % adj.length];
+    const n = noun[Math.abs(hash >> 3) % noun.length];
+
+    return `${a}${n}#${Math.abs(hash % 1000)}`;
+  }
+
   function acceptNotice() {
     localStorage.setItem("quiz_notice_seen", "true");
     showNotice = false;
   }
+
+  onMount(() => {
+    anonId = localStorage.getItem("anon_id");
+
+    if (!anonId) {
+      anonId = crypto.randomUUID();
+      localStorage.setItem("anon_id", anonId);
+    }
+
+    autoNick = generateFunnyNick(anonId);
+  });
 
   function normalizeScore(score) {
     if (typeof score === "number") return score;
@@ -1775,6 +1826,8 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     mentorTalkAudio.play().catch(() => {});
   }
 
+  let leaderboardSent = false;
+
   function stopMentorTalk() {
     mentorTalkingActive = false;
 
@@ -1792,6 +1845,12 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     a.play().catch(() => {});
     audioUnlocked = true;
   }
+
+  onMount(() => {
+    if (isFinished && !localStorage.getItem("leaderboard_submitted")) {
+      submitLeaderboardOnce();
+    }
+  });
 
   async function submitScore() {
     await fetch("/api/leaderboard/submit", {
@@ -1942,6 +2001,55 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     }
   }
 
+  function submitLeaderboardOnce() {
+    if (leaderboardSent) return;
+    if (totalFS === 0 && totalRS === 0) {
+      console.info("Zero score – skip submit");
+      return;
+    }
+    leaderboardSent = true;
+
+    const payload = {
+      anon_id: anonId,
+      nickname: nickname || autoNick,
+
+      total_fs: totalFS,
+      total_rs: totalRS,
+
+      percent_fs: percentFS,
+      percent_rs: percentRS,
+
+      avg_grade: Number(avgGradeNum),
+      duration_ms: durationMs,
+      questions_answered: answeredFS.length,
+
+      // auto: true,
+    };
+
+    // 1️⃣ normalny fetch (jeśli user NIE zamknął karty)
+    fetch("/api/leaderboard/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }).catch((err) => {
+      console.error(err);
+      // cisza
+    });
+
+    // 2️⃣ BEACON – gwarancja zapisu
+    const blob = new Blob([JSON.stringify(payload)], {
+      type: "application/json",
+    });
+
+    navigator.sendBeacon("/api/leaderboard/submit", blob);
+
+    // localStorage.setItem("leaderboard_submitted", "1");
+
+    if (totalFS === 0 && totalRS === 0) {
+      return; // nie submituj, ALE NIE BLOKUJ NICZEGO
+    }
+  }
+
   function finishTest() {
     interruptMentor();
     stopSound();
@@ -1953,6 +2061,7 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     // fixme drugie zabija pierwsze
     playSound("fnaf", { volume: 0.6 });
     playSound("outro", { volume: 0.6 });
+    submitLeaderboardOnce();
   }
 
   function skipQuestion() {
@@ -1978,6 +2087,16 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
     }
 
     nextQuestion();
+  }
+
+  function formatDate(ts) {
+    return new Date(ts).toLocaleString("pl-PL", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
   }
 
   function formatDuration(ms) {
@@ -2206,6 +2325,7 @@ Algorytm Knutha-Morrisa-Pratta wprowadza tablicę prefikso-sufiksów (LPS), któ
   onMount(async () => {
     const res = await fetch("/api/leaderboard/get");
     leaderboard = await res.json();
+    console.log("Leaderboard: ", leaderboard);
   });
   const topRS = () => [...leaderboard].sort((a, b) => b.total_rs - a.total_rs);
 
@@ -2430,7 +2550,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
     class="fixed top-0 left-0 right-0 bg-zinc-900 text-white px-4 py-2 flex justify-between text-sm z-50"
   >
     <div>FS: {totalFS} pkt</div>
-    <div>epstein AiSDland — 21,000 słów notatek — v1.3</div>
+    <div>epstein AiSDland — 21,000 słów notatek — v1.4</div>
     <div>RS: {totalRS} pkt</div>
   </div>
 
@@ -2912,15 +3032,27 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
          flex flex-col order-2 lg:order-1"
     >
       <LeaderboardBox title="⚡ Najszybsi">
-        {#each fastest() as e}
-          <Row {e} value={`${Math.round(e.duration_ms / 1000)}s`} />
-        {/each}
+        {#if leaderboard.length === 0}
+          <div class="py-6 text-center text-zinc-500">⏳ Ładowanie…</div>
+        {:else}
+          {#each fastest() as e}
+            <Row
+              {e}
+              fastest={true}
+              value={`${Math.round(e.duration_ms / 1000)}s`}
+            />
+          {/each}
+        {/if}
       </LeaderboardBox>
 
       <LeaderboardBox title="🧠 FS">
-        {#each topFS() as e}
-          <Row {e} value={`${e.total_fs}`} />
-        {/each}
+        {#if leaderboard.length === 0}
+          <div class="py-6 text-center text-zinc-500">⏳ Ładowanie…</div>
+        {:else}
+          {#each topFS() as e}
+            <Row {e} fastest={false} value={`${e.total_fs}`} />
+          {/each}
+        {/if}
       </LeaderboardBox>
     </aside>
 
@@ -3266,9 +3398,13 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
          flex flex-col order-3 lg:order-3"
     >
       <LeaderboardBox title="🔥 RS">
-        {#each topRS() as e}
-          <Row {e} value={`${e.total_rs}`} />
-        {/each}
+        {#if leaderboard.length === 0}
+          <div class="py-6 text-center text-zinc-500">⏳ Ładowanie…</div>
+        {:else}
+          {#each topRS() as e}
+            <Row {e} fastest={false} value={`${e.total_rs}`} />
+          {/each}
+        {/if}
       </LeaderboardBox>
 
       <!-- PLACEHOLDER -->
