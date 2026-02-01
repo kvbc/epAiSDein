@@ -2550,7 +2550,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
     class="fixed top-0 left-0 right-0 bg-zinc-900 text-white px-4 py-2 flex justify-between text-sm z-50"
   >
     <div>FS: {totalFS} pkt</div>
-    <div>epstein AiSDland — 21,000 słów notatek — v1.4</div>
+    <div>epstein AiSDland — 21,000 słów notatek — v1.5</div>
     <div>RS: {totalRS} pkt</div>
   </div>
 
@@ -2877,39 +2877,6 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
         </div>
       {/if}
 
-      <!-- 🔥 DÓŁ: SOLUTION FULL WIDTH -->
-      <!-- 🔽 ROZWIJANA WZORCOWA ODPOWIEDŹ -->
-      <div class="mt-6">
-        {#if !solutionOpen}
-          <button
-            on:click={() => (solutionOpen = true)}
-            class="w-full bg-zinc-800 hover:bg-zinc-700
-             text-zinc-200 py-3 rounded-lg
-             border border-zinc-700
-             flex items-center justify-center gap-2"
-          >
-            📘 Pokaż wzorcową odpowiedź
-          </button>
-        {/if}
-
-        {#if solutionOpen}
-          <div
-            class="mt-4 bg-zinc-900 border border-zinc-700 rounded-xl p-4 space-y-4"
-          >
-            <SolutionBlock solution={solutions[realIndex]} />
-
-            <!-- 🔼 ZWIJANIE NA DOLE -->
-            <button
-              on:click={() => (solutionOpen = false)}
-              class="w-full mt-4 bg-zinc-800 hover:bg-zinc-700
-               text-zinc-300 py-2 rounded-md text-sm"
-            >
-              ⬆️ Zwiń wzorcową odpowiedź
-            </button>
-          </div>
-        {/if}
-      </div>
-
       {#if sources && sources.length > 0}
         <div
           class="bg-[#0c1624] border border-blue-900/50 rounded-xl p-4 mt-3 text-sm"
@@ -2947,6 +2914,53 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
         >. Mentor bywa zbyt drobiazgowy przy wyższych ocenach.
       </div>
     {/if}
+
+    <!-- 🔥 DÓŁ: SOLUTION FULL WIDTH -->
+    <!-- 🔽 ROZWIJANA WZORCOWA ODPOWIEDŹ -->
+    <div class="mt-1">
+      {#if !solutionOpen}
+        <button
+          on:click={() => (solutionOpen = true)}
+          class="
+      w-full py-3 rounded-xl
+      bg-gradient-to-r from-emerald-500 to-cyan-500
+      text-zinc-900 font-semibold
+      flex items-center justify-center gap-2
+      shadow-lg shadow-emerald-500/20
+      transition-all duration-200
+      hover:scale-[1.02] hover:shadow-emerald-500/40
+      active:scale-[0.98]
+      focus:outline-none focus:ring-2 focus:ring-emerald-400
+    "
+        >
+          📘 Pokaż wzorcową odpowiedź
+        </button>
+      {/if}
+
+      {#if solutionOpen}
+        <div
+          class="mt-4 bg-zinc-900 border border-zinc-700 rounded-xl p-4 space-y-4"
+        >
+          <SolutionBlock solution={solutions[realIndex]} />
+
+          <button
+            on:click={() => (solutionOpen = false)}
+            class="
+        w-full py-2 rounded-lg text-sm font-medium
+        bg-gradient-to-r from-rose-500/20 to-orange-500/20
+        text-rose-300
+        border border-rose-500/30
+        transition-all duration-200
+        hover:bg-rose-500/30 hover:text-rose-200
+        hover:scale-[1.01]
+        active:scale-[0.97]
+      "
+          >
+            ⬆️ Zwiń wzorcową odpowiedź
+          </button>
+        </div>
+      {/if}
+    </div>
 
     <details class="bg-zinc-900 border border-zinc-700 rounded-lg p-4">
       <summary class="font-semibold text-white cursor-pointer">
