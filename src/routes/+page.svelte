@@ -682,7 +682,7 @@ jednoelementowych zbiorów do utworzenia zbioru posortowanego`,
       images: [
         {
           src: "/sols/merge_kroki.png",
-          link: "/assets/wyklady/Algorytmy 4+5.pdf",
+          link: "/assets/wyklady/Algorytmy 4%2b5.pdf",
           note: "Merge Sort - Kroki",
         },
       ],
@@ -696,7 +696,7 @@ wartości`,
       images: [
         {
           src: "/sols/merge_kroki.png",
-          link: "/assets/wyklady/Algorytmy 4+5.pdf",
+          link: "/assets/wyklady/Algorytmy 4%2b5.pdf",
           note: "Merge Sort - Kroki",
         },
         {
@@ -919,27 +919,27 @@ liczbach`,
       images: [
         {
           src: "/sols/onp_kroki_1.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Kroki (1)",
         },
         {
           src: "/sols/onp_kroki_2.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Kroki (2)",
         },
         {
           src: "/sols/onp_schemat_1.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Schemat blokowy (1)",
         },
         {
           src: "/sols/onp_schemat_2.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Schemat blokowy (2)",
         },
         {
           src: "/sols/onp_wartosci_kroki.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Obliczanie wartości - Kroki",
         },
       ],
@@ -986,27 +986,27 @@ wartości zapisanej w notacji postfiksowej`,
         },
         {
           src: "/sols/onp_kroki_1.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Kroki (1)",
         },
         {
           src: "/sols/onp_kroki_2.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Kroki (2)",
         },
         {
           src: "/sols/onp_schemat_1.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Schemat blokowy (1)",
         },
         {
           src: "/sols/onp_schemat_2.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Schemat blokowy (2)",
         },
         {
           src: "/sols/onp_wartosci_kroki.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "ONP - Obliczanie wartości - Kroki",
         },
       ],
@@ -1036,7 +1036,7 @@ strony do prawej`,
         },
         {
           src: "/sols/drzewo.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "Drzewo binarne (2)",
         },
         {
@@ -1065,7 +1065,7 @@ Sterta MIN, to sterta w którym rodzic musi być niemniejszy od dzieci`,
         },
         {
           src: "/sols/styrta.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "Sterta",
         },
       ],
@@ -1097,7 +1097,7 @@ elementów`,
         },
         {
           src: "/sols/drzewo.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "Drzewo binarne (2)",
         },
         {
@@ -1107,12 +1107,12 @@ elementów`,
         },
         {
           src: "/sols/bst_vs_avl.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "BST vs Drzewo Czerwono-Czarne vs Drzewo AVL",
         },
         {
           src: "/sols/drzewobst.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "Drzewo BST",
         },
       ],
@@ -1130,7 +1130,7 @@ Drzewo czerwono-czarne wykorzystuje dodatkową informację o kolorze węzła (cz
         },
         {
           src: "/sols/drzewo.png",
-          link: "/assets/wyklady/Algorytmy 7+8.pdf",
+          link: "/assets/wyklady/Algorytmy 7%2b8.pdf",
           note: "Drzewo binarne (2)",
         },
         {
@@ -1235,7 +1235,7 @@ koszt dotarcia oraz wierzchołek go poprzedzający.
       images: [
         {
           src: "/sols/dick_graf.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "Graf (1)",
         },
         {
@@ -1245,7 +1245,7 @@ koszt dotarcia oraz wierzchołek go poprzedzający.
         },
         {
           src: "/sols/dick_graf_2.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "Opracowanie",
         },
       ],
@@ -1259,7 +1259,7 @@ tworzy on cyklu), kończy się on gdy pozostaje n-1 krawędzi
       images: [
         {
           src: "/sols/kruskal.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "Graf",
         },
       ],
@@ -1284,7 +1284,7 @@ odwiedzimy wzsystkie elementy grafu
       images: [
         {
           src: "/sols/dfs.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "DFS (1)",
         },
         {
@@ -1294,7 +1294,7 @@ odwiedzimy wzsystkie elementy grafu
         },
         {
           src: "/sols/bfs.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "BFS (1)",
         },
         {
@@ -1327,7 +1327,7 @@ wierzchołki do odwiedzenia
       images: [
         {
           src: "/sols/somsiad.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "Graf",
         },
       ],
@@ -1373,17 +1373,17 @@ zachłannie
       images: [
         {
           src: "/sols/k_lf.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "LF (Largest First)",
         },
         {
           src: "/sols/k_sl.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "SL (Smallest Last)",
         },
         {
           src: "/sols/k_sl_2.png",
-          link: "/assets/wyklady/Algorytmy 9+10.pdf",
+          link: "/assets/wyklady/Algorytmy 9%2b10.pdf",
           note: "SL (Saturacyjny LF)",
         },
       ],
@@ -1417,7 +1417,7 @@ Funkcje skrótu - szyfrowanie jednokierunkowe, nie da się odzyskać tekstu jawn
       images: [
         {
           src: "/sols/cezar_schemat.png",
-          link: "/assets/wyklady/Algorytmy 11+12.pdf",
+          link: "/assets/wyklady/Algorytmy 11%2b12.pdf",
           note: "Szyfr Cezara - Schemat blokowy",
         },
       ],
@@ -1438,7 +1438,7 @@ Funkcje skrótu - szyfrowanie jednokierunkowe, nie da się odzyskać tekstu jawn
       images: [
         {
           src: "/sols/przestaw_schemat.png",
-          link: "/assets/wyklady/Algorytmy 11+12.pdf",
+          link: "/assets/wyklady/Algorytmy 11%2b12.pdf",
           note: "Szyfr Przestawieniowy - Schemat blokowy",
         },
       ],
@@ -1449,7 +1449,7 @@ Funkcje skrótu - szyfrowanie jednokierunkowe, nie da się odzyskać tekstu jawn
       images: [
         {
           src: "/sols/plotek.png",
-          link: "/assets/wyklady/Algorytmy 11+12.pdf",
+          link: "/assets/wyklady/Algorytmy 11%2b12.pdf",
           note: "Szyfr Płotkowy",
         },
       ],
@@ -1490,7 +1490,7 @@ Funkcje skrótu - szyfrowanie jednokierunkowe, nie da się odzyskać tekstu jawn
       images: [
         {
           src: "/sols/vic.png",
-          link: "/assets/wyklady/Algorytmy 11+12.pdf",
+          link: "/assets/wyklady/Algorytmy 11%2b12.pdf",
           note: "Szyfr VIC",
         },
       ],
@@ -1501,7 +1501,7 @@ Funkcje skrótu - szyfrowanie jednokierunkowe, nie da się odzyskać tekstu jawn
       images: [
         {
           src: "/sols/poli.png",
-          link: "/assets/wyklady/Algorytmy 11+12.pdf",
+          link: "/assets/wyklady/Algorytmy 11%2b12.pdf",
           note: "Tablica Polibiusza",
         },
       ],
@@ -2782,7 +2782,7 @@ Zrób quiz jeszcze raz po solidnej powtórce materiału.
            items-center justify-center
            gap-6 text-zinc-300"
     >
-      <span>🏝️ epstein AiSDland 1.7</span>
+      <span>🏝️ epstein AiSDland v1.7</span>
       <span>📝 21,000 słów notatek</span>
       <span class="flex items-center gap-1">
         <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
